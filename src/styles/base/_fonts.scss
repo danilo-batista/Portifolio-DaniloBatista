@@ -16,6 +16,10 @@
 :root {
     --font__carbona: 'Carbona';
 
+    font-family: var(--font__carbona);
+    font-size: 1rem;
+    line-height: 1.5;
+
     font-synthesis: none;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
