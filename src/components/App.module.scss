@@ -1,0 +1,9 @@
+@use '../styles/base/global';
+
+h1 {
+    font-family: var(--font__carbona);
+    font-weight: 400;
+    font-style: normal;
+
+    color: green;
+}
