@@ -18,7 +18,7 @@ export function Header() {
             </NavLink>
           </h1>
 
-          <nav>
+          <nav className={styles.header__navigation}>
             <div className={styles.container__menuMobile} ref={ref}>
               <MenuMobile ref={ref} />
             </div>

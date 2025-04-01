@@ -5,11 +5,11 @@
 .footer {
     background-color: colors.$color__primary-100;
 
-    min-width: 320px;
-    width: 100%;
+    padding: 1rem 1.5rem;
 
-    margin: 0 auto;
-    padding: 1rem 1rem;
+    position: sticky;
+    bottom: 0;
+    z-index: -1;
 
     font-family: fonts.$font__carbona;
     font-weight: 400;

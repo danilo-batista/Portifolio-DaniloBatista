@@ -6,11 +6,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
 }
 
 .container__menuFull {
     display: none;
-    
+
     @media screen and (min-width: 768px) {
         display: block;
     }
@@ -18,8 +19,7 @@
 
 .container__menuMobile {
     display: block;
-    position: relative;
-    
+
     @media screen and (min-width: 768px) {
         display: none;
     }
@@ -28,11 +28,12 @@
 .header {
     background-color: colors.$color__primary-100;
 
-    min-width: 320px;
-    width: 100%;
+    height: 5rem;
+    padding: 0 1.5rem;
 
-    margin: 0 auto;
-    padding: 1rem 1rem;
+    position: sticky;
+    top: 0;
+    left: 0;
 }
 
 .header__brand {
@@ -51,4 +52,8 @@
             color: colors.$color__primary-400;
         }
     }
+}
+
+.header__navigation {
+    position: relative;
 }
