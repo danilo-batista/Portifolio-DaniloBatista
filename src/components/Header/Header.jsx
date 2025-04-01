@@ -1,7 +1,11 @@
+import styles from '../Header/Header.module.scss';
+
 export function Header() {
   return (
     <>
-      <h1>Header</h1>
+      <header className={styles.header}>
+        <h1>Header</h1>
+      </header>
     </>
   );
 }

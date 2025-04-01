@@ -1,9 +1,9 @@
-@import "../styles/base/fonts";
-@import "../styles/base/colors";
-@import "../styles/base/global";
+@import "../../styles/base/fonts";
+@import "../../styles/base/colors";
+@import "../../styles/base/global";
 
-.main {
-    background-color: $color__secondary-100;
+.footer {
+    background-color: $color__primary-100;
 
     min-width: 320px;
     width: 100%;

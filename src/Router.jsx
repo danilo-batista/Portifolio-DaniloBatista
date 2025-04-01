@@ -16,7 +16,7 @@ export function Router() {
         <Route path="/sobre-mim" element={<About />} />
         <Route path="/portifolio" element={<Portfolio />} />
         <Route path="/blog" element={<Blog />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/contato" element={<Contact />} />
       </Route>
     </Routes>
   );
