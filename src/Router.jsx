@@ -8,15 +8,41 @@ import { Portfolio } from './pages/Portfolio';
 import { Blog } from './pages/Blog';
 import { Contact } from './pages/Contact';
 
+export const menuList = [
+  {
+    to: '/',
+    title: 'Home',
+    element: <Home />,
+  },
+  {
+    to: '/sobre-mim',
+    title: 'Sobre Mim',
+    element: <About />,
+  },
+  {
+    to: '/portifolio',
+    title: 'Portifólio',
+    element: <Portfolio />,
+  },
+  {
+    to: '/blog',
+    title: 'Blog',
+    element: <Blog />,
+  },
+  {
+    to: '/contato',
+    title: 'Contato',
+    element: <Contact />,
+  },
+];
+
 export function Router() {
   return (
     <Routes>
       <Route path="/" element={<DefaultLayout />}>
-        <Route path="/" element={<Home />} />
-        <Route path="/sobre-mim" element={<About />} />
-        <Route path="/portifolio" element={<Portfolio />} />
-        <Route path="/blog" element={<Blog />} />
-        <Route path="/contato" element={<Contact />} />
+        {menuList.map((menu) => {
+          return <Route path={menu.to} element={menu.element} />;
+        })}
       </Route>
     </Routes>
   );
