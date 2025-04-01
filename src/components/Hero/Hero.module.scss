@@ -1,0 +1,124 @@
+@use "../../styles/base/fonts";
+@use "../../styles/base/colors";
+@use "../../styles/base/global";
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.section {
+    background-color: colors.$color__primary-100;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: 3rem;
+
+    margin: 1rem 0;
+
+    text-align: center;
+
+    @media screen and (min-width: 768px) {
+        padding: 0 10%;
+    }
+
+    @media screen and (min-width: 1024px) {
+        flex-direction: row;
+        text-align: left;
+        padding: 0% 7.5%;
+    }
+}
+
+.hero__title {
+    font-weight: 700;
+    font-size: 3.25rem;
+    line-height: 4rem;
+
+    span {
+        color: colors.$color__primary-700;
+    }
+
+    @media screen and (min-width: 1024px) {
+        font-size: 2.5rem;
+        line-height: 3.25rem;
+    }
+
+    @media screen and (min-width: 1440px) {
+        font-size: 3.25rem;
+        line-height: 4rem;
+    }
+}
+
+.hero__description {
+    line-height: 1.625rem;
+
+    @media screen and (min-width: 1440px) {
+        font-size: 1.5rem;
+        line-height: 2.75rem;
+    }
+}
+
+.hero__buttons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    width: 100%;
+    white-space: nowrap;
+
+    font-weight: 700;
+    text-align: center;
+
+    >a {
+        width: 100%;
+        padding: 1rem 1.5rem;
+        border-radius: 0.5rem;
+
+        &:first-child {
+            background-color: colors.$color__danger-200;
+            color: colors.$color__gray-900;
+        }
+
+        &:last-child {
+            background-color: colors.$color__extracolor3-600;
+            color: colors.$color__gray-100;
+        }
+    }
+
+    @media screen and (min-width: 426px) {
+        flex-wrap: none;
+        gap: 1.5rem;
+        justify-content: center;
+
+        >a {
+            width: auto;
+        }
+    }
+
+    @media screen and (min-width: 1024px) {
+        justify-content: flex-start;
+    }
+
+    @media screen and (min-width: 1025px) {
+        justify-content: flex-start;
+        gap: 2.5rem;
+    }
+}
+
+.hero__profilePicture {
+    width: 100%;
+    border-radius: 8rem 8rem 20rem 20rem;
+
+    @media screen and (min-width: 426px) {
+        width: 425px;
+    }
+
+    @media screen and (min-width: 1024px) {
+        border-radius: 12rem 6rem 12rem 6rem;
+    }
+}
