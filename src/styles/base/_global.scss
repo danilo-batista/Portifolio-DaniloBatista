@@ -18,5 +18,13 @@
   textarea,
   button {
     font-family: fonts.$font__carbona;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  a {
+    text-decoration: none;
   }
 }

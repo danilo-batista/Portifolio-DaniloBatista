@@ -1,0 +1,27 @@
+@use "../../styles/base/fonts";
+@use "../../styles/base/colors";
+@use "../../styles/base/global";
+
+.menuList {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.menuList__item {
+    font-weight: 700;
+
+    width: 100%;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    white-space: nowrap;
+
+    a {
+        color: colors.$color__gray-900;
+
+        &:hover {
+            color: colors.$color__primary-500;
+        }
+    }
+}

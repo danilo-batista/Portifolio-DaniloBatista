@@ -1,9 +1,9 @@
-import styles from '../layouts/DefaultLayout.module.scss';
+import { Hero } from '../components/Hero/Hero';
 
 export function Home() {
   return (
     <>
-      <h2 className={styles.h2}>Home</h2>
+      <Hero />
     </>
   );
 }
