@@ -1,9 +1,9 @@
-import styles from "./App.module.scss";
+import { Home } from '../pages/Home';
 
 export function App() {
   return (
     <>
-      <h1 className={styles.h1}>Portifólio Danilo Batista</h1>
+      <Home />
     </>
-  )
+  );
 }

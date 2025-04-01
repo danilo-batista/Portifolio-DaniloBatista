@@ -1,27 +1,27 @@
 @font-face {
-    font-family: 'Carbona', sans-serif;
-    src:
-        url("../../assets/fonts/Carbona-Bold.woff2") format("woff2"),
-        url("../../assets/fonts/Carbona-Black.woff2") format("woff2"),
-        url("../../assets/fonts/Carbona-Medium.woff2") format("woff2"),
-        url("../../assets/fonts/Carbona-Regular.woff2") format("woff2"),
-        url("../../assets/fonts/Carbona-Light.woff2") format("woff2"),
-        url("../../assets/fonts/Carbona-BoldSlanted.woff2") format("woff2"),
-        url("../../assets/fonts/Carbona-BlackSlanted.woff2") format("woff2"),
-        url("../../assets/fonts/Carbona-MediumSlanted.woff2") format("woff2"),
-        url("../../assets/fonts/Carbona-RegularSlanted.woff2") format("woff2"),
-        url("../../assets/fonts/Carbona-LightSlanted.woff2") format("woff2"),
+  font-family: "Carbona", sans-serif;
+  src:
+    url("../../assets/fonts/Carbona-Bold.woff2") format("woff2"),
+    url("../../assets/fonts/Carbona-Black.woff2") format("woff2"),
+    url("../../assets/fonts/Carbona-Medium.woff2") format("woff2"),
+    url("../../assets/fonts/Carbona-Regular.woff2") format("woff2"),
+    url("../../assets/fonts/Carbona-Light.woff2") format("woff2"),
+    url("../../assets/fonts/Carbona-BoldSlanted.woff2") format("woff2"),
+    url("../../assets/fonts/Carbona-BlackSlanted.woff2") format("woff2"),
+    url("../../assets/fonts/Carbona-MediumSlanted.woff2") format("woff2"),
+    url("../../assets/fonts/Carbona-RegularSlanted.woff2") format("woff2"),
+    url("../../assets/fonts/Carbona-LightSlanted.woff2") format("woff2");
 }
 
+$font__carbona: "Carbona", sans-serif;
+
 :root {
-    --font__carbona: 'Carbona';
+  font-family: $font__carbona;
+  font-size: 1rem;
+  line-height: 1.5;
 
-    font-family: var(--font__carbona);
-    font-size: 1rem;
-    line-height: 1.5;
-
-    font-synthesis: none;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
