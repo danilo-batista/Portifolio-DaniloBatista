@@ -1,9 +1,9 @@
 import styles from '../layouts/DefaultLayout.module.scss';
 
-export function Home() {
+export function Contact() {
   return (
     <>
-      <h2 className={styles.h2}>Home</h2>
+      <h2 className={styles.h2}>Contact</h2>
     </>
   );
 }
