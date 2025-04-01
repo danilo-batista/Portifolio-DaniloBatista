@@ -1,0 +1,51 @@
+@import "../../styles/base/fonts";
+@import "../../styles/base/colors";
+@import "../../styles/base/global";
+
+.menuList {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.25rem;
+
+    position: absolute;
+    top: 2.875rem;
+    right: 0.5rem;
+
+    padding: 1.5rem 2rem;
+    z-index: 1;
+    white-space: nowrap;
+
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 1rem;
+    border: none;
+
+    background-color: $color__white;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.menuList__item {
+    font-weight: 700;
+    font-size: 1.25rem;
+    line-height: 2.875rem;
+    text-align: center;
+
+    width: 100%;
+    border-radius: 0.5rem;
+
+    padding: 0 1rem;
+
+    &:active {
+        background-color: $color__primary-400;
+        padding: 0 1rem;
+
+        a {
+            color: $color__white ;
+        }
+    }
+
+    a {
+        color: $color__primary-400;
+    }
+}
