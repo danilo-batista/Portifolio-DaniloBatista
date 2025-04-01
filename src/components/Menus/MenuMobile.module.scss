@@ -1,6 +1,6 @@
-@import "../../styles/base/fonts";
-@import "../../styles/base/colors";
-@import "../../styles/base/global";
+@use "../../styles/base/fonts";
+@use "../../styles/base/colors";
+@use "../../styles/base/global";
 
 .menuList {
     display: flex;
@@ -21,7 +21,7 @@
     border-radius: 1rem;
     border: none;
 
-    background-color: $color__white;
+    background-color: colors.$color__white;
     transition: opacity 0.3s ease-in-out;
 }
 
@@ -37,15 +37,15 @@
     padding: 0 1rem;
 
     &:active {
-        background-color: $color__primary-400;
+        background-color: colors.$color__primary-400;
         padding: 0 1rem;
 
         a {
-            color: $color__white ;
+            color: colors.$color__white ;
         }
     }
 
     a {
-        color: $color__primary-400;
+        color: colors.$color__primary-400;
     }
 }

@@ -1,6 +1,6 @@
-@import "../../styles/base/fonts";
-@import "../../styles/base/colors";
-@import "../../styles/base/global";
+@use "../../styles/base/fonts";
+@use "../../styles/base/colors";
+@use "../../styles/base/global";
 
 .container {
     display: flex;
@@ -26,7 +26,7 @@
 }
 
 .header {
-    background-color: $color__primary-100;
+    background-color: colors.$color__primary-100;
 
     min-width: 320px;
     width: 100%;
@@ -44,11 +44,11 @@
     }
 
     a {
-        color: $color__info-700;
+        color: colors.$color__info-700;
         text-decoration: none;
 
         &:hover {
-            color: $color__primary-400;
+            color: colors.$color__primary-400;
         }
     }
 }

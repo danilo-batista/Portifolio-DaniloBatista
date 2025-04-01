@@ -1,9 +1,9 @@
-@import "../styles/base/fonts";
-@import "../styles/base/colors";
-@import "../styles/base/global";
+@use "../styles/base/fonts";
+@use "../styles/base/colors";
+@use "../styles/base/global";
 
 .main {
-    background-color: $color__secondary-100;
+    background-color: colors.$color__secondary-100;
 
     min-width: 320px;
     width: 100%;
@@ -11,7 +11,7 @@
     margin: 0 auto;
     padding: 1rem 1rem;
 
-    font-family: $font__carbona;
+    font-family: fonts.$font__carbona;
     font-weight: 400;
     font-style: normal;
 }
