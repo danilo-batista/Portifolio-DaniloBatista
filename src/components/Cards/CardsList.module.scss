@@ -1,0 +1,40 @@
+@use "../../styles/base/fonts";
+@use "../../styles/base/colors";
+@use "../../styles/base/global";
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.section {
+    margin: 3rem 0;
+}
+
+.section__title {
+    font-weight: 700;
+    font-size: 1.675rem;
+    line-height: 2.5rem;
+    text-align: center;
+
+    width: 100%;
+    padding: 2rem 3rem 0 3rem;
+
+    color: colors.$color__gray-700;
+}
+
+.section__cards {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
+        justify-content: space-between;
+
+        gap: 2rem;
+        flex-wrap: wrap;
+    }
+}
