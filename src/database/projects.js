@@ -35,11 +35,11 @@ export const database = [
   },
   {
     id: 4,
-    title: 'Alura Books',
+    title: 'Alura Start',
     description:
       'Lorem ipsum dolor sit amet consectetur. Nunc euismod venenatis aliquam consequat nisi facilisi sed ac diam. Scelerisque nisi varius suscipit congue eget nunc neque mi. Placerat enim orci arcu habitasse morbi.',
     date: 'Jan | Jul 20-25',
-    client: 'rocketseat',
+    client: 'alura',
   },
 ];
 

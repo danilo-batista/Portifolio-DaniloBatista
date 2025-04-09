@@ -69,6 +69,16 @@
         font-weight: 700;
         font-size: 1.25rem;
     }
+
+    >a {
+        padding: 0.25rem 0.25rem 0 0.3rem;
+        border-radius: 0.25rem;
+        background-color: colors.$color__white;
+
+        &:hover {
+            background-color: colors.$color__secondary-200;
+        }
+    }
 }
 
 .article__projectsLink {
@@ -82,6 +92,10 @@
     padding: 0.5rem;
 
     >a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
         font-size: 0.75rem;
         font-weight: 700;
         line-height: 1rem;
@@ -95,16 +109,21 @@
         &:nth-child(1) {
             background-color: #171515;
             color: colors.$color__gray-100;
-        }
+            gap: 0.125rem;
 
-        // &:nth-child(2) {
-        //     background-color: #00B37E;
-        //     color: colors.$color__white;
-        // }
+            &:hover {
+                background-color: colors.$color__gray-600;
+            }
+        }
 
         &:nth-child(2) {
             background-color: #0e76a8;
             color: colors.$color__white;
+            gap: 0.25rem;
+
+            &:hover {
+                background-color: colors.$color__info-600;
+            }
         }
 
         @media screen and (min-width: 1440px) {

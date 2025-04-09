@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import * as styles from './Card.module.scss';
-import { LuExternalLink } from 'react-icons/lu';
+import { LuExternalLink, LuGithub } from 'react-icons/lu';
+import { FaLinkedin } from 'react-icons/fa';
 
 export function Card(props) {
   return (
@@ -24,6 +25,7 @@ export function Card(props) {
               >
                 <LuExternalLink color="#00B37E" size={20} strokeWidth={2.25} />
               </Link>
+
               <h3>{props.title}</h3>
             </div>
             <p>{props.description}</p>
@@ -31,10 +33,12 @@ export function Card(props) {
 
           <div className={styles.article__projectsLink}>
             <Link to={`https://github.com/danilo-batista/${props.slug}`}>
+              <LuGithub color="#e1e1e6" size={20} strokeWidth={1.5} />
               GITHUB
             </Link>
 
             <Link to={`https://www.linkedin.com/in/danilobatista/`}>
+              <FaLinkedin color="#e1e1e6" size={20} strokeWidth={1.5} />
               LINKEDIN
             </Link>
           </div>

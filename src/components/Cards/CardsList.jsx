@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 import { projectsList } from '../../database/projects';
 import { Card } from '../Cards/Card';
 
@@ -28,6 +30,9 @@ export function CardsList() {
                 </>
               );
             })}
+          </div>
+          <div className={styles.section__moreProjects}>
+            <Link to="/portifolio">Conheça mais projetos</Link>
           </div>
         </div>
       </section>

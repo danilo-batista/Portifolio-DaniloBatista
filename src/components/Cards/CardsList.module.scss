@@ -62,7 +62,7 @@
 .section__cards {
     display: flex;
     flex-direction: column;
-    
+
     flex-wrap: wrap;
     gap: 2rem;
 
@@ -88,5 +88,31 @@
 
     @media screen and (min-width: 768px) {
         flex-direction: row;
+    }
+}
+
+.section__moreProjects {
+    margin: 3rem 0 3rem 0;
+    text-align: center;
+
+    >a {
+        font-size: 1rem;
+        line-height: 1.625rem;
+        font-weight: 700;
+        text-align: center;
+        text-decoration: none;
+
+        padding: 0.75rem 1.25rem;
+        border-radius: 0.25rem;
+
+        border: 2px solid colors.$color__primary-500;
+        background-color: colors.$color__primary-100;
+        color: colors.$color__primary-500;
+
+        &:hover {
+            background-color: colors.$color__primary-200;
+            color: colors.$color__primary-700;
+
+        }
     }
 }
