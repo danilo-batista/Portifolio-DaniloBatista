@@ -1,0 +1,118 @@
+@use "../../styles/base/fonts";
+@use "../../styles/base/colors";
+@use "../../styles/base/global";
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+.section {
+    margin: 3rem 0;
+
+    @media screen and (min-width: 768px) {
+        padding: 0 10%;
+    }
+
+    @media screen and (min-width: 1024px) {
+        padding: 0% 7.5%;
+    }
+}
+
+.section__title {
+    font-weight: 700;
+    font-size: 1.75rem;
+    line-height: 3rem;
+    text-align: center;
+
+    width: 100%;
+    padding: 2rem 3rem 0 3rem;
+
+    color: colors.$color__gray-700;
+
+    @media screen and (min-width: 1024px) {
+        font-size: 2.5rem;
+        line-height: 3.25rem;
+    }
+
+    @media screen and (min-width: 1440px) {
+        font-size: 3.25rem;
+    }
+}
+
+.section__description {
+    font-weight: 500;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    text-align: center;
+
+    width: 100%;
+    padding: 0 3rem 2rem 3rem;
+
+    color: colors.$color__gray-500;
+
+    @media screen and (min-width: 1440px) {
+        font-size: 1.5rem;
+        line-height: 2.75rem;
+    }
+}
+
+.section__cards {
+    display: flex;
+    flex-direction: column;
+
+    flex-wrap: wrap;
+    gap: 2rem;
+
+    >* {
+        max-width: 100%;
+        flex: 1 1 100%;
+
+        @media screen and (min-width: 768px) {
+            flex: 1 1 calc(50% - 2rem); // 2 por linha
+            max-width: calc(50% - 2rem);
+        }
+
+        @media screen and (min-width: 1024px) {
+            flex: 1 1 calc(33.333% - 2rem); // 3 por linha com gap
+            max-width: calc(33.333% - 2rem);
+        }
+
+        @media screen and (min-width: 1440px) {
+            flex: 1 1 calc(25% - 2rem); // 4 por linha com gap
+            max-width: calc(25% - 2rem);
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
+    }
+}
+
+.section__moreProjects {
+    margin: 3rem 0 3rem 0;
+    text-align: center;
+
+    >a {
+        font-size: 1rem;
+        line-height: 1.625rem;
+        font-weight: 700;
+        text-align: center;
+        text-decoration: none;
+
+        padding: 0.75rem 1.25rem;
+        border-radius: 0.25rem;
+
+        border: 2px solid colors.$color__primary-500;
+        background-color: colors.$color__primary-100;
+        color: colors.$color__primary-500;
+
+        &:hover {
+            background-color: colors.$color__primary-200;
+            color: colors.$color__primary-700;
+
+        }
+    }
+}
