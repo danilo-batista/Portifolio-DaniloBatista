@@ -1,0 +1,133 @@
+@use "../../styles/base/fonts";
+@use "../../styles/base/colors";
+@use "../../styles/base/global";
+
+
+.article {
+    background-color: colors.$color__white;
+    border-radius: 1rem;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+
+    @media screen and (min-width: 1024px) {
+        flex-wrap: wrap;
+    }
+}
+
+.article__thumbnail {
+    border-radius: 1rem 1rem 0 0;
+    overflow: hidden;
+
+    >img {
+        width: 100%;
+        object-fit: cover;
+        border-bottom: 1px solid colors.$color__gray-100;
+
+        @media screen and (min-width: 768px) {
+            height: 10rem;
+        }
+    }
+}
+
+.article__information {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.75rem 1.25rem;
+
+    >p {
+        font-size: 0.875rem;
+        text-align: center;
+        text-overflow: ellipsis;
+        overflow: hidden;
+
+        height: 4rem;
+        margin-top: 0.5rem;
+    }
+
+    @media screen and (min-width: 768px) {
+        align-items: flex-start;
+
+        >p {
+            text-align: left;
+        }
+    }
+}
+
+.article__project {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 0.5rem;
+
+    >h3 {
+        font-weight: 700;
+        font-size: 1.25rem;
+    }
+
+    >a {
+        padding: 0.25rem 0.25rem 0 0.3rem;
+        border-radius: 0.25rem;
+        background-color: colors.$color__white;
+
+        &:hover {
+            background-color: colors.$color__secondary-200;
+        }
+    }
+}
+
+.article__projectsLink {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 0.5rem;
+
+    width: 100%;
+    padding: 0.5rem;
+
+    >a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-size: 0.75rem;
+        font-weight: 700;
+        line-height: 1rem;
+        text-transform: uppercase;
+        text-align: center;
+
+        border-radius: 0.5rem;
+        padding: 0.75rem;
+        width: 100%;
+
+        &:nth-child(1) {
+            background-color: #171515;
+            color: colors.$color__gray-100;
+            gap: 0.125rem;
+
+            &:hover {
+                background-color: colors.$color__gray-600;
+            }
+        }
+
+        &:nth-child(2) {
+            background-color: #0e76a8;
+            color: colors.$color__white;
+            gap: 0.25rem;
+
+            &:hover {
+                background-color: colors.$color__info-600;
+            }
+        }
+
+        @media screen and (min-width: 1440px) {
+            font-size: 0.875rem;
+        }
+    }
+}
