@@ -21,8 +21,9 @@ export function CardsList() {
                     title={project.title}
                     description={project.description}
                     date={project.date}
-                    thumbnail={project.thumbnail}
                     client={project.client}
+                    slug={project.slug}
+                    thumbnail={project.thumbnail}
                   />
                 </>
               );

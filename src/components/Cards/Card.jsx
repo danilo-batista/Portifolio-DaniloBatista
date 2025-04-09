@@ -1,12 +1,13 @@
 import { Link } from 'react-router-dom';
 import * as styles from './Card.module.scss';
+import { LuExternalLink } from 'react-icons/lu';
 
 export function Card(props) {
   return (
     <>
       <article className={styles.article}>
         <div className={styles.container}>
-          <Link to={`/portifolio/${props.client}/${props.id}/${props.title}`}>
+          <Link to={`/portifolio/${props.client}/${props.slug}`}>
             <div className={styles.article__thumbnail}>
               <img
                 src={`/images/${props.thumbnail}`}
@@ -17,19 +18,22 @@ export function Card(props) {
           </Link>
 
           <div className={styles.article__information}>
-            <h3>{props.title}</h3>
+            <div className={styles.article__project}>
+              <Link
+                to={`https://www.danilobatista.com/portifolio/${props.client}/${props.slug}`}
+              >
+                <LuExternalLink color="#00B37E" size={20} strokeWidth={2.25} />
+              </Link>
+              <h3>{props.title}</h3>
+            </div>
             <p>{props.description}</p>
           </div>
 
           <div className={styles.article__projectsLink}>
-            <Link to={`https://github.com/danilo-batista/${props.title}`}>
+            <Link to={`https://github.com/danilo-batista/${props.slug}`}>
               GITHUB
             </Link>
-            <Link
-              to={`https://www.danilobatista.com/portifolio/${props.client}/${props.title}`}
-            >
-              AO VIVO
-            </Link>
+
             <Link to={`https://www.linkedin.com/in/danilobatista/`}>
               LINKEDIN
             </Link>
@@ -39,30 +43,3 @@ export function Card(props) {
     </>
   );
 }
-
-/*
-
-export function Card(props) {
-  return (
-    <>
-      <article className={styles.article}>
-        <div className={styles.container}>
-          <div className={styles.article__thumbnail}>
-            <img
-              src={`${props.thumbnail}`}
-              alt={`Imagem de capa do projeto ${props.title}.`}
-            />
-          </div>
-          <div className={styles.article__infos}>
-            <p>{props.date}</p>
-            <p>SVGS</p>
-          </div>
-          <h3 className={styles.article__title}>{props.title}</h3>
-          <p className={styles.article__description}>{props.description}</p>
-        </div>
-      </article>
-    </>
-  );
-}
-
-*/
