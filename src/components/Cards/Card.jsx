@@ -26,9 +26,9 @@ export function Card(props) {
               GITHUB
             </Link>
             <Link
-              to={`https://www.danilobatista.com/portifolio/${props.client}/${props.id}/${props.title}`}
+              to={`https://www.danilobatista.com/portifolio/${props.client}/${props.title}`}
             >
-              LIVE
+              AO VIVO
             </Link>
             <Link to={`https://www.linkedin.com/in/danilobatista/`}>
               LINKEDIN

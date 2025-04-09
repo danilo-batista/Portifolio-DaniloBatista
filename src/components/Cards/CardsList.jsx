@@ -1,5 +1,6 @@
-import { Card } from '../Cards/Card';
 import { projectsList } from '../../database/projects';
+import { Card } from '../Cards/Card';
+
 import * as styles from './CardsList.module.scss';
 
 export function CardsList() {
@@ -8,6 +9,9 @@ export function CardsList() {
       <section className={styles.section}>
         <div className={styles.container}>
           <h2 className={styles.section__title}>Projetos</h2>
+          <p className={styles.section__description}>
+            Conheça projetos de destaque.
+          </p>
           <div className={styles.section__cards}>
             {projectsList.map((project) => {
               return (

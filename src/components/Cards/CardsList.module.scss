@@ -6,7 +6,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
+    flex-direction: column;
 }
 
 .section {
@@ -15,8 +15,8 @@
 
 .section__title {
     font-weight: 700;
-    font-size: 1.675rem;
-    line-height: 2.5rem;
+    font-size: 1.75rem;
+    line-height: 3rem;
     text-align: center;
 
     width: 100%;
@@ -25,16 +25,46 @@
     color: colors.$color__gray-700;
 }
 
+.section__description {
+    font-weight: 500;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    text-align: center;
+
+    width: 100%;
+    padding: 0 3rem 2rem 3rem;
+
+    color: colors.$color__gray-500;
+}
+
 .section__cards {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    
+    flex-wrap: wrap;
+    gap: 2rem;
+
+    >* {
+        max-width: 100%;
+        flex: 1 1 100%;
+
+        @media screen and (min-width: 768px) {
+            flex: 1 1 calc(50% - 2rem); // 2 por linha
+            max-width: calc(50% - 2rem);
+        }
+
+        @media screen and (min-width: 1024px) {
+            flex: 1 1 calc(33.333% - 2rem); // 3 por linha com gap
+            max-width: calc(33.333% - 2rem);
+        }
+
+        @media screen and (min-width: 1440px) {
+            flex: 1 1 calc(25% - 2rem); // 4 por linha com gap
+            max-width: calc(25% - 2rem);
+        }
+    }
 
     @media screen and (min-width: 768px) {
         flex-direction: row;
-        justify-content: space-between;
-
-        gap: 2rem;
-        flex-wrap: wrap;
     }
 }

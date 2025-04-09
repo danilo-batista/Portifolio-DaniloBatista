@@ -3,10 +3,10 @@ export const projectsList = [
     id: 1,
     thumbnail: 'aluraplus.png',
     date: 'Jan | Jul 2024',
-    title: 'AluraPlus',
+    title: 'Alura Plus',
     description:
       'Lorem ipsum dolor sit amet consectetur. Nunc euismod venenatis aliquam consequat nisi facilisi sed ac diam. Scelerisque nisi varius suscipit congue eget nunc neque mi. Placerat enim orci arcu habitasse morbi.',
-    client: 'danilo-batista',
+    client: 'danilobatista',
   },
   {
     id: 2,
@@ -21,7 +21,16 @@ export const projectsList = [
     id: 3,
     thumbnail: 'alurabooks.png',
     date: 'Jan | Jul 20-25',
-    title: 'AluraBooks',
+    title: 'Alura Books',
+    description:
+      'Lorem ipsum dolor sit amet consectetur. Nunc euismod venenatis aliquam consequat nisi facilisi sed ac diam. Scelerisque nisi varius suscipit congue eget nunc neque mi. Placerat enim orci arcu habitasse morbi.',
+    client: 'rocketseat',
+  },
+  {
+    id: 4,
+    thumbnail: 'alurabooks.png',
+    date: 'Jan | Jul 20-25',
+    title: 'Alura Books',
     description:
       'Lorem ipsum dolor sit amet consectetur. Nunc euismod venenatis aliquam consequat nisi facilisi sed ac diam. Scelerisque nisi varius suscipit congue eget nunc neque mi. Placerat enim orci arcu habitasse morbi.',
     client: 'rocketseat',
