@@ -2,112 +2,124 @@
 @use "../../styles/base/colors";
 @use "../../styles/base/global";
 
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+
+    gap: 2rem;
+}
+
 .footer {
-    background-color: colors.$color__gray-900;
-    color: colors.$color__gray-400;
+    background-color: colors.$color__gray-700;
+    color: colors.$color__gray-100;
+    text-align: center;
 
     @media screen and (min-width: 768px) {
         padding: 0 10%;
     }
 
     @media screen and (min-width: 1024px) {
-        padding: 0% 7.5%;
+        padding: 0 7.5%;
     }
 }
 
-.container {
+.footer__social {
+    padding: 2rem 3rem 0 3rem;
+}
+
+.footer__socialCircle {
+    border-radius: 50%;
+    width: 9rem;
+    height: 9rem;
+    overflow: hidden;
+    position: relative;
+
+    border: 3px solid colors.$color__gray-300;
+    ;
+
+    >img {
+        position: absolute;
+        bottom: 25;
+        left: 0;
+        width: 100%;
+    }
+}
+
+.footer__socialInfo {
     display: flex;
-    justify-content: space-between;
-    align-items: left;
     flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    margin: 1rem 0;
+}
+
+.footer__socialSubTitle {
+    font-style: oblique;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.footer__socialTitle {
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin-bottom: 1rem;
+
+    span {
+        color: colors.$color__primary-700;
+    }
 
     @media screen and (min-width: 1024px) {
-        flex-direction: row;
-        padding: 0% 7.5%;
+        font-size: 2.5rem;
+        line-height: 3.25rem;
+    }
+
+    @media screen and (min-width: 1440px) {
+        font-size: 3.25rem;
+        line-height: 4rem;
+    }
+}
+
+.footer__socialDescription {
+    >a {
+        color: colors.$color__gray-400;
+
+        &:hover {
+            color: colors.$color__gray-100;
+        }
+    }
+}
+
+.footer__socialMedia {
+    display: flex;
+    gap: 1rem;
+
+    >a {
+        color: colors.$color__gray-100;
+
+        &:hover {
+            color: colors.$color__gray-300;
+        }
     }
 }
 
 .footer__copyright {
+    background-color: colors.$color__gray-900;
     font-weight: 700;
-    font-size: 1rem;
-    text-align: center;
+    width: 100%;
     padding: 1rem;
 
     >span {
         font-weight: 500;
     }
 
-    >p {
-        &:last-child {
-            font-size: 0.75rem;
-        }
+    >a {
+        color: colors.$color__gray-400;
 
-        >a {
+        &:hover {
             color: colors.$color__gray-100;
         }
     }
 }
-
-
-
-
-// .footer__social {
-//     padding: 2rem 3rem 0 3rem;
-// }
-
-// .footer__socialCircle {
-//     border-radius: 50%;
-//     width: 10rem;
-//     height: 10rem;
-//     overflow: hidden;
-//     position: relative;
-
-//     >img {
-//         position: absolute;
-//         bottom: -10;
-//         width: 105%;
-//     }
-// }
-
-// .footer__form {
-//     padding: 2rem 3rem 0 3rem;
-// }
-
-// .footer__formGeneral {
-//     display: flex;
-//     flex-direction: column;
-//     gap: 1.5rem;
-// }
-
-// .footer__formName,
-// .footer__formEmail,
-// .footer__formMessage {
-//     border-radius: 0.5rem;
-//     border: 2px solid colors.$color__gray-100;
-//     background: none;
-//     padding: 0.75rem 1rem;
-//     color: colors.$color__gray-100;
-
-//     &::placeholder {
-//         color: colors.$color__gray-500;
-//         font-weight: 700;
-//         font-size: 0.875rem;
-//     }
-
-//     &:hover,
-//     &:active {
-//         border: 1.75px solid colors.$color__success-500;
-//     }
-// }
-
-// .footer__formButton {
-//     min-width: 7rem;
-//     padding: 1rem 1.5rem;
-//     border-radius: 0.5rem;
-//     text-transform: uppercase;
-//     width: 100%;
-//     background-color: colors.$color__primary-500;
-//     color: colors.$color__gray-100;
-//     border: none;
-//     font-weight: 900;
-// }
