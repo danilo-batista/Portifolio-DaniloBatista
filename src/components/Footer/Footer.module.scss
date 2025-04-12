@@ -106,10 +106,13 @@
 }
 
 .footer__copyright {
-    background-color: colors.$color__gray-900;
+    width: 100vw;
+}
+
+.footer__copy {
     font-weight: 700;
-    width: 100%;
-    padding: 1rem;
+    padding: 1rem 3rem;
+    background-color: colors.$color__gray-900;
 
     >span {
         font-weight: 500;

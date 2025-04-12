@@ -40,14 +40,16 @@ export function Footer() {
               </Link>
             </div>
           </div>
-          <p className={styles.footer__copyright}>
-            todos os direitos reservados . danilo<span>batista®</span> . 2025 .
-            For design portfolio, please access{' '}
-            <Link to="https://www.danilobatista.com.br" target="_blank">
-              danilobatista.com.br
-            </Link>
-            .
-          </p>
+          <div className={styles.footer__copyright}>
+            <p className={styles.footer__copy}>
+              todos os direitos reservados . danilo<span>batista®</span> . 2025
+              . For design portfolio, please access{' '}
+              <Link to="https://www.danilobatista.com.br" target="_blank">
+                danilobatista.com.br
+              </Link>
+              .
+            </p>
+          </div>
         </div>
       </footer>
     </>
