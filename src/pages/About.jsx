@@ -1,9 +1,13 @@
-import styles from '../layouts/DefaultLayout.module.scss';
+import { HeroPicture } from '../components/Hero/HeroPicture';
+import styles from '../pages/About.module.scss';
 
 export function About() {
   return (
     <>
-      <h2 className={styles.h2}>About</h2>
+      <section className={styles.section}>
+        <h2 className={styles.h2}>About</h2>
+        <HeroPicture />
+      </section>
     </>
   );
 }
