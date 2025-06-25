@@ -20,9 +20,7 @@ export function Card(props) {
 
           <div className={styles.article__information}>
             <div className={styles.article__project}>
-              <Link
-                to={`https://www.danilobatista.com/portifolio/${props.client}/${props.slug}`}
-              >
+              <Link to={props.link}>
                 <LuExternalLink color="#00B37E" size={20} strokeWidth={2.25} />
               </Link>
 

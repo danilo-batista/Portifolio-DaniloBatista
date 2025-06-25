@@ -1,0 +1,33 @@
+@use "../../styles/base/fonts";
+@use "../../styles/base/colors";
+@use "../../styles/base/global";
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.section {
+    background-color: colors.$color__primary-100;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: 3rem;
+
+    margin: 1rem 0;
+
+    text-align: center;
+
+    @media screen and (min-width: 768px) {
+        padding: 0 10%;
+    }
+
+    @media screen and (min-width: 1024px) {
+        flex-direction: row;
+        text-align: left;
+        padding: 0% 7.5%;
+    }
+}
