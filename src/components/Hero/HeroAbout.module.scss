@@ -1,6 +1,6 @@
-@use "../styles/base/fonts";
-@use "../styles/base/colors";
-@use "../styles/base/global";
+@use "../../styles/base/fonts";
+@use "../../styles/base/colors";
+@use "../../styles/base/global";
 
 .container {
     display: flex;
@@ -13,7 +13,7 @@
 
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     flex-direction: column;
     gap: 3rem;
 
