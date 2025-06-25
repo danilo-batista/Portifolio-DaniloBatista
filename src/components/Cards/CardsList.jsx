@@ -15,21 +15,24 @@ export function CardsList() {
             Conheça projetos de destaque.
           </p>
           <div className={styles.section__cards}>
-            {projectsList.map((project) => {
-              return (
-                <>
-                  <Card
-                    id={project.id}
-                    title={project.title}
-                    description={project.description}
-                    date={project.date}
-                    client={project.client}
-                    slug={project.slug}
-                    thumbnail={project.thumbnail}
-                  />
-                </>
-              );
-            })}
+            {projectsList
+              .sort((a, b) => b.id - a.id)
+              .map((project) => {
+                return (
+                  <>
+                    <Card
+                      id={project.id}
+                      title={project.title}
+                      description={project.description}
+                      date={project.date}
+                      client={project.client}
+                      slug={project.slug}
+                      thumbnail={project.thumbnail}
+                      link={project.link}
+                    />
+                  </>
+                );
+              })}
           </div>
           <div className={styles.section__moreProjects}>
             <Link to="/portifolio">Conheça mais projetos</Link>

@@ -1,0 +1,22 @@
+@use "../../styles/base/fonts";
+@use "../../styles/base/colors";
+@use "../../styles/base/global";
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.hero__profilePicture {
+    width: 100%;
+    border-radius: 8rem 8rem 20rem 20rem;
+
+    @media screen and (min-width: 426px) {
+        width: 425px;
+    }
+
+    @media screen and (min-width: 1024px) {
+        border-radius: 12rem 6rem 12rem 6rem;
+    }
+}

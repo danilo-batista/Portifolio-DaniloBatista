@@ -1,25 +1,19 @@
 import { NavLink } from 'react-router-dom';
+import { HeroPicture } from './HeroPicture';
+import { HeroCopywriting } from './HeroCopywriting';
+import { heroHome } from '../../database/heroInfo';
 
 import styles from '../Hero/Hero.module.scss';
-import daniloBatistaPicture from '../../assets/images/danilo-batista.webp';
 
 export function Hero() {
   return (
     <>
       <section className={styles.section}>
         <div className={styles.container}>
-          <h2 className={styles.hero__title}>
-            Eleve seu negócio digital a outro nível com um
-            <span> projeto de qualidade!</span>
-          </h2>
-
-          <p className={styles.hero__description}>
-            Soluções inovadoras para o seu negócio! Com mais de 20 anos de
-            experiência em Design e Tecnologia, unimos estratégia, eficiência e
-            inovação para otimizar processos e fortalecer parcerias
-            Transformamos desafios em oportunidades, gerando resultados reais
-            para sua empresa.
-          </p>
+          <HeroCopywriting
+            title={heroHome.title}
+            description={heroHome.description}
+          />
 
           <div className={styles.hero__buttons}>
             <NavLink to="/sobre-mim">Meu Currículo!</NavLink>
@@ -27,13 +21,7 @@ export function Hero() {
           </div>
         </div>
 
-        <div className={styles.container}>
-          <img
-            src={daniloBatistaPicture}
-            alt="Foto de Danilo Batista, homem branco, careca, com barba, utilizando uma camiseta de cor vinho em um fundo bege."
-            className={styles.hero__profilePicture}
-          />
-        </div>
+        <HeroPicture />
       </section>
     </>
   );
