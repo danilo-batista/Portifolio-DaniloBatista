@@ -9,14 +9,13 @@
 }
 
 .section {
-    background-color: colors.$color__primary-100;
-
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     flex-direction: column;
 
-    margin: 1rem 0;
+    background-color: colors.$color__extracolor3-100;
+    margin: 5rem 0;
 
     text-align: center;
 
