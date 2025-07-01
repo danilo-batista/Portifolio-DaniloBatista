@@ -22,11 +22,11 @@
 
 .article__thumbnail {
     border-radius: 1rem 1rem 0 0;
+    object-fit: cover;
     overflow: hidden;
 
     >img {
         width: 100%;
-        object-fit: cover;
         border-bottom: 1px solid colors.$color__gray-100;
 
         @media screen and (min-width: 768px) {
@@ -84,48 +84,24 @@
 
 .article__projectsLink {
     display: flex;
-    justify-content: space-between;
+    justify-content: left;
     align-items: center;
     flex-wrap: nowrap;
-    gap: 0.5rem;
 
     width: 100%;
     padding: 0.5rem;
 
     >a {
         display: flex;
-        justify-content: center;
-        align-items: center;
+        justify-content: left;
+        align-items: flex-end;
 
         font-size: 0.75rem;
         font-weight: 700;
         line-height: 1rem;
-        text-transform: uppercase;
-        text-align: center;
 
         border-radius: 0.5rem;
-        padding: 0.75rem;
-        width: 100%;
-
-        &:nth-child(1) {
-            background-color: #171515;
-            color: colors.$color__gray-100;
-            gap: 0.125rem;
-
-            &:hover {
-                background-color: colors.$color__gray-600;
-            }
-        }
-
-        &:nth-child(2) {
-            background-color: #0e76a8;
-            color: colors.$color__white;
-            gap: 0.25rem;
-
-            &:hover {
-                background-color: colors.$color__info-600;
-            }
-        }
+        padding: 0.5rem;
 
         @media screen and (min-width: 1440px) {
             font-size: 0.875rem;
