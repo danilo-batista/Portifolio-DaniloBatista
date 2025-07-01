@@ -25,6 +25,8 @@ export function ExperienceList() {
               </h3>
               <hr className={styles.experience__jobTitleDivisor} />
               <p className={styles.experience__description}>
+                <strong>MSP Estúdios</strong>
+                <br />
                 Estúdio de quadrinhos responsável pela criação e expansão do
                 Universo da Turma da Mônica.
               </p>
@@ -79,6 +81,8 @@ export function ExperienceList() {
               </h3>
               <hr className={styles.experience__jobTitleDivisor} />
               <p className={styles.experience__description}>
+                <strong>Kalunga | Spiral</strong>
+                <br />
                 Rede especializada em comércio de papelaria e eletrônicos.
               </p>
 
@@ -122,6 +126,8 @@ export function ExperienceList() {
               <h3 className={styles.experience__jobTitle}>Designer Gráfico</h3>
               <hr className={styles.experience__jobTitleDivisor} />
               <p className={styles.experience__description}>
+                <strong>Multilaser</strong>
+                <br />
                 Empresa especializada em suprimentos de informática e
                 eletrônicos.
               </p>
@@ -212,6 +218,8 @@ export function ExperienceList() {
               </h3>
               <hr className={styles.experience__jobTitleDivisor} />
               <p className={styles.experience__description}>
+                <strong>Alfaflex</strong>
+                <br />
                 Gráfica responsável pela produção de painéis adesivos e
                 circuitos impressos flexíveis para produtos eletrônicos,
                 utilizando o sistema serigráfico.
