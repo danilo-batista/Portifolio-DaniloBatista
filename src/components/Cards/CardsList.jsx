@@ -34,9 +34,9 @@ export function CardsList() {
                 );
               })}
           </div>
-          <div className={styles.section__moreProjects}>
+          {/* <div className={styles.section__moreProjects}>
             <Link to="/portifolio">Conheça mais projetos</Link>
-          </div>
+          </div> */}
         </div>
       </section>
     </>

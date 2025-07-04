@@ -8,7 +8,7 @@ export function Card(props) {
     <>
       <article className={styles.article}>
         <div className={styles.container}>
-          <Link to={`/portifolio/${props.client}/${props.slug}`}>
+          <Link to={props.link}>
             <div className={styles.article__thumbnail}>
               <img
                 src={`/images/${props.thumbnail}`}

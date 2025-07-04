@@ -24,11 +24,11 @@ export const menuList = [
     title: 'Portifólio',
     element: <Portfolio />,
   },
-  {
-    to: '/blog',
-    title: 'Blog',
-    element: <Blog />,
-  },
+  // {
+  //   to: '/blog',
+  //   title: 'Blog',
+  //   element: <Blog />,
+  // },
   {
     to: '/contato',
     title: 'Contato',

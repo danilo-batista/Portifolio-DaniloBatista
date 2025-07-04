@@ -78,7 +78,7 @@ export const projectsList = database.map((project) => {
   return {
     ...project,
     slug,
-    thumbnail: `${slug}.png`,
+    thumbnail: `${slug}.webp`,
     link,
   };
 });
