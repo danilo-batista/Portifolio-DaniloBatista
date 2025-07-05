@@ -1,5 +1,4 @@
 import { HeroAbout } from '../components/Hero/HeroAbout';
-import { Experience } from '../components/Experience/Experience';
 import { Skills } from '../components/Skills/Skills';
 
 export function About() {
@@ -7,7 +6,6 @@ export function About() {
     <>
       <HeroAbout />
       <Skills />
-      <Experience />
     </>
   );
 }

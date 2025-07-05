@@ -4,8 +4,7 @@ export function Skills() {
   return (
     <section className={styles.section}>
       <div className={styles.container}>
-        <div className={styles.container__title}>Minhas Habilidades</div>
-
+        <h2 className={styles.container__title}>Minhas Habilidades</h2>
         <ul className={styles.container__listItems}>
           <li className={styles.container__items}>React.js</li>
           <li className={styles.container__items}>JavaScript</li>
