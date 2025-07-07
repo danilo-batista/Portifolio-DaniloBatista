@@ -14,18 +14,18 @@ export function Career(props) {
         </Link>
 
         <div className={styles.item__brandInfo}>
-          <p className={styles.brand__jobPeriod}>{props.period}</p>
-          <h2 className={styles.brand__jobTitle}>{props.title}</h2>
-          <h3 className={styles.brand__jobCompany}>{props.company}</h3>
+          <p className={styles.item__brandPeriod}>{props.period}</p>
+          <h2 className={styles.item__brandTitle}>{props.title}</h2>
+          <h3 className={styles.item__brandCompany}>{props.company}</h3>
         </div>
       </div>
 
       <div className={styles.items__container}>
-        <p className={styles.brand__jobDescription}>{props.description}</p>
+        <p className={styles.item__brandDescription}>{props.description}</p>
       </div>
 
       <div className={styles.items__container}>
-        <details className={styles.brand__resume}>
+        <details className={styles.item__brandResume}>
           <summary>Leia mais aqui!</summary>
           <ul>
             {props.resume.map((resume) => (

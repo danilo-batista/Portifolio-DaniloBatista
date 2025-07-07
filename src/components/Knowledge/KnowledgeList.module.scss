@@ -1,0 +1,104 @@
+ @use "../../styles/base/fonts";
+@use "../../styles/base/colors";
+@use "../../styles/base/global";
+
+.container {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+    border-radius: 1rem;
+
+    width: 100%;
+    padding: 0.59rem 0;
+
+    background-color: colors.$color__white;
+}
+
+.section {
+    width: 100%;
+    margin: 5rem 0 5rem 0;
+
+    text-align: center;
+
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
+        gap: 1rem;
+
+        margin: 7rem 0 5rem 0;
+        padding: 0 10%;
+    }
+
+    @media screen and (min-width: 1024px) {
+        text-align: left;
+        padding: 0 7.5%;
+    }
+}
+
+.container__title {
+    padding: 1rem 2rem 0 2rem;
+
+    font-size: 2rem;
+    font-weight: 700;
+
+    color: colors.$color__gray-700;
+
+    @media screen and (min-width: 768px) {
+        padding: 2rem 3rem 0 3rem;
+
+        font-size: 2.25rem;
+        text-align: center;
+        line-height: 3.625rem;
+    }
+
+    @media screen and (min-width: 1024px) {
+        text-align: left;
+    }
+
+    @media screen and (min-width: 1440px) {
+        font-size: 2.75rem;
+        line-height: 3.625rem;
+    }
+}
+
+.container__description {
+    font-weight: 500;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    text-align: center;
+
+    width: 100%;
+    padding: 0 3rem 2rem 3rem;
+
+    color: colors.$color__gray-500;
+
+    @media screen and (min-width: 768px) {
+        padding: 0 3rem 2rem 3rem;
+        font-size: 1.375rem;
+        line-height: 1.75rem;
+    }
+
+    @media screen and (min-width: 1024px) {
+        font-size: 1.5rem;
+        line-height: 2.25rem;
+        text-align: left;
+    }
+}
+
+.container__items {
+    width: 100%;
+    text-align: center;
+    flex-direction: column;
+    margin-top: 1rem;
+
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
+        justify-content: center;
+        padding: 0 10%;
+    }
+
+    @media screen and (min-width: 1024px) {
+        text-align: left;
+        padding: 0 7.5%;
+    }
+}

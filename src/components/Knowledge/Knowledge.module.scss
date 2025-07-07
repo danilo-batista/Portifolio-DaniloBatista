@@ -39,6 +39,25 @@
     }
 }
 
+.items__containerTCC {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 2rem;
+
+    @media screen and (min-width: 768px) {
+        padding: 0;
+    }
+
+    @media screen and (min-width: 1024px) {
+        gap: 0.25rem;
+    }
+
+    @media screen and (min-width: 1440px) {
+        gap: 0.75rem;
+    }
+}
+
 .item__brand {
     max-width: 200px;
 
@@ -149,10 +168,10 @@
 
 .resume__listItems {
     padding-bottom: 0.5rem;
-    margin-left: 1.25rem;
-
-    list-style-type: disc;
-    text-align: left;
+    
+    @media screen and (min-width: 768px) {
+        text-align: left;
+    }
 
     @media screen and (min-width: 1440px) {
         margin-left: 1.425rem;
@@ -161,10 +180,33 @@
 }
 
 .resume__listItemsTopic {
-    margin-top: 1rem;
+    margin-top: 0;
     font-weight: 700;
 
     @media screen and (min-width: 768px) {
         text-align: left;
     }
+}
+
+.resume__list {
+    margin-top: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    >li {
+        flex-grow: 1;
+    }
+}
+
+.resume__listItemsPills {
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.5rem;
+    font-weight: 700;
+
+    background-color: colors.$color__gray-100;
+    border: 0.15rem solid colors.$color__gray-300;
+    color: colors.$color__gray-500;
 }
