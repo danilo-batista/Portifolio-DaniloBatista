@@ -9,7 +9,7 @@
 }
 
 .section {
-    background-color: colors.$color__primary-100;
+    // background-color: colors.$color__white;
 
     display: flex;
     justify-content: space-between;
@@ -17,7 +17,7 @@
     flex-direction: column;
     gap: 3rem;
 
-    margin: 1rem 0;
+    margin: 5rem 0;
 
     text-align: center;
 
