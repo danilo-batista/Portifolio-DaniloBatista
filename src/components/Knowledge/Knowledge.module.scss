@@ -1,0 +1,212 @@
+@use "../../styles/base/fonts";
+@use "../../styles/base/colors";
+@use "../../styles/base/global";
+
+.options__listItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+    padding-bottom: 4rem;
+
+    @media screen and (min-width: 768px) {
+        align-items: center;
+    }
+
+    @media screen and (min-width: 1024px) {
+        align-items: flex-start;
+        gap: 1rem;
+    }
+}
+
+.items__container {
+    display: flex;
+    flex-direction: column;
+    padding: 0 2rem;
+
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
+        padding: 0;
+    }
+
+    @media screen and (min-width: 1024px) {
+        gap: 0.25rem;
+    }
+
+    @media screen and (min-width: 1440px) {
+        gap: 0.75rem;
+    }
+}
+
+.items__containerTCC {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 2rem;
+
+    @media screen and (min-width: 768px) {
+        padding: 0;
+    }
+
+    @media screen and (min-width: 1024px) {
+        gap: 0.25rem;
+    }
+
+    @media screen and (min-width: 1440px) {
+        gap: 0.75rem;
+    }
+}
+
+.item__brand {
+    max-width: 200px;
+
+    @media screen and (min-width: 768px) {
+        text-align: left;
+    }
+
+    @media screen and (min-width: 1024px) {
+        max-width: 250px;
+    }
+
+    @media screen and (min-width: 1440px) {
+        max-width: 300px;
+    }
+}
+
+.item__brandInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 1rem;
+
+    @media screen and (min-width: 768px) {
+        align-items: flex-start;
+        justify-content: center;
+    }
+}
+
+.item__brandPeriod {
+    color: colors.$color__gray-500;
+    font-weight: 500;
+    font-style: oblique;
+
+    @media screen and (min-width: 768px) {
+        text-align: left;
+    }
+
+    @media screen and (min-width: 1440px) {
+        font-size: 1.5rem;
+    }
+}
+
+.item__brandTitle {
+    font-weight: 700;
+    line-height: 110%;
+    font-size: 1.375rem;
+
+    @media screen and (min-width: 768px) {
+        text-align: left;
+    }
+
+    @media screen and (min-width: 1024px) {
+        font-size: 1.625rem;
+    }
+
+    @media screen and (min-width: 1440px) {
+        font-size: 2rem;
+    }
+}
+
+.item__brandCompany {
+    color: colors.$color__gray-500;
+    margin-top: 0.25rem;
+
+    font-weight: 600;
+    line-height: 110%;
+
+    @media screen and (min-width: 768px) {
+        text-align: left;
+        margin: 0;
+    }
+
+    @media screen and (min-width: 1024px) {
+        font-size: 1.375rem;
+    }
+
+    @media screen and (min-width: 1440px) {
+        font-size: 1.675rem;
+    }
+}
+
+.item__brandDescription {
+    @media screen and (min-width: 1024px) {
+        font-size: 1.275rem;
+    }
+
+    @media screen and (min-width: 1440px) {
+        font-size: 1.675rem;
+    }
+}
+
+.item__brandResume {
+    display: flex;
+    flex-direction: column;
+
+    &>summary {
+        font-weight: 600;
+    }
+
+    &>ul {
+        margin-top: 0.5rem;
+    }
+
+    @media screen and (min-width: 1440px) {
+        font-size: 1.275rem;
+    }
+}
+
+.resume__listItems {
+    padding-bottom: 0.5rem;
+    
+    @media screen and (min-width: 768px) {
+        text-align: left;
+    }
+
+    @media screen and (min-width: 1440px) {
+        margin-left: 1.425rem;
+        font-size: 1.275rem;
+    }
+}
+
+.resume__listItemsTopic {
+    margin-top: 0;
+    font-weight: 700;
+
+    @media screen and (min-width: 768px) {
+        text-align: left;
+    }
+}
+
+.resume__list {
+    margin-top: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    >li {
+        flex-grow: 1;
+    }
+}
+
+.resume__listItemsPills {
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.5rem;
+    font-weight: 700;
+
+    background-color: colors.$color__gray-100;
+    border: 0.15rem solid colors.$color__gray-300;
+    color: colors.$color__gray-500;
+}

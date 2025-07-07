@@ -1,11 +1,15 @@
+import { CareerList } from '../components/Career/CareerList';
 import { HeroAbout } from '../components/Hero/HeroAbout';
-import { Experience } from '../components/Experience/Experience';
+import { KnowledgeList } from '../components/Knowledge/KnowledgeList';
+import { Skills } from '../components/Skills/Skills';
 
 export function About() {
   return (
     <>
       <HeroAbout />
-      <Experience />
+      <Skills />
+      <CareerList />
+      <KnowledgeList />
     </>
   );
 }
