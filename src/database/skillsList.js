@@ -1,5 +1,5 @@
 export const skillsList = [
-  'React.j',
+  'React.js',
   'JavaScript',
   'HTML',
   'CSS',
