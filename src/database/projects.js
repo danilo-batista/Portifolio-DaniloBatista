@@ -67,6 +67,15 @@ export const database = [
     client: 'alura',
     link: `https://serenatto-mocha.vercel.app/`,
   },
+  {
+    id: 8,
+    title: 'Ignite Feed',
+    description:
+      'Lorem ipsum dolor sit amet consectetur. Nunc euismod venenatis aliquam consequat nisi facilisi sed ac diam. Scelerisque nisi varius suscipit congue eget nunc neque mi. Placerat enim orci arcu habitasse morbi.',
+    date: 'Jan | Jul 20-25',
+    client: 'ignite',
+    link: `https://ignite-feed-six-silk.vercel.app/`,
+  },
 ];
 
 export const projectsList = database.map((project) => {
