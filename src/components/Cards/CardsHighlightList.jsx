@@ -10,22 +10,23 @@ export function CardsHighlightList() {
         {projectsList
           .sort((a, b) => b.id - a.id)
           .filter((project) => project.highlight)
-          .map((project) => {
+          .map((project, index) => {
+            const isEven = index % 2 === 0;
             return (
-              <>
-                <CardHighlight
-                  id={project.id}
-                  title={project.title}
-                  description={project.description}
-                  date={project.date}
-                  client={project.client}
-                  slug={project.slug}
-                  thumbnail={project.thumbnail}
-                  link={project.link}
-                  highlight={project.highlight}
-                  category={project.category}
-                />
-              </>
+              <CardHighlight
+                key={project.id}
+                id={project.id}
+                title={project.title}
+                description={project.description}
+                date={project.date}
+                client={project.client}
+                slug={project.slug}
+                thumbnail={project.thumbnail}
+                link={project.link}
+                highlight={project.highlight}
+                category={project.category}
+                isEven={isEven}
+              />
             );
           })}
       </div>

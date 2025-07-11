@@ -101,6 +101,19 @@
     }
 }
 
+.even {
+    background-color: colors.$color__secondary-100;
+
+    .container__category {
+        color: colors.$color__secondary-500;
+    }
+
+    .container__title {
+        color: colors.$color__secondary-700;
+    }
+
+}
+
 .article__thumbnail {
     overflow: hidden;
     position: relative;

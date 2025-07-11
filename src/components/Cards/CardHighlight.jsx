@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 export function CardHighlight(props) {
   return (
-    <article className={styles.article}>
+    <article className={`${styles.article} ${props.isEven ? styles.even : ''}`}>
       <div className={styles.article__thumbnail}>
         <Link to={props.link}>
           <img
@@ -16,7 +16,9 @@ export function CardHighlight(props) {
         </Link>
       </div>
 
-      <div className={styles.article__information}>
+      <div
+        className={`${styles.article__information} ${props.isEven ? styles.even : ''}`}
+      >
         <p className={styles.container__category}>{props.category}</p>
         <h2 className={styles.container__title}>{props.title}</h2>
         <p className={styles.container__description}>{props.description}</p>
