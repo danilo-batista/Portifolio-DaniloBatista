@@ -5,16 +5,12 @@ export function HeroCopywriting({ title, description }) {
     <>
       <h2 className={styles.hero__title}>{title}</h2>
       {description.map((description) => {
-        console.log(description);
-        return <p className={styles.hero__description}>{description}</p>;
+        return (
+          <p className={styles.hero__description} key={description}>
+            {description}
+          </p>
+        );
       })}
     </>
   );
-}
-
-{
-  /* {description.map((data) => {
-  console.log(data);
-  return <p className={styles.hero__description}>{data}</p>;
-})} */
 }

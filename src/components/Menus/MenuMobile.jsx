@@ -33,7 +33,7 @@ export function MenuMobile({ ref }) {
         <ul className={styles.menuList}>
           {menuList.map((menu) => {
             return (
-              <li className={styles.menuList__item}>
+              <li className={styles.menuList__item} key={menu.title}>
                 <NavLink to={menu.to} onClick={handleLinkClick}>
                   {menu.title}
                 </NavLink>

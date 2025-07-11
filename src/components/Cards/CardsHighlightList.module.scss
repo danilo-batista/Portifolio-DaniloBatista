@@ -1,0 +1,72 @@
+@use "../../styles/base/fonts";
+@use "../../styles/base/colors";
+@use "../../styles/base/global";
+
+.container {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+    gap: 4rem;
+    
+    width: 100%;
+    padding: 0.59rem 0;
+}
+
+.section {
+    width: 100%;
+    margin: 5rem 0 5rem 0;
+    padding: 0 2.5%;
+
+    text-align: center;
+
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
+        gap: 1rem;
+
+        margin: 7rem 0 5rem 0;
+        padding: 0 10%;
+    }
+
+    @media screen and (min-width: 1024px) {
+        text-align: left;
+        padding: 0 7.5%;
+    }
+}
+
+.section__moreProjects {
+    margin: 3rem 0 1.25rem 0;
+    text-align: center;
+    order: 3;
+
+    >a {
+        font-size: 1rem;
+        line-height: 1.625rem;
+        font-weight: 700;
+        text-align: center;
+        text-decoration: none;
+
+        padding: 0.75rem 1.25rem;
+        border-radius: 0.5rem;
+
+        border: 2px solid colors.$color__primary-500;
+        background-color: colors.$color__primary-100;
+        color: colors.$color__primary-500;
+
+        &:hover {
+            background-color: colors.$color__primary-200;
+            color: colors.$color__primary-700;
+
+        }
+    }
+
+    @media screen and (min-width: 425px) {
+        margin: 3rem 0 2rem 0;
+    }
+
+    @media screen and (min-width: 768px) {
+        >a {
+            font-size: 1.125rem;
+        }
+    }
+}
