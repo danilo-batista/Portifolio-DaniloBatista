@@ -5,7 +5,6 @@ import { DefaultLayout } from './layouts/DefaultLayout';
 import { Home } from './pages/Home';
 import { About } from './pages/About';
 import { Portfolio } from './pages/Portfolio';
-import { Blog } from './pages/Blog';
 import { Contact } from './pages/Contact';
 
 export const menuList = [
@@ -24,11 +23,6 @@ export const menuList = [
     title: 'Portifólio',
     element: <Portfolio />,
   },
-  // {
-  //   to: '/blog',
-  //   title: 'Blog',
-  //   element: <Blog />,
-  // },
   {
     to: '/contato',
     title: 'Contato',
