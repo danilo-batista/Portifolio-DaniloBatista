@@ -10,7 +10,6 @@ export const heroAbout = {
   title: 'Olá! Sou o Danilo Batista!',
   description: [
     'Sou um profissional com mais de 22 anos de experiência em Design Gráfico, período no qual desenvolvi habilidades sólidas em criação, layout e produção gráfica. Minha trajetória inclui atuação em gráficas, importadoras de produtos tecnológicos e no mercado editorial, contribuindo para a alfabetização de milhares de crianças.',
-
     'Motivado pela constante evolução do mercado e pela minha paixão por aprender, decidi mergulhar na área de Tecnologia. Concluí uma graduação em Análise de Sistemas e tenho me especializado em Desenvolvimento Front-End, com foco em React.js, HTML, CSS e JavaScript.',
   ],
 };

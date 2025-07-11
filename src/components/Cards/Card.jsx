@@ -26,12 +26,19 @@ export function Card(props) {
           </div>
 
           <div className={styles.article__projectsLink}>
-            <Link to={`https://github.com/danilo-batista/${props.slug}`}>
-              <FiGithub color="#7c7c8a" size={20} strokeWidth={2.25} />
-            </Link>
-            <Link to={props.link}>
-              <LuExternalLink color="#00B37E" size={20} strokeWidth={2.25} />
-            </Link>
+            <p className={styles.container__descriptionLinks}>
+              saiba mais &gt;
+            </p>
+            <div className={styles.container__links}>
+              <Link to={`https://github.com/danilo-batista/${props.slug}`}>
+                <FiGithub color="#7c7c8a" size={20} strokeWidth={2.25} />
+                <p>GitHub</p>
+              </Link>
+              <Link to={props.link}>
+                <LuExternalLink color="#7c7c8a" size={20} strokeWidth={2.25} />
+                <p>On-line</p>
+              </Link>
+            </div>
           </div>
         </div>
       </article>
