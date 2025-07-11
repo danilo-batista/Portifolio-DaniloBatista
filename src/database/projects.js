@@ -17,6 +17,8 @@ export const database = [
       'Lorem ipsum dolor sit amet consectetur. Nunc euismod venenatis aliquam consequat nisi facilisi sed ac diam. Scelerisque nisi varius suscipit congue eget nunc neque mi. Placerat enim orci arcu habitasse morbi.',
     date: 'Jan | Jul 2024',
     client: 'danilobatista',
+    highlight: false,
+    category: 'landing page',
   },
   {
     id: 2,
@@ -25,6 +27,8 @@ export const database = [
       'Lorem ipsum dolor sit amet consectetur. Nunc euismod venenatis aliquam consequat nisi facilisi sed ac diam. Scelerisque nisi varius suscipit congue eget nunc neque mi. Placerat enim orci arcu habitasse morbi.',
     date: 'Jan | Jul 20-25',
     client: 'rocketseat',
+    highlight: true,
+    category: 'landing page',
   },
   {
     id: 3,
@@ -33,6 +37,8 @@ export const database = [
       'Lorem ipsum dolor sit amet consectetur. Nunc euismod venenatis aliquam consequat nisi facilisi sed ac diam. Scelerisque nisi varius suscipit congue eget nunc neque mi. Placerat enim orci arcu habitasse morbi.',
     date: 'Jan | Jul 20-25',
     client: 'alura',
+    highlight: false,
+    category: 'landing page',
   },
   {
     id: 4,
@@ -41,6 +47,8 @@ export const database = [
       'Lorem ipsum dolor sit amet consectetur. Nunc euismod venenatis aliquam consequat nisi facilisi sed ac diam. Scelerisque nisi varius suscipit congue eget nunc neque mi. Placerat enim orci arcu habitasse morbi.',
     date: 'Jan | Jul 20-25',
     client: 'alura',
+    highlight: true,
+    category: 'landing page',
   },
   {
     id: 5,
@@ -49,6 +57,8 @@ export const database = [
       'Lorem ipsum dolor sit amet consectetur. Nunc euismod venenatis aliquam consequat nisi facilisi sed ac diam. Scelerisque nisi varius suscipit congue eget nunc neque mi. Placerat enim orci arcu habitasse morbi.',
     date: 'Jan | Jul 20-25',
     client: 'alura',
+    highlight: false,
+    category: 'landing page',
   },
   {
     id: 6,
@@ -57,6 +67,8 @@ export const database = [
       'Lorem ipsum dolor sit amet consectetur. Nunc euismod venenatis aliquam consequat nisi facilisi sed ac diam. Scelerisque nisi varius suscipit congue eget nunc neque mi. Placerat enim orci arcu habitasse morbi.',
     date: 'Jan | Jul 20-25',
     client: 'alura',
+    highlight: false,
+    category: 'landing page',
   },
   {
     id: 7,
@@ -65,6 +77,8 @@ export const database = [
       'Lorem ipsum dolor sit amet consectetur. Nunc euismod venenatis aliquam consequat nisi facilisi sed ac diam. Scelerisque nisi varius suscipit congue eget nunc neque mi. Placerat enim orci arcu habitasse morbi.',
     date: 'Jan | Jul 20-25',
     client: 'alura',
+    highlight: true,
+    category: 'landing page',
     link: `https://serenatto-mocha.vercel.app/`,
   },
 ];
