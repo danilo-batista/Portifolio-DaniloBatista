@@ -1,7 +1,7 @@
-import * as styles from './CardHighlight.module.scss';
-import { LuExternalLink } from 'react-icons/lu';
 import { FiGithub } from 'react-icons/fi';
+import { LuExternalLink } from 'react-icons/lu';
 import { Link } from 'react-router-dom';
+import * as styles from './CardHighlight.module.scss';
 
 export function CardHighlight(props) {
   return (
@@ -25,7 +25,6 @@ export function CardHighlight(props) {
         <h2 className={styles.container__title}>{props.title}</h2>
         <p className={styles.container__description}>{props.description}</p>
         <div className={styles.article__projectsLink}>
-          <p className={styles.container__descriptionLinks}>saiba mais &gt;</p>
           <div className={styles.container__links}>
             <Link to={`https://github.com/danilo-batista/${props.slug}`}>
               <FiGithub color="#7c7c8a" size={20} strokeWidth={2.25} />

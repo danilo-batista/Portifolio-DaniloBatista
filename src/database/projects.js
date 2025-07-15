@@ -6,7 +6,7 @@ export function toSlug(string) {
     .normalize('NFD') // remove acentos
     .replace(/[\u0300-\u036f]/g, '') // remove caracteres especiais de acento
     .replace(/\s+/g, '-') // substitui espaços por hífen
-    .replace(/[^a-z0-9\-]/g, ''); // remove qualquer outro caractere especial
+    .replace(/[^a-z0-9-]/g, ''); // remove qualquer outro caractere especial
 }
 
 export const database = [
@@ -18,7 +18,7 @@ export const database = [
     date: '2025 02',
     client: 'danilobatista',
     highlight: false,
-    category: 'landing page',
+    category: 'desenvolvimento',
   },
   {
     id: 2,
@@ -28,7 +28,7 @@ export const database = [
     date: '2025 02',
     client: 'rocketseat',
     highlight: true,
-    category: ['landing page', 'e-commerce'],
+    category: 'desenvolvimento',
   },
   {
     id: 3,
@@ -38,7 +38,7 @@ export const database = [
     date: '2025 02',
     client: 'alura',
     highlight: false,
-    category: 'landing page',
+    category: 'desenvolvimento',
   },
   {
     id: 4,
@@ -48,7 +48,7 @@ export const database = [
     date: '2025 03',
     client: 'alura',
     highlight: false,
-    category: 'landing page',
+    category: 'desenvolvimento',
   },
   {
     id: 5,
@@ -58,7 +58,7 @@ export const database = [
     date: '2025 03',
     client: 'alura',
     highlight: false,
-    category: 'landing page',
+    category: 'desenvolvimento',
   },
   {
     id: 6,
@@ -68,7 +68,7 @@ export const database = [
     date: '2025 03',
     client: 'alura',
     highlight: false,
-    category: 'landing page',
+    category: 'desenvolvimento',
   },
   {
     id: 7,
@@ -78,7 +78,7 @@ export const database = [
     date: '2025 03',
     client: 'alura',
     highlight: true,
-    category: 'landing page',
+    category: 'desenvolvimento',
     link: `https://serenatto-mocha.vercel.app/`,
   },
   {
@@ -89,7 +89,7 @@ export const database = [
     date: '2025 02',
     client: 'rocketseat',
     highlight: true,
-    category: 'feed',
+    category: 'desenvolvimento',
     link: `https://ignite-feed-six-silk.vercel.app/`,
   },
 ];
