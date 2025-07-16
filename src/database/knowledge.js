@@ -49,6 +49,7 @@ const knowledgeDatabase = [
     period: 'jan/2014 ~ jun/2020',
     title: 'Análise e Desenvolvimento de Sistemas',
     description: [
+      'Tecnólogo',
       'Orientação a objetos',
       'Scrum',
       'Kanban',
@@ -75,6 +76,7 @@ const knowledgeDatabase = [
     period: 'jul/2009 ~ jun/2011',
     title: 'Design Estratégico e Inovação',
     description: [
+      'Especilização',
       'Design Thinking',
       'Double Diamond',
       'Sustentabilidade',
