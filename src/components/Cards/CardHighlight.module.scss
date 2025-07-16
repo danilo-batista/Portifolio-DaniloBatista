@@ -12,6 +12,7 @@
 
     background-color: colors.$color__danger-100;
     border-radius: 1rem;
+    box-shadow: 1px 4px 8px 1px rgba(0, 0, 0, 0.125);
 
     @media screen and (min-width: 1024px) {
         flex-direction: row-reverse;
@@ -226,7 +227,7 @@
         align-items: center;
         gap: 0.25rem;
 
-        font-size: 0.75rem;
+        font-size: 1rem;
         font-weight: 700;
         line-height: 1rem;
 
@@ -237,7 +238,7 @@
         color: colors.$color__gray-700;
 
         @media screen and (min-width: 768px) {
-            font-size: 1rem;
+            font-size: 1.125rem;
         }
     }
 

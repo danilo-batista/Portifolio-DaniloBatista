@@ -4,13 +4,14 @@
 
 .container {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    flex-direction: column;
 }
 
 .section {
     margin: 3rem 0;
+    padding: 0 2.5%;
 
     @media screen and (min-width: 768px) {
         padding: 0 10%;
@@ -21,28 +22,34 @@
     }
 }
 
-.section__title {
-    font-weight: 700;
-    font-size: 1.75rem;
-    line-height: 3rem;
-    text-align: center;
 
-    width: 100%;
-    padding: 2rem 3rem 0 3rem;
+.container__title {
+    padding: 1rem 2rem 0 2rem;
+
+    font-size: 2rem;
+    font-weight: 700;
 
     color: colors.$color__gray-700;
 
+    @media screen and (min-width: 768px) {
+        padding: 2rem 3rem 0 3rem;
+
+        font-size: 2.25rem;
+        text-align: center;
+        line-height: 3.625rem;
+    }
+
     @media screen and (min-width: 1024px) {
-        font-size: 2.5rem;
-        line-height: 3.25rem;
+        text-align: left;
     }
 
     @media screen and (min-width: 1440px) {
-        font-size: 3.25rem;
+        font-size: 2.75rem;
+        line-height: 3.625rem;
     }
 }
 
-.section__description {
+.container__description {
     font-weight: 500;
     font-size: 1.125rem;
     line-height: 1.75rem;
@@ -53,18 +60,24 @@
 
     color: colors.$color__gray-500;
 
-    @media screen and (min-width: 1440px) {
+    @media screen and (min-width: 768px) {
+        padding: 0 3rem 2rem 3rem;
+        font-size: 1.375rem;
+        line-height: 1.75rem;
+    }
+
+    @media screen and (min-width: 1024px) {
         font-size: 1.5rem;
-        line-height: 2.75rem;
+        line-height: 2.25rem;
     }
 }
 
-.section__cards {
+.container__cards {
     display: flex;
     flex-direction: column;
 
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 2.5rem;
 
     >* {
         max-width: 100%;
@@ -91,19 +104,19 @@
     }
 }
 
+
 .section__moreProjects {
-    margin: 3rem 0 3rem 0;
+    margin: 3rem 0 1.25rem 0;
     text-align: center;
 
     >a {
-        font-size: 1rem;
         line-height: 1.625rem;
         font-weight: 700;
         text-align: center;
         text-decoration: none;
 
         padding: 0.75rem 1.25rem;
-        border-radius: 0.25rem;
+        border-radius: 0.5rem;
 
         border: 2px solid colors.$color__primary-500;
         background-color: colors.$color__primary-100;
@@ -112,7 +125,6 @@
         &:hover {
             background-color: colors.$color__primary-200;
             color: colors.$color__primary-700;
-
         }
     }
 }

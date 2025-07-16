@@ -1,7 +1,7 @@
-import * as styles from './CardsHighlightList.module.scss';
+import { Link } from 'react-router-dom';
 import { projectsList } from '../../database/projects';
 import { CardHighlight } from './CardHighlight';
-import { Link } from 'react-router-dom';
+import * as styles from './CardsHighlightList.module.scss';
 
 export function CardsHighlightList() {
   return (
