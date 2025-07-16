@@ -1,10 +1,5 @@
-import { CardsList } from '../components/Cards/CardsList';
-import styles from '../layouts/DefaultLayout.module.scss';
+import { PortfolioMainList } from '../components/PortfolioCard/PortfolioMainList';
 
 export function Portfolio() {
-  return (
-    <>
-      <CardsList />
-    </>
-  );
+  return <PortfolioMainList showHighlights={false} showMoreLinks={false} />;
 }
