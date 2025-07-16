@@ -1,12 +1,11 @@
-import { CardHighlight } from '../components/Cards/CardHighlight';
-import { CardsHighlightList } from '../components/Cards/CardsHighlightList';
 import { Hero } from '../components/Hero/Hero';
+import { PortfolioMainList } from '../components/PortfolioCard/PortfolioMainList';
 
 export function Home() {
   return (
     <>
       <Hero />
-      <CardsHighlightList />
+      <PortfolioMainList showHighlights={true} showMoreLinks={true} />
     </>
   );
 }
