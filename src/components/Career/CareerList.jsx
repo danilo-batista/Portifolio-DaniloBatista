@@ -1,6 +1,5 @@
-import styles from '../Career/CareerList.module.scss';
-
 import { careerList } from '../../database/career';
+import styles from '../Career/CareerList.module.scss';
 import { Career } from './Career';
 
 export function CareerList() {
@@ -16,20 +15,19 @@ export function CareerList() {
             .sort((a, b) => b.id - a.id)
             .map((career) => {
               return (
-                <>
-                  <Career
-                    id={career.id}
-                    company={career.company}
-                    slug={career.slug}
-                    brand={career.brand}
-                    link={career.link}
-                    period={career.period}
-                    title={career.title}
-                    resume={career.resume}
-                    description={career.description}
-                    extraProjects={career.extraProjects}
-                  />
-                </>
+                <Career
+                  key={career.id}
+                  id={career.id}
+                  company={career.company}
+                  slug={career.slug}
+                  brand={career.brand}
+                  link={career.link}
+                  period={career.period}
+                  title={career.title}
+                  resume={career.resume}
+                  description={career.description}
+                  extraProjects={career.extraProjects}
+                />
               );
             })}
         </ul>

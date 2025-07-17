@@ -1,9 +1,8 @@
-import { NavLink } from 'react-router-dom';
+import Hamburger from 'hamburger-react';
 import { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import { useClickAway } from 'react-use';
 import { menuList } from '../../Router';
-
-import Hamburger from 'hamburger-react';
 import styles from '../Menus/MenuMobile.module.scss';
 
 export function MenuMobile({ ref }) {

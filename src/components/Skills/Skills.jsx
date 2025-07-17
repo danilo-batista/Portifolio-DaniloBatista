@@ -1,5 +1,5 @@
-import styles from '../Skills/Skills.module.scss';
 import { skillsList } from '../../database/skillsList';
+import styles from '../Skills/Skills.module.scss';
 
 export function Skills() {
   return (
@@ -8,7 +8,11 @@ export function Skills() {
         <h2 className={styles.container__title}>Minhas Habilidades</h2>
         <ul className={styles.container__listItems}>
           {skillsList.map((skill) => {
-            return <li className={styles.container__items}>{skill}</li>;
+            return (
+              <li key={skill} className={styles.container__items}>
+                {skill}
+              </li>
+            );
           })}
         </ul>
       </div>

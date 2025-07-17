@@ -4,10 +4,8 @@ import { Router } from './Router';
 
 export function App() {
   return (
-    <>
-      <BrowserRouter>
-        <Router />
-      </BrowserRouter>
-    </>
+    <BrowserRouter>
+      <Router />
+    </BrowserRouter>
   );
 }

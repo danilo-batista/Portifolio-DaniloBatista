@@ -1,6 +1,5 @@
-import styles from '../Knowledge/KnowledgeList.module.scss';
-
 import { knowledgeList } from '../../database/knowledge.js';
+import styles from '../Knowledge/KnowledgeList.module.scss';
 import { Knowledge } from './Knowledge';
 
 export function KnowledgeList() {
@@ -16,20 +15,19 @@ export function KnowledgeList() {
             .sort((a, b) => b.id - a.id)
             .map((knowledge) => {
               return (
-                <>
-                  <Knowledge
-                    id={knowledge.id}
-                    company={knowledge.company}
-                    slug={knowledge.slug}
-                    brand={knowledge.brand}
-                    link={knowledge.link}
-                    period={knowledge.period}
-                    title={knowledge.title}
-                    resume={knowledge.resume}
-                    description={knowledge.description}
-                    extraProjects={knowledge.extraProjects}
-                  />
-                </>
+                <Knowledge
+                  key={knowledge.id}
+                  id={knowledge.id}
+                  company={knowledge.company}
+                  slug={knowledge.slug}
+                  brand={knowledge.brand}
+                  link={knowledge.link}
+                  period={knowledge.period}
+                  title={knowledge.title}
+                  resume={knowledge.resume}
+                  description={knowledge.description}
+                  extraProjects={knowledge.extraProjects}
+                />
               );
             })}
         </ul>

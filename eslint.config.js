@@ -1,8 +1,8 @@
-import globals from "globals";
+import jsxA11y from "eslint-plugin-jsx-a11y";
+import prettier from "eslint-plugin-prettier";
 import react from "eslint-plugin-react";
 import reactHooks from "eslint-plugin-react-hooks";
-import prettier from "eslint-plugin-prettier";
-import jsxA11y from "eslint-plugin-jsx-a11y";
+import globals from "globals";
 
 /** @type {import('eslint').Linter.Config[]} */
 export default [
@@ -29,7 +29,7 @@ export default [
       reactHooks: reactHooks,
       jsxA11y: jsxA11y,
       prettier: prettier,
-    },    
+    },
     rules: {
       "react/self-closing-comp": "error",
       "prettier/prettier": [
@@ -62,8 +62,8 @@ export default [
     },
     settings: {
       react: {
-        version: 'detect',
+        version: "detect",
       },
-    }
-  }
+    },
+  },
 ];
