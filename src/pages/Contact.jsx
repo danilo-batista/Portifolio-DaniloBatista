@@ -1,5 +1,5 @@
-import styles from '../layouts/DefaultLayout.module.scss';
+import { ContactForm } from '../components/Forms/ContactForm';
 
 export function Contact() {
-  return <h2 className={styles.h2}>Contact</h2>;
+  return <ContactForm />;
 }

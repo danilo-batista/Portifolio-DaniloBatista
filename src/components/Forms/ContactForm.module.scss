@@ -1,0 +1,82 @@
+@use "../../styles/base/fonts";
+@use "../../styles/base/colors";
+@use "../../styles/base/global";
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    width: 100%;
+
+    max-width: 90rem;
+    margin: 0 auto;
+}
+
+.section {
+    background-color: colors.$color__danger-100;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: 3rem;
+
+    padding: 5rem 2rem;
+
+    text-align: center;
+
+    @media screen and (min-width: 768px) {
+        padding: 5rem 10%;
+    }
+
+    @media screen and (min-width: 1024px) {
+        flex-direction: row;
+        text-align: left;
+        padding: 5rem 7.5%;
+    }
+
+    @media screen and (min-width: 1440px) {
+            gap: 8rem;
+
+    }
+
+    @media screen and (min-width: 2560px) {
+        padding: 5rem 25.5%;
+    }
+}
+
+// Form
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form__title {
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin-bottom: 1rem;
+    text-align: left;
+
+    span {
+        color: colors.$color__primary-700;
+    }
+
+    @media screen and (min-width: 1024px) {
+        font-size: 2.5rem;
+        line-height: 3.25rem;
+    }
+
+    @media screen and (min-width: 1440px) {
+        font-size: 3.25rem;
+        line-height: 4rem;
+    }
+}
+
+.form__contactData {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
