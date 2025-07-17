@@ -9,21 +9,30 @@
     flex-direction: column;
 
     gap: 2rem;
-    padding-top: 5rem;
+    max-width: 90rem;
+    margin: 0 auto;
 }
 
 .footer {
     background-color: colors.$color__gray-700;
     color: colors.$color__gray-100;
     text-align: center;
-
+    padding: 5rem 2rem 0 2rem;
 
     @media screen and (min-width: 768px) {
-        padding: 0 10%;
+        padding: 5rem 10% 0 10%;
     }
 
     @media screen and (min-width: 1024px) {
-        padding: 0 7.5%;
+        padding: 5rem 2rem 0 2rem;
+    }
+
+    @media screen and (min-width: 1440px) {
+            padding: 5rem 4rem 0 4rem;
+    }
+
+    @media screen and (min-width: 2560px) {
+            padding: 5rem 25.5% 0 25.5%;
     }
 }
 

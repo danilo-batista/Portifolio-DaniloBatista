@@ -168,7 +168,7 @@
 
 .resume__listItems {
     padding-bottom: 0.5rem;
-    
+
     @media screen and (min-width: 768px) {
         text-align: left;
     }
@@ -202,9 +202,11 @@
 }
 
 .resume__listItemsPills {
-    padding: 0.25rem 0.75rem;
-    border-radius: 1.25rem;
+    padding: 0.5rem 1rem;
+    border-radius: 3rem;
     font-weight: 700;
+    text-align: center;
+    line-height: 1.125rem;
 
     background-color: colors.$color__gray-100;
     border: 0.15rem solid colors.$color__gray-300;

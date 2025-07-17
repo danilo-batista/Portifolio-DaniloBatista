@@ -1,11 +1,10 @@
-import { Routes, Route } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 
 import { DefaultLayout } from './layouts/DefaultLayout';
-
-import { Home } from './pages/Home';
 import { About } from './pages/About';
-import { Portfolio } from './pages/Portfolio';
 import { Contact } from './pages/Contact';
+import { Home } from './pages/Home';
+import { Portfolio } from './pages/Portfolio';
 
 export const menuList = [
   {
@@ -35,7 +34,9 @@ export function Router() {
     <Routes>
       <Route path="/" element={<DefaultLayout />}>
         {menuList.map((menu) => {
-          return <Route path={menu.to} element={menu.element} />;
+          return (
+            <Route path={menu.to} element={menu.element} key={menu.title} />
+          );
         })}
       </Route>
     </Routes>
