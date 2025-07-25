@@ -1,5 +1,5 @@
 import emailjs from '@emailjs/browser';
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
 import styles from '../Forms/ContactForm.module.scss';
 import { HeroPicture } from '../Hero/HeroPicture';
@@ -8,8 +8,10 @@ import { InputField } from './InputField';
 import { TextAreaField } from './TextAreaField';
 
 export function ContactForm() {
-  const form = useRef();
-  const recaptchaRef = useRef();
+  const siteKey = import.meta.env.VITE_SITE_KEY;
+  const publicKey = import.meta.env.VITE_PUBLIC_KEY;
+  const templateID = import.meta.env.VITE_TEMPLATE_ID;
+  const serviceID = import.meta.env.VITE_SERVICE_ID;
 
   const [formData, setFormData] = useState({
     user_name: '',
@@ -19,11 +21,15 @@ export function ContactForm() {
     message: '',
   });
   const [captcha, setCaptcha] = useState('');
+  const [showCaptcha, setShowCaptcha] = useState(false);
 
-  const siteKey = import.meta.env.VITE_SITE_KEY;
-  const publicKey = import.meta.env.VITE_PUBLIC_KEY;
-  const templateID = import.meta.env.VITE_TEMPLATE_ID;
-  const serviceID = import.meta.env.VITE_SERVICE_ID;
+  const form = useRef();
+  const recaptchaRef = useRef();
+
+  useEffect(() => {
+    const allFilled = Object.values(formData).every((val) => val.trim() !== '');
+    setShowCaptcha(allFilled);
+  }, [formData]);
 
   function handleChange(event) {
     const { name, value } = event.target;
@@ -122,7 +128,7 @@ export function ContactForm() {
           <InputField
             label="Assunto"
             type="text"
-            placeholder="Parceria"
+            placeholder="Novos Projetos!"
             name="subject"
             value={formData.subject}
             onChange={handleChange}
@@ -132,18 +138,20 @@ export function ContactForm() {
           <TextAreaField
             label="Mensagem"
             name="message"
-            placeholder="It was a dark and stormy night..."
+            placeholder="Conte-me mais sobre a sua necessidade..."
             value={formData.message}
             onChange={handleChange}
             required
           />
 
-          <ReCAPTCHA
-            sitekey={siteKey}
-            onChange={setCaptcha}
-            ref={recaptchaRef}
-            className={styles.captcha}
-          />
+          {showCaptcha && (
+            <ReCAPTCHA
+              sitekey={siteKey}
+              onChange={setCaptcha}
+              ref={recaptchaRef}
+              className={styles.captcha}
+            />
+          )}
 
           <Button type="submit">Envie um Oi!</Button>
         </form>
