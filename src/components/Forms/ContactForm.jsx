@@ -27,7 +27,19 @@ export function ContactForm() {
 
   function handleChange(event) {
     const { name, value } = event.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
+
+    let newValue = value;
+
+    if (name === 'user_phone') {
+      const digits = value.replace(/\D/g, '');
+
+      newValue = digits
+        .replace(/^(\d{2})(\d)/, '($1) $2')
+        .replace(/(\d{5})(\d)/, '$1-$2')
+        .slice(0, 15);
+    }
+
+    setFormData((prev) => ({ ...prev, [name]: newValue }));
   }
 
   function sendEmail(event) {
