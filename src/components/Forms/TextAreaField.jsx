@@ -9,9 +9,12 @@ export function TextAreaField(props) {
 
       <textarea
         className={styles.textAreaField__text}
-        id={props.label}
+        id={props.name}
         name={props.name}
+        value={props.value}
+        onChange={props.onChange}
         placeholder={props.placeholder}
+        required={props.required}
         rows="5"
       />
     </article>

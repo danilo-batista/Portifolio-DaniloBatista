@@ -9,10 +9,13 @@ export function InputField(props) {
       <input
         className={styles.inputField__text}
         type={props.type}
-        id={props.label}
+        id={props.name}
         name={props.name}
+        value={props.value}
+        onChange={props.onChange}
         placeholder={props.placeholder}
         required={props.required}
+        pattern={props.pattern}
       />
     </article>
   );

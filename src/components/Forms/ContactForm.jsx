@@ -9,20 +9,37 @@ import { TextAreaField } from './TextAreaField';
 
 export function ContactForm() {
   const form = useRef();
-
   const recaptchaRef = useRef();
-  const [captcha, setCapcha] = useState('');
-  const siteKey = import.meta.env.VITE_SITE_KEY;
 
+  const [formData, setFormData] = useState({
+    user_name: '',
+    user_mail: '',
+    user_phone: '',
+    subject: '',
+    message: '',
+  });
+  const [captcha, setCaptcha] = useState('');
+
+  const siteKey = import.meta.env.VITE_SITE_KEY;
   const publicKey = import.meta.env.VITE_PUBLIC_KEY;
   const templateID = import.meta.env.VITE_TEMPLATE_ID;
   const serviceID = import.meta.env.VITE_SERVICE_ID;
+
+  function handleChange(event) {
+    const { name, value } = event.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  }
 
   function sendEmail(event) {
     event.preventDefault();
 
     if (!captcha) {
       alert('⚠️ Por favor, resolva o reCAPTCHA antes de enviar.');
+      return;
+    }
+
+    if (!form.current.checkValidity()) {
+      form.current.reportValidity();
       return;
     }
 
@@ -35,10 +52,15 @@ export function ContactForm() {
           alert('✅ Mensagem enviada com sucesso!');
           console.log('Email enviado:', result.text);
 
-          // Limpa captcha e formulário
           recaptchaRef.current.reset();
           setCaptcha('');
-          form.current.reset();
+          setFormData({
+            user_name: '',
+            user_mail: '',
+            user_phone: '',
+            subject: '',
+            message: '',
+          });
         },
         (error) => {
           console.error('Erro ao enviar:', error.text);
@@ -59,6 +81,8 @@ export function ContactForm() {
             type="text"
             placeholder="Jack Sparrow"
             name="user_name"
+            value={formData.user_name}
+            onChange={handleChange}
             required
           />
 
@@ -67,6 +91,8 @@ export function ContactForm() {
             type="email"
             placeholder="sparrow@email.com"
             name="user_mail"
+            value={formData.user_mail}
+            onChange={handleChange}
             required
           />
 
@@ -76,6 +102,8 @@ export function ContactForm() {
             placeholder="(11) 98765-4321"
             name="user_phone"
             pattern="\([0-9]{2}\) [0-9]{5}-[0-9]{4}"
+            value={formData.user_phone}
+            onChange={handleChange}
             required
           />
 
@@ -84,6 +112,8 @@ export function ContactForm() {
             type="text"
             placeholder="Parceria"
             name="subject"
+            value={formData.subject}
+            onChange={handleChange}
             required
           />
 
@@ -91,12 +121,14 @@ export function ContactForm() {
             label="Mensagem"
             name="message"
             placeholder="It was a dark and stormy night..."
+            value={formData.message}
+            onChange={handleChange}
             required
           />
 
           <ReCAPTCHA
             sitekey={siteKey}
-            onChange={setCapcha}
+            onChange={setCaptcha}
             ref={recaptchaRef}
             className={styles.captcha}
           />
