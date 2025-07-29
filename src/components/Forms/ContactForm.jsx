@@ -97,7 +97,7 @@ export function ContactForm() {
           <InputField
             label="Nome"
             type="text"
-            placeholder="Jack Sparrow"
+            placeholder="Seu nome"
             name="user_name"
             value={formData.user_name}
             onChange={handleChange}
@@ -107,7 +107,7 @@ export function ContactForm() {
           <InputField
             label="E-mail"
             type="email"
-            placeholder="sparrow@email.com"
+            placeholder="seunome@email.com"
             name="user_mail"
             value={formData.user_mail}
             onChange={handleChange}
@@ -117,7 +117,7 @@ export function ContactForm() {
           <InputField
             label="Telefone"
             type="tel"
-            placeholder="(11) 98765-4321"
+            placeholder="(00) 00000-0000"
             name="user_phone"
             pattern="\([0-9]{2}\) [0-9]{5}-[0-9]{4}"
             value={formData.user_phone}
@@ -138,7 +138,7 @@ export function ContactForm() {
           <TextAreaField
             label="Mensagem"
             name="message"
-            placeholder="Conte-me mais sobre a sua necessidade..."
+            placeholder="Conte-me mais sobre o assunto..."
             value={formData.message}
             onChange={handleChange}
             required
