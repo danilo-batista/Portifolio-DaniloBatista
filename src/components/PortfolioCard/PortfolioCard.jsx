@@ -13,6 +13,7 @@ export function PortfolioCard(props) {
             src={`/thumbnails/${props.thumbnail}`}
             alt={`Imagem de capa do projeto ${props.title}.`}
             className={styles.article__thumbnailImage}
+            loading="lazy"
           />
         </a>
       </div>

@@ -1,0 +1,48 @@
+@use "../../styles/base/fonts";
+@use "../../styles/base/colors";
+@use "../../styles/base/global";
+
+.inputField__data {
+    display: flex;
+    flex-direction: column;
+}
+
+.inputField__label {
+    display: block;
+
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 1.75rem;
+    text-align: left;
+
+    color: colors.$color__gray-700;
+}
+
+.inputField__text {
+    display: block;
+    height: 3.25rem;
+    padding: 0.75rem 1.25rem;
+
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 1.75rem;
+    text-align: left;
+
+    border-radius: 0.25rem;
+    border: 1px solid colors.$color__gray-300;
+
+    &::placeholder {
+        font-size: 1.125rem;
+
+        background-color: colors.$color__white;
+        color: colors.$color__gray-300;
+    }
+
+    &:user-valid {
+        border: 2px solid colors.$color__success-500;
+    }
+
+    &:user-invalid {
+        border: 2px solid colors.$color__danger-300;
+    }
+}
