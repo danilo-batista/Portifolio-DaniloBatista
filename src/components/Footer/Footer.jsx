@@ -13,6 +13,7 @@ export function Footer() {
               src={daniloBatistaPicture}
               alt="Foto de Danilo Batista, homem branco, careca, com barba, utilizando uma camiseta de cor vinho em um fundo bege."
               className={styles.hero__profilePicture}
+              loading="lazy"
             />
           </div>
           <div className={styles.footer__socialInfo}>
