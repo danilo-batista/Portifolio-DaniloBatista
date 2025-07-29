@@ -10,6 +10,7 @@ export function Knowledge(props) {
             src={props.brand}
             alt={`Logotipo ${props.company}`}
             className={styles.item__brand}
+            loading="lazy"
           />
         </Link>
 

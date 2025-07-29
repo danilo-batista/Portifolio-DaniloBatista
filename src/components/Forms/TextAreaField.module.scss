@@ -38,4 +38,12 @@
         color: colors.$color__gray-300;
 
     }
+
+    &:user-valid {
+        border: 2px solid colors.$color__success-500;
+    }
+
+    &:user-invalid {
+        border: 2px solid colors.$color__danger-300;
+    }
 }
