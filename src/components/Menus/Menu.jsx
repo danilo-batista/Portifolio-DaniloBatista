@@ -29,7 +29,7 @@ export function Menu() {
   return (
     <nav className={styles.menuList__wrapper}>
       <div className={styles.menuList__mobile} ref={ref}>
-        <HamburgerButton onToggle={setIsOpen} />
+        <HamburgerButton isOpen={isOpen} onToggle={setIsOpen} />
         {isOpen && (
           <ul className={styles.menuList}>
             {menuList.map((menu) => {
