@@ -1,10 +1,12 @@
 /* Disponibiliza os estilos para reutilização. */
 @forward './colors';
 @forward './fonts';
+@forward './tokens';
 
 /* Utiliza os arquivos localmente. */
 @use './colors' as *;
 @use './fonts' as *;
+@use './tokens' as *;
 
 /* Estilos globais. */
 :root {

@@ -2,3 +2,6 @@
 @forward 'base/reset';
 @forward 'base/normalize';
 @forward 'base/global';
+
+/* Disponibiliza os 'mixins' para reutilização. */
+@forward 'utils/mixins.scss';

@@ -9,22 +9,19 @@ export function Header() {
 
   return (
     <header className={styles.header}>
-      <div className={styles.container}>
-        <h1 className={styles.header__brand}>
-          <NavLink to="/">
-            danilo<span>batista®</span>
-          </NavLink>
-        </h1>
-
-        <nav className={styles.header__navigation}>
-          <div className={styles.container__menuMobile} ref={ref}>
-            <MenuMobile ref={ref} />
-          </div>
-          <div className={styles.container__menuFull}>
-            <Menu />
-          </div>
-        </nav>
-      </div>
+      <h1 className={styles.header__brand}>
+        <NavLink to="/">
+          danilo<span>batista®</span>
+        </NavLink>
+      </h1>
+      <nav className={styles.header__navigation}>
+        <div className={styles.container__menuMobile} ref={ref}>
+          <MenuMobile ref={ref} />
+        </div>
+        <div className={styles.container__menuFull}>
+          <Menu />
+        </div>
+      </nav>
     </header>
   );
 }
