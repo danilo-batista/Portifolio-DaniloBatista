@@ -1,5 +1,7 @@
+$font__carbona: "Carbona", sans-serif;
+
 @font-face {
-  font-family: "Carbona", sans-serif;
+  font-family: "Carbona";
   src:
     url("../../assets/fonts/Carbona-Bold.woff2") format("woff2"),
     url("../../assets/fonts/Carbona-Black.woff2") format("woff2"),
@@ -11,19 +13,4 @@
     url("../../assets/fonts/Carbona-MediumSlanted.woff2") format("woff2"),
     url("../../assets/fonts/Carbona-RegularSlanted.woff2") format("woff2"),
     url("../../assets/fonts/Carbona-LightSlanted.woff2") format("woff2");
-}
-
-$font__carbona: "Carbona", sans-serif;
-
-:root {
-  font-family: $font__carbona;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 1rem;
-  line-height: 1.5;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }

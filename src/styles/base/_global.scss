@@ -1,30 +1,39 @@
-@use "reset";
-@use "normalize";
-@use "fonts";
-@use "colors";
+/* Disponibiliza os estilos para reutilização. */
+@forward './colors';
+@forward './fonts';
 
+/* Utiliza os arquivos localmente. */
+@use './colors' as *;
+@use './fonts' as *;
+
+/* Estilos globais. */
 :root {
-  :focus {
-    outline: 0;
-  }
+    :focus {
+        outline: 0;
+    }
 
-  body {
-    background-color: colors.$color__gray-100;
-    color: colors.$color__gray-900;
-  }
+    body {
+        background-color: $color__gray-100;
+        color: $color__gray-900;
+    }
 
-  body,
-  input,
-  textarea,
-  button {
-    font-family: fonts.$font__carbona;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 1rem;
-    line-height: 1.5;
-  }
+    body,
+    input,
+    textarea,
+    button {
+        font-family: $font__carbona;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 1.5rem;
 
-  a {
-    text-decoration: none;
-  }
+        font-synthesis: none;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    a {
+        text-decoration: none;
+    }
 }
