@@ -37,24 +37,3 @@
         font-size: 1.5rem;
     }
 }
-
-.header__navigation {
-    position: relative;
-}
-
-/* Estilos para os componentes de Menu inseridos. */
-.container__menuFull {
-    display: none;
-
-    @media screen and (min-width: $breakpoint__tablet) {
-        display: block;
-    }
-}
-
-.container__menuMobile {
-    display: block;
-
-    @media screen and (min-width: $breakpoint__tablet) {
-        display: none;
-    }
-}

@@ -2,9 +2,10 @@
 
 @mixin flexbox($justifyContent: space-between,
     $alignItems: center,
-    $flexDirection: row) {
+    $flexDirection: row, $gap: gap) {
     display: flex;
     justify-content: $justifyContent;
     align-items: $alignItems;
     flex-direction: $flexDirection;
+    gap: $gap;
 }
