@@ -1,7 +1,7 @@
 @use '../styles/main' as *;
 
 .main {
-    margin-inline: 2rem;
+    margin-inline: 1rem;
 
     @media screen and (min-width: $breakpoint__desktop) {
         max-width: $maxWidth__desktop;

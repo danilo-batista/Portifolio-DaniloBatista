@@ -1,10 +1,11 @@
-import { Hero } from '../components/Hero/Hero';
+import { NewHero } from '../components/Hero/NewHero';
 import { PortfolioMainList } from '../components/PortfolioCard/PortfolioMainList';
 
 export function Home() {
   return (
     <>
-      <Hero />
+      <NewHero />
+      {/* <Hero /> */}
       <PortfolioMainList showHighlights={true} showMoreLinks={true} />
     </>
   );
