@@ -19,6 +19,7 @@ export const database = [
     client: 'danilobatista',
     highlight: false,
     category: 'desenvolvimento',
+    tags: ['css', 'html'],
   },
   {
     id: 2,
@@ -29,6 +30,7 @@ export const database = [
     client: 'rocketseat',
     highlight: true,
     category: 'desenvolvimento',
+    tags: ['css', 'html'],
   },
   {
     id: 3,
@@ -39,6 +41,7 @@ export const database = [
     client: 'alura',
     highlight: false,
     category: 'desenvolvimento',
+    tags: ['css', 'html'],
   },
   {
     id: 4,
@@ -49,6 +52,7 @@ export const database = [
     client: 'alura',
     highlight: false,
     category: 'desenvolvimento',
+    tags: ['css', 'html'],
   },
   {
     id: 5,
@@ -59,6 +63,7 @@ export const database = [
     client: 'alura',
     highlight: false,
     category: 'desenvolvimento',
+    tags: ['css', 'html'],
   },
   {
     id: 6,
@@ -69,6 +74,7 @@ export const database = [
     client: 'alura',
     highlight: false,
     category: 'desenvolvimento',
+    tags: ['css', 'html'],
   },
   {
     id: 7,
@@ -79,6 +85,7 @@ export const database = [
     client: 'alura',
     highlight: true,
     category: 'desenvolvimento',
+    tags: ['sass', 'html'],
     link: `https://serenatto-mocha.vercel.app/`,
   },
   {
@@ -90,6 +97,7 @@ export const database = [
     client: 'rocketseat',
     highlight: true,
     category: 'desenvolvimento',
+    tags: ['react', 'css modules'],
     link: `https://ignite-feed-six-silk.vercel.app/`,
   },
 ];

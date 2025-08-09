@@ -1,0 +1,148 @@
+@use '../../styles/main' as *;
+
+/* Elementos do card básico de Portifólio */
+.card {
+    @include flexbox($flexDirection: column);
+
+    width: 100%;
+    height: 100%;
+
+    background-color: $color__danger-100;
+    border-radius: 1rem;
+    box-shadow: 1px 4px 8px 1px rgba(0, 0, 0, 0.125);
+}
+
+.card__even {
+    background-color: $color__secondary-100;
+    border-radius: 1rem;
+
+    .card__infoCategory {
+        color: $color__secondary-600;
+    }
+
+    .card__infoTitle {
+        color: $color__secondary-700;
+    }
+
+    .card__infoPills {
+        & .card__listItemsPills {
+            color: $color__secondary-800;
+            background-color: $color__secondary-200;
+
+            border: 2px solid $color__secondary-500;
+        }
+    }
+}
+
+/* Estilos das imagens */
+.card__thumbnail {
+    width: 100%;
+
+    position: relative;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+
+    box-shadow: 1px 4px 8px 1px rgba(0, 0, 0, 0.125);
+}
+
+.card__thumbnailImage {
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+
+    border-radius: 0.5rem 0.5rem 0 0;
+    box-shadow: 0px 1px 8px 4px rgba(0, 0, 0, 0.125);
+}
+
+
+/* Estilos das informações */
+.card__information {
+    @include flexbox($flexDirection: column, $alignItems: flex-start);
+
+    padding: 0 1.5rem;
+}
+
+.card__infoCategory {
+    margin-top: 0.125rem;
+    padding-left: 0.25rem;
+
+    font-size: 1.125rem;
+    font-weight: 700;
+
+    color: $color__danger-500;
+}
+
+.card__infoTitle {
+    margin-top: 1.75rem;
+    padding-left: 0.25rem;
+
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 2rem;
+
+    color: $color__danger-500;
+}
+
+.card__infoDescription {
+    margin: 1rem 0 0.75rem 0;
+    padding-left: 0.25rem;
+
+    color: $color__gray-900;
+}
+
+
+/* Estilos de tags*/
+.card__infoPills {
+    @include flexbox($flexDirection: row, $justifyContent: flex-start, $alignItems: center, $gap: 0.375rem);
+    flex-wrap: wrap;
+
+    width: 100%;
+    margin-top: 1.25rem;
+
+    font-size: 0.75rem
+}
+
+.card__listItemsPills {
+    padding: 0.25rem 0.75rem;
+
+    color: $color__danger-800;
+    background-color: $color__danger-200;
+
+    border: 1.5px solid $color__danger-500;
+    border-radius: 1.5rem;
+
+    font-weight: 600;
+    line-height: 1.125rem;
+}
+
+
+/* Estilos de links*/
+.card__containerLinks {
+    @include flexbox($justifyContent: center, $alignItems: flex-start,
+        $flexDirection: column);
+
+    width: 100%;
+    margin-top: auto;
+    padding: 0 1.5rem 1rem 1.5rem;
+}
+
+.card__links {
+    @include flexbox($alignItems: left, $gap: 1rem);
+    flex-wrap: nowrap;
+
+    padding: 1rem 0 0 0;
+
+    & a {
+        @include flexbox($alignItems: center, $gap: 0.25rem);
+
+        font-weight: 700;
+        line-height: 1.5rem;
+
+        border-radius: 0.5rem;
+        color: $color__gray-700;
+    }
+
+    & svg {
+        stroke: $color__gray-700;
+    }
+}

@@ -1,0 +1,152 @@
+@use '../../styles/main' as *;
+
+/* Elementos da lista de Portifólio */
+.cardList {
+    @include flexbox($flexDirection: column, $justifyContent: flex-start, $alignItems: left, $gap: 1rem);
+
+    padding: 1.75rem 0;
+
+    text-align: left;
+
+    // background-color: $color__info-300;
+
+    @media screen and (min-width: $breakpoint__mediumCellPhone) {
+        padding: 1.825rem 1rem;
+    }
+
+    @media screen and (min-width: $breakpoint__cellPhone) {
+        padding: 2rem 1rem;
+    }
+
+    @media screen and (min-width: $breakpoint__tablet) {
+        @include flexbox($flexDirection: column, $justifyContent: flex-start, $alignItems: center, $gap: 2rem);
+        padding: 5rem 1rem 2rem;
+    }
+
+    @media screen and (min-width: $breakpoint__smallDesktop) {
+        padding: 5rem 1rem 3rem;
+    }
+
+    @media screen and (min-width: $breakpoint__desktop) {
+        padding: 7rem 5rem 5rem;
+    }
+}
+
+.cardList__title {
+    padding-inline: 1.5rem;
+
+    font-weight: 700;
+    font-size: 1.875rem;
+    line-height: 2.5rem;
+
+    @media screen and (min-width: $breakpoint__cellPhone) {
+        font-size: 2rem;
+        line-height: 2.75rem;
+    }
+
+    @media screen and (min-width: $breakpoint__tablet) {
+        padding-inline: 3.5rem;
+
+        font-size: 3rem;
+        line-height: 4rem;
+    }
+
+    @media screen and (min-width: $breakpoint__smallDesktop) {
+        font-size: 3.75rem;
+        line-height: 4.25rem;
+    }
+
+    @media screen and (min-width: $breakpoint__desktop) {
+        font-size: 4.5rem;
+        line-height: 5.125rem;
+    }
+}
+
+.cardList__subtitle {
+    padding-inline: 1.5rem;
+
+    text-align: left;
+
+    @media screen and (min-width: $breakpoint__cellPhone) {
+        font-size: 1.125rem;
+    }
+
+    @media screen and (min-width: $breakpoint__tablet) {
+        padding-inline: 3.5rem;
+    }
+
+    @media screen and (min-width: $breakpoint__smallDesktop) {
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+
+    @media screen and (min-width: $breakpoint__desktop) {
+        font-size: 1.75rem;
+        line-height: 2.5rem;
+    }
+}
+
+.cardList__cards {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr;
+
+    padding-inline: 1.5rem;
+    height: 100%;
+
+    @media screen and (min-width: $breakpoint__tablet) {
+        grid-template-columns: repeat(2, 1fr);
+        padding-inline: 3.5rem;
+    }
+
+    @media screen and (min-width: $breakpoint__smallDesktop) {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2.75rem;
+    }
+
+    @media screen and (min-width: $breakpoint__largeDesktop) {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2.5rem;
+    }
+}
+
+.cardList__buttons {
+    @include flexbox($justifyContent: space-around,
+        $alignItems: center,
+        $flexDirection: row);
+
+    margin-top: 1.5rem;
+    padding-inline: 1.5rem;
+
+    @media screen and (min-width: $breakpoint__tablet) {
+        @include flexbox($gap: 2rem);
+        flex-wrap: nowrap;
+        padding: 1rem 3.5rem 0;
+    }
+}
+
+.cardList__button {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+    border: 2px solid $color__gray-900;
+
+    font-weight: 700;
+    text-align: center;
+
+    background-color: $color__gray-900;
+    border: 2px solid $color__gray-700;
+
+    color: $color__gray-100;
+
+    @media screen and (min-width: $breakpoint__smallDesktop) {
+        font-size: 1.25rem;
+    }
+
+    @media screen and (min-width: $breakpoint__desktop) {
+        padding: 1.5rem 1.5rem;
+        font-size: 1.5rem;
+
+        border: 1.5px solid $color__gray-500;
+    }
+}
