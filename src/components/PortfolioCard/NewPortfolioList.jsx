@@ -39,13 +39,15 @@ export function NewPortfolioList(props) {
           );
         })}
       </div>
-      {props.showMoreLinks && (
-        <div className={styles.cardList__buttons}>
-          <Link to="/portifolio" className={styles.cardList__button}>
-            Veja mais projetos aqui
-          </Link>
-        </div>
-      )}
+      <div className={styles.cardList__links}>
+        {props.showMoreLinks && (
+          <div className={styles.cardList__buttons}>
+            <Link to="/portifolio" className={styles.cardList__button}>
+              Veja mais projetos aqui
+            </Link>
+          </div>
+        )}
+      </div>
     </section>
   );
 }

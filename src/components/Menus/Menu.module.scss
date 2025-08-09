@@ -37,7 +37,7 @@
 /* Elementos do Menu Desktop */
 .menuList__desktop {
     display: none;
-    gap: 1.5rem;
+    gap: 1rem;
 
     @media screen and (min-width: $breakpoint__tablet) {
         display: flex;
@@ -51,6 +51,10 @@
     border-radius: 0.5rem;
     padding-inline: 0.5rem;
     white-space: nowrap;
+
+    @media screen and (min-width: $breakpoint__desktop) {
+        font-size: 1.25rem;
+    }
 }
 
 .menuList__itemActive {
