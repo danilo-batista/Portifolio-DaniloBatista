@@ -139,8 +139,11 @@
         }
     }
 
-    @media screen and (min-width: $breakpoint__smallDesktop) {
+    @media screen and (min-width: $breakpoint__tablet) {
         width: auto;
+    }
+
+    @media screen and (min-width: $breakpoint__smallDesktop) {
         font-size: 1.25rem;
     }
 
