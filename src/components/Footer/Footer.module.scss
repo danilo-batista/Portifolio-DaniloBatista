@@ -1,6 +1,4 @@
-@use "../../styles/base/fonts";
-@use "../../styles/base/colors";
-@use "../../styles/base/global";
+@use '../../styles/main' as *;
 
 .container {
     display: flex;
@@ -14,8 +12,8 @@
 }
 
 .footer {
-    background-color: colors.$color__gray-700;
-    color: colors.$color__gray-100;
+    background-color: $color__gray-700;
+    color: $color__gray-100;
     text-align: center;
     padding: 5rem 2rem 0 2rem;
 
@@ -28,11 +26,11 @@
     }
 
     @media screen and (min-width: 1440px) {
-            padding: 5rem 4rem 0 4rem;
+        padding: 5rem 4rem 0 4rem;
     }
 
     @media screen and (min-width: 2560px) {
-            padding: 5rem 25.5% 0 25.5%;
+        padding: 5rem 25.5% 0 25.5%;
     }
 }
 
@@ -47,7 +45,7 @@
     overflow: hidden;
     position: relative;
 
-    border: 3px solid colors.$color__gray-300;
+    border: 3px solid $color__gray-300;
     ;
 
     >img {
@@ -79,7 +77,7 @@
     margin-bottom: 1rem;
 
     span {
-        color: colors.$color__primary-700;
+        color: $color__primary-700;
     }
 
     @media screen and (min-width: 1024px) {
@@ -95,10 +93,10 @@
 
 .footer__socialDescription {
     >a {
-        color: colors.$color__gray-400;
+        color: $color__gray-400;
 
         &:hover {
-            color: colors.$color__gray-100;
+            color: $color__gray-100;
         }
     }
 }
@@ -109,32 +107,50 @@
     padding-bottom: 3rem;
 
     >a {
-        color: colors.$color__gray-100;
+        color: $color__gray-100;
 
         &:hover {
-            color: colors.$color__gray-300;
+            color: $color__gray-300;
         }
     }
 }
 
-.footer__copyright {
-    width: 100vw;
+.cardList__buttons {
+    @include flexbox($justifyContent: space-around,
+        $alignItems: center,
+        $flexDirection: row);
+
+    padding-inline: 1.5rem;
+
+    @media screen and (min-width: $breakpoint__tablet) {
+        @include flexbox($gap: 2rem);
+        flex-wrap: nowrap;
+        padding: 1rem 3.5rem 0;
+    }
 }
 
-.footer__copy {
+.cardList__button {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+    border: 2px solid $color__gray-900;
+
     font-weight: 700;
-    padding: 1rem 3rem;
-    background-color: colors.$color__gray-900;
+    text-align: center;
 
-    >span {
-        font-weight: 500;
+    background-color: $color__gray-900;
+    border: 2px solid $color__gray-700;
+
+    color: $color__gray-100;
+
+    @media screen and (min-width: $breakpoint__smallDesktop) {
+        font-size: 1.25rem;
     }
 
-    >a {
-        color: colors.$color__gray-400;
+    @media screen and (min-width: $breakpoint__desktop) {
+        padding: 1.5rem 1.5rem;
+        font-size: 1.5rem;
 
-        &:hover {
-            color: colors.$color__gray-100;
-        }
+        border: 1.5px solid $color__gray-500;
     }
 }

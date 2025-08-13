@@ -21,32 +21,24 @@ export function Footer() {
             <h3 className={styles.footer__socialTitle}>
               Gostou do meu trabalho? Diga "Oi!" e vamos crescer juntos!
             </h3>
-            <p className={styles.footer__socialDescription}>
-              Estou sempre disponível para um bate-papo. Envie-me um e-mail para{' '}
-              <Link to="mailto:hello@danilobatista.com">
-                hello@danilobatista.com
-              </Link>{' '}
-              ou me chame nas redes sociais.
-            </p>
+            <div className={styles.cardList__buttons}>
+              <Link to="/portifolio" className={styles.cardList__button}>
+                Vamos conversar!
+              </Link>
+              <Link
+                to={`https://www.linkedin.com/in/danilobatista/`}
+                className={styles.footer__socialMedia}
+              >
+                <AiFillLinkedin size={32} strokeWidth={2.25} />
+              </Link>
+              <Link
+                to={`https://github.com/danilo-batista/`}
+                className={styles.footer__socialMedia}
+              >
+                <AiOutlineGithub size={32} strokeWidth={2.25} />
+              </Link>
+            </div>
           </div>
-          <div className={styles.footer__socialMedia}>
-            <Link to={`https://www.linkedin.com/in/danilobatista/`}>
-              <AiFillLinkedin size={32} strokeWidth={2.25} />
-            </Link>
-            <Link to={`https://github.com/danilo-batista/`}>
-              <AiOutlineGithub size={32} strokeWidth={2.25} />
-            </Link>
-          </div>
-        </div>
-        <div className={styles.footer__copyright}>
-          <p className={styles.footer__copy}>
-            todos os direitos reservados . danilo<span>batista®</span> . 2025 .
-            For design portfolio, please access{' '}
-            <Link to="https://www.danilobatista.com.br" target="_blank">
-              danilobatista.com.br
-            </Link>
-            .
-          </p>
         </div>
       </div>
     </footer>
