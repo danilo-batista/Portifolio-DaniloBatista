@@ -30,11 +30,9 @@ export function Career(props) {
           <summary>Leia mais aqui!</summary>
           <ul>
             {props.resume.map((resume) => (
-              <>
-                <li className={styles.resume__listItems} key={resume}>
-                  {resume}
-                </li>
-              </>
+              <li className={styles.resume__listItems} key={resume}>
+                {resume}
+              </li>
             ))}
           </ul>
 
@@ -46,11 +44,9 @@ export function Career(props) {
 
           <ul>
             {props.extraProjects.map((extraProjects) => (
-              <>
-                <li className={styles.resume__listItems} key={extraProjects}>
-                  {extraProjects}
-                </li>
-              </>
+              <li className={styles.resume__listItems} key={extraProjects}>
+                {extraProjects}
+              </li>
             ))}
           </ul>
         </details>

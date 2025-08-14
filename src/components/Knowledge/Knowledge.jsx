@@ -30,11 +30,9 @@ export function Knowledge(props) {
 
         <ul>
           {props.extraProjects.map((extraProjects) => (
-            <>
-              <li className={styles.resume__listItems} key={extraProjects}>
-                {extraProjects}
-              </li>
-            </>
+            <li className={styles.resume__listItems} key={extraProjects}>
+              {extraProjects}
+            </li>
           ))}
         </ul>
       </div>
@@ -42,11 +40,9 @@ export function Knowledge(props) {
       <div className={styles.items__container}>
         <ul className={styles.resume__list}>
           {props.description.map((description) => (
-            <>
-              <li className={styles.resume__listItemsPills} key={description}>
-                {description}
-              </li>
-            </>
+            <li className={styles.resume__listItemsPills} key={description}>
+              {description}
+            </li>
           ))}
         </ul>
       </div>

@@ -25,7 +25,6 @@ export function NewMainFooter() {
           <Link
             to={`https://www.linkedin.com/in/danilobatista/`}
             className={styles.cardList__button}
-            ß
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"

@@ -1,10 +1,11 @@
 @use '../../styles/main' as *;
 
-/* Elementos do Hero */
-.hero {
+/* Elementos da lista de Skills */
+.skill {
     @include flexbox($flexDirection: column, $justifyContent: flex-start, $alignItems: left, $gap: 3rem);
 
     padding: 1.75rem 0;
+    margin: 3rem 0;
 
     text-align: left;
     // background-color: $color__info-300;
@@ -18,7 +19,7 @@
     }
 
     @media screen and (min-width: $breakpoint__tablet) {
-        @include flexbox($flexDirection: column, $justifyContent: flex-start, $alignItems: center, $gap: 2rem);
+        @include flexbox($flexDirection: column, $justifyContent: flex-start, $alignItems: left, $gap: 2rem);
         padding: 5rem 1rem 2rem;
     }
 
@@ -31,11 +32,7 @@
     }
 }
 
-.hero__listDescription {
-    @include flexbox($flexDirection: column, $alignItems: flex-start, $gap: 2rem);
-}
-
-.hero__title {
+.skill__title {
     padding-inline: 1.5rem;
 
     font-weight: 700;
@@ -49,46 +46,40 @@
 
     @media screen and (min-width: $breakpoint__tablet) {
         padding-inline: 3.5rem;
-        white-space: nowrap;
 
         font-size: 3rem;
         line-height: 4rem;
     }
 
-    @media screen and (min-width: $breakpoint__smallDesktop) {
+    @media screen and (min-width: $breakpoint__desktop) {
         font-size: 3.75rem;
         line-height: 4.25rem;
     }
-
-    @media screen and (min-width: $breakpoint__desktop) {
-        font-size: 4.5rem;
-        line-height: 5.125rem;
-    }
 }
 
-.hero__description {
+.skill__listItems {
+    @include flexbox($flexDirection: row, $justifyContent: center, $alignItems: center, $gap: 2.25rem);
+
+    flex-wrap: wrap;
     padding-inline: 1.5rem;
-    text-align: left;
+    margin-top: auto;
+}
 
-    &>span {
-        font-weight: 700;
-    }
+.skill__items {
+    flex-grow: 1;
+    padding: 0 1.5rem 0.75rem 1.5rem;
 
-    @media screen and (min-width: $breakpoint__cellPhone) {
-        font-size: 1.125rem;
-    }
+    
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+    
+    color: $color__gray-700;
+    border-bottom: 2px solid $color__gray-300;
 
     @media screen and (min-width: $breakpoint__tablet) {
-        padding: 0.5rem 3.5rem 0.5rem 3.5rem;
-    }
+        padding: 0 3.5rem 0.75rem 3.5rem;
 
-    @media screen and (min-width: $breakpoint__smallDesktop) {
         font-size: 1.5rem;
-        line-height: 2rem;
-    }
-
-    @media screen and (min-width: $breakpoint__desktop) {
-        font-size: 1.75rem;
-        line-height: 2.5rem;
+        line-height: 2.25rem;
     }
 }
