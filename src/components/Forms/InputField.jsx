@@ -1,14 +1,14 @@
-import styles from '../Forms/InputField.module.scss';
+import styles from '../Forms/GenericField.module.scss';
 
 export function InputField(props) {
   return (
-    <article className={styles.inputField__data}>
-      <label className={styles.inputField__label} htmlFor={props.name}>
+    <article className={styles.genericField__data}>
+      <label className={styles.genericField__label} htmlFor={props.name}>
         {props.label}
       </label>
+
       <input
-        className={styles.inputField__text}
-        type={props.type}
+        className={styles.genericField__text}
         id={props.name}
         name={props.name}
         value={props.value}
@@ -16,6 +16,7 @@ export function InputField(props) {
         placeholder={props.placeholder}
         required={props.required}
         pattern={props.pattern}
+        type={props.type}
       />
     </article>
   );

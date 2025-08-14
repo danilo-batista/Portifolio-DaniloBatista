@@ -1,0 +1,20 @@
+@use '../../styles/main.scss' as *;
+
+/* Elementos do Botão */
+.button {
+    width: 100%;
+    padding: 1rem 1.5rem;
+
+    border-radius: 0.5rem;
+    border: none;
+
+    text-align: center;
+
+    background-color: $color__gray-900;
+    color: $color__gray-100;
+
+    &:hover {
+        background-color: $color__secondary-600;
+        color: $color__secondary-900;
+    }
+}

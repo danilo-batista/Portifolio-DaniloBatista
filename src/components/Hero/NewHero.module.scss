@@ -121,9 +121,11 @@
 .hero__button {
     width: 100%;
     padding: 1rem 1.5rem;
+
     border-radius: 0.5rem;
     border: 2px solid $color__gray-900;
 
+    font-weight: 700;
     text-align: center;
 
     &:first-child {

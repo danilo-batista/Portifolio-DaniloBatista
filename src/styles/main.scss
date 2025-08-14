@@ -5,3 +5,6 @@
 
 /* Disponibiliza os 'mixins' para reutilização. */
 @forward 'utils/mixins.scss';
+
+/* Utiliza os arquivos localmente. */
+@use 'base/global';
