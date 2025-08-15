@@ -53,6 +53,15 @@ export function NewHeroAbout() {
             para todos os envolvidos no processo.
           </span>
         </p>
+        <div className={styles.download__buttons}>
+          <a
+            href="/files/DaniloBatista-curriculo_desenvolvedor.pdf"
+            download="/DaniloBatista-curriculo_desenvolvedor.pdf"
+            className={styles.download__button}
+          >
+            Meu currículo
+          </a>
+        </div>
       </div>
     </section>
   );
