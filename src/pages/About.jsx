@@ -1,6 +1,6 @@
-import { CareerList } from '../components/Career/CareerList';
+import { NewCareerList } from '../components/Career/NewCareerList';
 import { NewHeroAbout } from '../components/Hero/NewHeroAbout';
-import { KnowledgeList } from '../components/Knowledge/KnowledgeList';
+// import { KnowledgeList } from '../components/Knowledge/KnowledgeList';
 import { NewSkills } from '../components/Skills/NewSkills';
 
 export function About() {
@@ -8,8 +8,8 @@ export function About() {
     <>
       <NewHeroAbout />
       <NewSkills />
-      <CareerList />
-      <KnowledgeList />
+      <NewCareerList />
+      {/* <KnowledgeList /> */}
     </>
   );
 }

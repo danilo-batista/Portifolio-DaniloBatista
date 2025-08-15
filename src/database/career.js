@@ -6,7 +6,7 @@ const careerDatabase = [
     company: 'Alfaflex',
     link: 'https://alfaflex.com.br/',
     period: 'set/2002 ~ dez/2005',
-    title: 'Técnico Gráfico em Pré-Impressão',
+    title: 'Técnico em Pré-Impressão',
     description:
       'Gráfica responsável pela produção de painéis adesivos e circuitos impressos flexíveis para produtos eletrônicos, utilizando o sistema serigráfico. Obs.: No período em que eu trabalhei nesta empresa, ela era conhecida como Condugraf Produtos Eletrônicos.',
     resume: [
@@ -50,7 +50,7 @@ const careerDatabase = [
     company: 'Kalunga',
     link: 'https://turmadamonica.uol.com.br/',
     period: 'ago/2012 ~ mar/2014',
-    title: 'Analista de Embalagens Senior',
+    title: 'Analista de Embalagens',
     description: 'Rede especializada em comércio de papelaria e eletrônicos.',
     resume: [
       'Atualizei layouts de embalagens dos produtos de marca própria.',
@@ -85,6 +85,6 @@ export const careerList = careerDatabase.map((career) => {
   return {
     ...career,
     slug,
-    brand: `/images/brand-${slug}_logo.png`,
+    brand: `/brands/${slug}.png`,
   };
 });
