@@ -1,6 +1,8 @@
 @use '../styles/main' as *;
 
 .main {
+    margin: auto 0;
+
     @media screen and (min-width: $breakpoint__desktop) {
         max-width: $maxWidth__desktop;
     }
@@ -8,8 +10,4 @@
     @media screen and (min-width: $breakpoint__largeDesktop) {
         max-width: $maxWidth__largeDesktop;
     }
-}
-
-.div {
-    margin: auto 0;
 }
