@@ -3,6 +3,7 @@
 /* Elementos do Header */
 .header {
     @include flexbox($justifyContent: space-between, $alignItems: center);
+    padding-inline: 1.5rem;
 
     height: 5rem;
     position: sticky;
@@ -13,7 +14,7 @@
     background-color: $color__gray-100;
 
     @media screen and (min-width: $breakpoint__cellPhone) {
-        padding-inline: 1rem;
+        padding-inline: 2rem;
     }
 
     @media screen and (min-width: $breakpoint__tablet) {
@@ -22,7 +23,12 @@
 
     @media screen and (min-width: $breakpoint__desktop) {
         height: 6rem;
-        padding-inline: 5rem;
+        padding-inline: 6.25rem;
+    }
+
+    @media screen and (min-width: $breakpoint__largeDesktop) {
+        height: 6rem;
+        padding-inline: 20rem;
     }
 }
 

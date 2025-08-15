@@ -1,15 +1,15 @@
 @use '../styles/main' as *;
 
 .main {
-    margin-inline: 1rem;
-
     @media screen and (min-width: $breakpoint__desktop) {
         max-width: $maxWidth__desktop;
-        margin-inline: 6.25rem;
     }
 
     @media screen and (min-width: $breakpoint__largeDesktop) {
         max-width: $maxWidth__largeDesktop;
-        margin-inline: 20rem;
     }
+}
+
+.div {
+    margin: auto 0;
 }

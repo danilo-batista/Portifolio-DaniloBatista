@@ -4,17 +4,17 @@
 .hero {
     @include flexbox($flexDirection: column, $justifyContent: flex-start, $gap: 3rem);
 
-    padding: 1.75rem 0;
+    padding: 1.75rem 1.5rem;
 
     text-align: left;
     // background-color: $color__info-300;
 
     @media screen and (min-width: $breakpoint__mediumCellPhone) {
-        padding: 1.825rem 1rem;
+        padding: 1.825rem 1.5rem;
     }
 
     @media screen and (min-width: $breakpoint__cellPhone) {
-        padding: 2rem 1rem;
+        padding: 2rem 1.5rem;
     }
 
     @media screen and (min-width: $breakpoint__tablet) {
