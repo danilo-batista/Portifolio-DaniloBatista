@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
-import styles from '../Career/NewCareer.module.scss';
+import styles from '../Knowledge/NewKnowledge.module.scss';
 
-export function NewCareer(props) {
+export function NewKnowledge(props) {
   /* Cria um useRef apontando para <details> */
   const detailsRef = useRef(null);
 
@@ -19,7 +19,7 @@ export function NewCareer(props) {
   }, []);
 
   return (
-    <article className={styles.career}>
+    <article className={styles.knowledge}>
       <a href={props.link} rel="noopener noreferrer">
         <img
           src={props.brand}
@@ -36,37 +36,37 @@ export function NewCareer(props) {
 
       <div className={styles.card__information}>
         <h3 className={styles.card__infoCategory}>{props.company}</h3>
-        <p className={styles.card__infoDescription}>{props.description}</p>
+        <p className={styles.card__infoDescription}>{props.type}</p>
       </div>
 
       <div className={styles.card__information}>
-        <details ref={detailsRef} className={styles.card__infoResume}>
-          <summary>Clique aqui para saber mais sobre esta experiência.</summary>
-          <ul className={styles.card__infoActivities}>
-            {props.resume.map((resume) => (
-              <li className={styles.card__infoActivitiesList} key={resume}>
-                {resume}
-              </li>
-            ))}
-          </ul>
+        <ul className={styles.card__infoActivities}>
+          {props.description.map((description) => (
+            <li className={styles.card__infoActivitiesList} key={description}>
+              {description}
+            </li>
+          ))}
+        </ul>
+      </div>
 
-          {props.extraProjects?.length > 0 && (
-            <p className={styles.card__infoDescription}>
-              <span>Projeto especial desenvolvido com êxito:</span>
-            </p>
-          )}
-
-          <ul>
-            {props.extraProjects.map((extraProjects) => (
-              <li
-                className={styles.card__infoActivitiesList}
-                key={extraProjects}
-              >
-                {extraProjects}
-              </li>
-            ))}
-          </ul>
-        </details>
+      <div className={styles.card__information}>
+        {props.extraProjects?.length > 0 && (
+          <details ref={detailsRef} className={styles.card__infoResume}>
+            <summary>
+              Clique aqui para saber sobre o Projeto de Conclusão de curso.
+            </summary>
+            <ul>
+              {props.extraProjects.map((extraProjects) => (
+                <li
+                  className={styles.card__infoActivitiesList}
+                  key={extraProjects}
+                >
+                  {extraProjects}
+                </li>
+              ))}
+            </ul>
+          </details>
+        )}
       </div>
     </article>
   );

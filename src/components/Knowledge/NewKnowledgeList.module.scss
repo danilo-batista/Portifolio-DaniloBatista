@@ -1,7 +1,7 @@
 @use '../../styles/main' as *;
 
 /* Elementos da lista de Experiências */
-.careerList {
+.knowledgeList {
     @include flexbox($flexDirection: column, $justifyContent: flex-start, $alignItems: left, $gap: 1rem);
 
     padding: 1.75rem 0;
@@ -31,7 +31,7 @@
     }
 }
 
-.careerList__title {
+.knowledgeList__title {
     padding-inline: 1.5rem;
 
     font-weight: 700;
@@ -56,7 +56,7 @@
     }
 }
 
-.careerList__subtitle {
+.knowledgeList__subtitle {
     padding-inline: 1.5rem;
 
     text-align: left;
@@ -80,7 +80,7 @@
     }
 }
 
-.careerList__cards {
+.knowledgeList__cards {
     display: grid;
     gap: 3rem;
     grid-template-columns: 1fr;
@@ -101,7 +101,7 @@
     }
 
     @media screen and (min-width: $breakpoint__largeDesktop) {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         gap: 2.5rem;
     }
 }

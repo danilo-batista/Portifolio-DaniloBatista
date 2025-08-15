@@ -1,7 +1,7 @@
 @use '../../styles/main' as *;
 
 /* Elementos do bloco de Experiência */
-.career {
+.knowledge {
     @include flexbox($flexDirection: column, $alignItems: flex-start, $justifyContent: flex-start);
 
     margin: 1rem 0;
@@ -10,11 +10,16 @@
     border-radius: 1rem;
 
     width: 100%;
+    max-width: 100%;
 }
 
 /* Estilos das imagens */
 .card__thumbnailImage {
     width: 100%;
+
+    max-width: 100%;
+    height: auto;
+    display: block;
 
     position: relative;
     overflow: hidden;
@@ -38,13 +43,14 @@
 .card__information {
     @include flexbox($flexDirection: column, $alignItems: flex-start);
 
+    width: 100%;
     padding: 0.5rem 1.5rem;
 
     &:first-of-type {
         min-height: calc(4rem + 1.5rem);
     }
 
-    &:nth-of-type(2) {
+    &:nth-of-type(3) {
         flex-shrink: 0;
     }
 
@@ -117,12 +123,11 @@
 }
 
 .card__infoActivitiesList {
-    padding-bottom: 0.5rem;
-
     margin-left: 1.25rem;
 
     list-style-type: disc;
     text-align: left;
+
 
     @media screen and (min-width: 1440px) {
         margin-left: 1.425rem;

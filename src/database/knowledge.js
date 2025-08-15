@@ -6,8 +6,9 @@ const knowledgeDatabase = [
     company: 'ETE Professor Camargo Aranha',
     link: 'https://eteccamargoaranha.cps.sp.gov.br/',
     period: 'jan/2002 ~ jun/2002',
-    title: 'Técnico em Auxiliar de Informática',
-    description: ['Técnico', 'SQL', 'Lógica de Programação'],
+    title: 'Auxiliar de Informática',
+    type: 'Técnico',
+    description: ['SQL', 'Lógica de Programação'],
     extraProjects: [],
   },
   {
@@ -15,8 +16,9 @@ const knowledgeDatabase = [
     company: 'SENAI Theobaldo de Nigris',
     link: 'https://sp.senai.br/unidade/grafica/',
     period: 'jul/2001 ~ jun/2003',
-    title: 'Técnico Gráfico em Pré-Impressão',
-    description: ['Técnico', 'Produção Gráfica', 'Colorimetria'],
+    title: 'Produtor Gráfico em Pré-Impressão',
+    type: 'Técnico',
+    description: ['Produção Gráfica', 'Colorimetria'],
     extraProjects: [],
   },
   {
@@ -25,8 +27,8 @@ const knowledgeDatabase = [
     link: 'https://www.usjt.br',
     period: 'jan/2004 ~ dez/2007',
     title: 'Design Gráfico',
+    type: 'Bacharelado',
     description: [
-      'Bacharel',
       'macOS',
       'Windows',
       'Photoshop',
@@ -48,8 +50,8 @@ const knowledgeDatabase = [
     link: 'http://gru.ifsp.edu.br',
     period: 'jan/2014 ~ jun/2020',
     title: 'Análise e Desenvolvimento de Sistemas',
+    type: 'Tecnólogo',
     description: [
-      'Tecnólogo',
       'Scrum',
       'Kanban',
       'BPMN',
@@ -75,8 +77,8 @@ const knowledgeDatabase = [
     link: 'https://ied.edu.br',
     period: 'jul/2009 ~ jun/2011',
     title: 'Design Estratégico e Inovação',
+    type: 'Especialização',
     description: [
-      'Especialização',
       'OmniGraffle',
       'Double Diamond',
       'Design Thinking',
@@ -96,6 +98,6 @@ export const knowledgeList = knowledgeDatabase.map((knowledge) => {
   return {
     ...knowledge,
     slug,
-    brand: `/images/brand-${slug}_logo.png`,
+    brand: `/brands/${slug}.png`,
   };
 });
