@@ -3,11 +3,11 @@
 .footer {
     @include flexbox($flexDirection: column, $justifyContent: space-between, $alignItems: left);
 
-    padding: 1.75rem 1.5rem 0;
-    margin: 3rem 0 5rem;
+    padding: 4.75rem 1.5rem 5rem;
 
     text-align: left;
-    // background-color: $color__info-300;
+    background-color: $color__gray-600;
+    color: $color__gray-300;
 
     @media screen and (min-width: $breakpoint__mediumCellPhone) {
         padding: 1.825rem 1.5rem;
@@ -19,19 +19,19 @@
 
     @media screen and (min-width: $breakpoint__tablet) {
         @include flexbox($flexDirection: column, $justifyContent: flex-start, $alignItems: flex-start, $gap: 2rem);
-        padding: 5rem 1.5rem 2rem;
+        padding: 5rem 1.5rem;
     }
 
     @media screen and (min-width: $breakpoint__smallDesktop) {
-        padding: 5rem 1.5rem 3rem;
+        padding: 5rem 1.5rem;
     }
 
     @media screen and (min-width: $breakpoint__desktop) {
-        padding: 7rem 6.25rem 5rem;
+        padding: 7rem 6.25rem;
     }
 
     @media screen and (min-width: $breakpoint__largeDesktop) {
-        padding: 7rem 20rem 5rem;
+        padding: 7rem 20rem;
     }
 }
 
@@ -41,9 +41,9 @@
 
     width: 9rem;
     height: 9rem;
-    border-radius: 50%;
     margin: 1rem 1.5rem;
 
+    border-radius: 50%;
     border: 3px solid $color__gray-300;
 
     &>img {
@@ -119,27 +119,29 @@
 
     border-radius: 0.5rem;
     border: 2px solid $color__gray-900;
+    background: $color__gray-300;
+    color: $color__gray-900;
 
     font-weight: 700;
     text-align: center;
 
-    background: none;
-    color: $color__gray-900;
+    &:hover {
+        color: $color__gray-900;
+        background: $color__gray-400;
 
-    &:first-child {
-        &> svg {
+        & svg {
             stroke: $color__gray-900;
         }
     }
 
     &:last-child {
         background-color: $color__gray-900;
-        border: 2px solid $color__gray-700;
-
         color: $color__gray-100;
+        border: none;
 
-        @media screen and (min-width: $breakpoint__desktop) {
-            border: 1.5px solid $color__gray-500;
+        &:hover {
+            color: $color__gray-100;
+            background: $color__gray-800;
         }
     }
 
@@ -152,7 +154,9 @@
     }
 
     @media screen and (min-width: $breakpoint__desktop) {
-        padding: 1.5rem 1.5rem;
+        width: 16rem;
+
+        padding: 1.5rem;
         font-size: 1.5rem;
     }
 }

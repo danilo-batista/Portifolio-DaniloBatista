@@ -10,6 +10,14 @@
     border-radius: 1rem;
 
     width: 100%;
+
+    filter: saturate(0.4);
+
+    &:hover {
+        filter: grayscale(0);
+        transform: scale(1.02);
+        transition: all 0.3s ease-in;
+    }
 }
 
 /* Estilos das imagens */
@@ -24,13 +32,10 @@
 
     background-color: $color__extracolor2-100;
     border-radius: 1rem 1rem 0 0;
-    filter: grayscale(1);
 
     &:hover {
-        filter: grayscale(0);
-        transform: scale(1.05);
+        transform: scale(1.02);
         transition: all 0.3s ease-in;
-        border-radius: 1rem;
     }
 }
 
@@ -92,10 +97,10 @@
     @include flexbox($flexDirection: column, $alignItems: flex-start);
 
     width: 100%;
+    padding-bottom: 0.75rem;
 
     &>summary {
         font-weight: 600;
-        margin: 1rem 0 1.5rem 0;
     }
 
     &>ul {

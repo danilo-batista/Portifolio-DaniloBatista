@@ -1,23 +1,21 @@
-@use "../../styles/base/fonts";
-@use "../../styles/base/colors";
-@use "../../styles/base/global";
+@use '../../styles/main' as *;
 
+/* Elementos da Imagem Danilo Batista */
 .container {
-    display: flex;
-    flex-direction: column;
+    @include flexbox($flexDirection: column);
     gap: 2rem;
-    padding-inline: 1.5rem;
 }
 
 .hero__profilePicture {
     width: 100%;
-    border-radius: 8rem 8rem 20rem 20rem;
+    border-radius: 12rem 12rem 20rem 20rem;
+    padding-inline: 1.5rem;
 
-    @media screen and (min-width: 426px) {
-        width: 425px;
+    @media screen and (min-width: $breakpoint__tablet) {
+        border-radius: 12rem 6rem 12rem 6rem;
     }
 
-    @media screen and (min-width: 1024px) {
-        border-radius: 12rem 6rem 12rem 6rem;
+    @media screen and (min-width: $breakpoint__smallDesktop) {
+        border-radius: 6rem 12rem 6rem 12rem;
     }
 }

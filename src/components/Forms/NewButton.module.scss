@@ -10,11 +10,15 @@
 
     text-align: center;
 
-    background-color: $color__gray-900;
-    color: $color__gray-100;
+    background-color: $color__extracolor1-400;
+    color: $color__extracolor1-800;
 
     &:hover {
-        background-color: $color__secondary-600;
-        color: $color__secondary-900;
+        background-color: $color__extracolor1-500;
+        color: $color__extracolor1-800;
+    }
+
+    @media screen and (min-width: $breakpoint__tablet) {
+        max-width: 16rem;
     }
 }

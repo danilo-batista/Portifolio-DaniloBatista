@@ -2,12 +2,12 @@
 
 /* Elementos do Hero */
 .hero {
-    @include flexbox($flexDirection: column, $justifyContent: flex-start, $gap: 3rem);
+    @include flexbox($flexDirection: column, $justifyContent: flex-start, $alignItems: center, $gap: 3rem);
 
     padding: 1.75rem 1.5rem;
 
     text-align: left;
-    // background-color: $color__info-300;
+    background-color: $color__secondary-100;
 
     @media screen and (min-width: $breakpoint__mediumCellPhone) {
         padding: 1.825rem 1.5rem;
@@ -18,16 +18,16 @@
     }
 
     @media screen and (min-width: $breakpoint__tablet) {
-        @include flexbox($flexDirection: column, $justifyContent: flex-start, $alignItems: center, $gap: 2rem);
-        padding: 5rem 1rem 2rem;
+        padding: 5rem 1rem;
     }
 
     @media screen and (min-width: $breakpoint__smallDesktop) {
-        padding: 5rem 1rem 3rem;
+        @include flexbox($flexDirection: column, $justifyContent: flex-start, $alignItems: flex-start, $gap: 2rem);
+        padding: 6rem 1rem;
     }
 
     @media screen and (min-width: $breakpoint__desktop) {
-        padding: 7rem 5rem 5rem;
+        padding: 7rem 5rem;
     }
 }
 
@@ -99,6 +99,7 @@
         $flexDirection: row);
 
     padding-inline: 1.5rem;
+    margin-bottom: 2.5rem;
 
     @media screen and (min-width: $breakpoint__tablet) {
         @include flexbox($gap: 2rem);
@@ -110,25 +111,22 @@
 .download__button {
     width: 100%;
     padding: 1rem 1.5rem;
+
     border-radius: 0.5rem;
-    border: 2px solid $color__gray-900;
+    background-color: $color__success-600;
+    color: $color__white;
 
     font-weight: 700;
     text-align: center;
-
-    background-color: $color__gray-900;
-    border: 2px solid $color__gray-700;
-
-    color: $color__gray-100;
 
     @media screen and (min-width: $breakpoint__smallDesktop) {
         font-size: 1.25rem;
     }
 
     @media screen and (min-width: $breakpoint__desktop) {
+        width: 16rem;
+
         padding: 1.5rem 1.5rem;
         font-size: 1.5rem;
-
-        border: 1.5px solid $color__gray-500;
     }
 }

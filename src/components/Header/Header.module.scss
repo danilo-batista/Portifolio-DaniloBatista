@@ -11,7 +11,8 @@
     left: 0;
     z-index: 1;
 
-    background-color: $color__gray-100;
+    background-color: $color__gray-700;
+
 
     @media screen and (min-width: $breakpoint__cellPhone) {
         padding-inline: 2rem;
@@ -22,12 +23,10 @@
     }
 
     @media screen and (min-width: $breakpoint__desktop) {
-        height: 6rem;
         padding-inline: 6.25rem;
     }
 
     @media screen and (min-width: $breakpoint__largeDesktop) {
-        height: 6rem;
         padding-inline: 20rem;
     }
 }
@@ -41,10 +40,10 @@
     }
 
     & a {
-        color: $color__info-700;
+        color: $color__gray-100;
 
         &:hover {
-            color: $color__primary-400;
+            color: $color__primary-300;
         }
     }
 

@@ -8,8 +8,6 @@
 
     text-align: left;
 
-    // background-color: $color__info-300;
-
     @media screen and (min-width: $breakpoint__mediumCellPhone) {
         padding: 1.825rem 1.5rem;
     }
@@ -19,19 +17,19 @@
     }
 
     @media screen and (min-width: $breakpoint__tablet) {
-        padding: 5rem 1.5rem 2rem;
+        padding: 5rem 1.5rem;
     }
 
     @media screen and (min-width: $breakpoint__smallDesktop) {
-        padding: 5rem 1.5rem 3rem;
+        padding: 5rem 1.5rem;
     }
 
     @media screen and (min-width: $breakpoint__desktop) {
-        padding: 7rem 6.25rem 5rem;
+        padding: 7rem 6.25rem;
     }
 
     @media screen and (min-width: $breakpoint__largeDesktop) {
-        padding: 7rem 20rem 5rem;
+        padding: 7rem 20rem;
     }
 }
 
@@ -132,7 +130,6 @@
     width: 100%;
     padding: 1rem 1.5rem;
     border-radius: 0.5rem;
-    border: 2px solid $color__gray-900;
 
     font-weight: 700;
     text-align: center;
@@ -142,6 +139,11 @@
 
     color: $color__gray-100;
 
+    &:hover {
+        color: $color__success-800;
+        background: $color__success-100;
+    }
+
     @media screen and (min-width: $breakpoint__smallDesktop) {
         font-size: 1.25rem;
     }
@@ -149,7 +151,5 @@
     @media screen and (min-width: $breakpoint__desktop) {
         padding: 1.5rem 1.5rem;
         font-size: 1.5rem;
-
-        border: 1.5px solid $color__gray-500;
     }
 }
