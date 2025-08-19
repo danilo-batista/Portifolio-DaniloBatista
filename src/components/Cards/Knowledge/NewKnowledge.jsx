@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import styles from '../Knowledge/NewKnowledge.module.scss';
+import styles from './NewKnowledge.module.scss';
 
 export function NewKnowledge(props) {
   /* Cria um useRef apontando para <details> */

@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
-import { projectsList } from '../../database/projects';
+import { projectsList } from '../../../database/projects';
 import { NewPortfolioCard } from './NewPortfolioCard';
-import * as styles from './NewPortfolioList.module.scss';
+import styles from './NewPortfolioList.module.scss';
 
 export function NewPortfolioList(props) {
   /* Cria uma nova lista ao percorrer a anterior, reorganizando por ordem descrescente e filtrando os projetos a serem destacados. */

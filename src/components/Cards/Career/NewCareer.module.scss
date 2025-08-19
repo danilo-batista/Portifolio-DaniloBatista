@@ -1,0 +1,186 @@
+@use '../../../styles/main' as *;
+
+/* Elementos do bloco de Experiência */
+.career {
+    @include flexbox($flexDirection: column, $alignItems: flex-start, $justifyContent: flex-start);
+
+    margin: 1rem 0;
+
+    background-color: $color__secondary-100;
+    border-radius: 1rem;
+
+    width: 100%;
+
+    filter: saturate(0.4);
+
+    &:hover {
+        filter: grayscale(0);
+        transform: scale(1.02);
+        transition: all 0.3s ease-in;
+    }
+}
+
+.card__even {
+    background-color: $color__success-100;
+
+    .card__thumbnailCaption {
+        background-color: $color__success-700;
+    }
+
+    .card__infoTitle {
+        color: $color__success-700;
+    }
+
+    .card__infoResume {
+        &>summary {
+            color: $color__success-600;
+        }
+    }
+}
+
+/* Estilos das imagens */
+.card__thumbnail {
+    width: 100%;
+}
+
+.card__thumbnailImage {
+    width: 100%;
+
+    object-fit: cover;
+    object-position: top;
+
+    border-radius: 1rem 1rem 0 0;
+
+    &:hover {
+        transform: scale(1.02);
+        transition: all 0.3s ease-in;
+    }
+}
+
+.card__thumbnailCaption {
+    width: 100%;
+    padding: 0.5rem;
+
+    background-color: $color__secondary-700;
+    color: $color__white;
+
+    font-weight: 600;
+    text-align: center;
+
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+/* Estilos das informações */
+.card__information {
+    @include flexbox($flexDirection: column, $alignItems: flex-start, $justifyContent: flex-start);
+
+    padding: 0 1.5rem;
+    margin-bottom: 1rem;
+
+    &:last-of-type {
+        margin-top: auto;
+    }
+}
+
+/* Bloco de Período, Cargo e Resumo da empresa. */
+.card__infoPeriod {
+    padding-top: 0.25rem;
+
+    font-weight: 400;
+    font-style: oblique;
+
+    @media screen and (min-width: $breakpoint__cellPhone) {
+        font-size: 1.25rem;
+    }
+
+    @media screen and (min-width: $breakpoint__tablet) {
+        padding-top: 0.5rem;
+    }
+}
+
+.card__infoTitle {
+    font-weight: 700;
+    font-size: 1.25rem;
+
+    color: $color__secondary-800;
+
+    @media screen and (min-width: $breakpoint__cellPhone) {
+        font-size: 1.375rem;
+        line-height: 1.75rem;
+    }
+
+    @media screen and (min-width: $breakpoint__tablet) {
+        padding-top: 0.25rem;
+
+        font-size: 1.75rem;
+        line-height: 2rem;
+    }
+}
+
+.card__infoDescription {
+    padding-top: 0.75rem;
+
+    color: $color__gray-900;
+
+    &>span {
+        font-weight: 700;
+    }
+
+    @media screen and (min-width: $breakpoint__cellPhone) {
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+    }
+}
+
+/* Bloco de Experiências */
+.card__infoResume {
+    @include flexbox($flexDirection: column, $alignItems: flex-start);
+
+    width: 100%;
+    padding: 0 0 0.75rem 0.25rem;
+
+    &>summary {
+        font-weight: 600;
+        color: $color__secondary-600;
+    }
+
+    &>ul {
+        margin-top: 0.5rem;
+    }
+
+    @media screen and (min-width: $breakpoint__cellPhone) {
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+    }
+}
+
+.card__infoActivities {
+    display: inline-block;
+
+    width: 100%;
+    padding-bottom: 1rem;
+
+    list-style-type: disc;
+}
+
+.card__infoActivitiesList {
+    padding-bottom: 0.5rem;
+    margin-left: 1.25rem;
+
+    list-style-type: disc;
+    text-align: left;
+
+    @media screen and (min-width: $breakpoint__desktop) {
+        margin-left: 1.425rem;
+    }
+}
+
+.card__infoDescriptionTopic {
+    padding: 0.25rem 0 0 0.25rem;
+
+    color: $color__gray-900;
+
+    &>span {
+        font-weight: 700;
+    }
+}

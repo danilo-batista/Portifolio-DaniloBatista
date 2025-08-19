@@ -19,27 +19,39 @@ export function NewCareer(props) {
   }, []);
 
   return (
-    <article className={styles.career}>
-      <a href={props.link} rel="noopener noreferrer">
-        <img
-          src={props.brand}
-          alt={`Logotipo ${props.company}`}
-          className={styles.card__thumbnailImage}
-          loading="lazy"
-        />
-      </a>
-
-      <div className={styles.card__information}>
-        <p className={styles.card__infoDescription}>{props.period}</p>
-        <h2 className={styles.card__infoTitle}>{props.title}</h2>
+    <article
+      className={`${styles.career} ${props.isEven ? styles.card__even : ''}`}
+    >
+      {/* Bloco de imagem  */}
+      <div className={styles.card__thumbnail}>
+        <a href={props.link} rel="noopener noreferrer">
+          <figcaption className={styles.card__thumbnailCaption}>
+            {props.company}
+          </figcaption>
+          <figure>
+            <img
+              src={props.brand}
+              alt={`Logotipo ${props.company}`}
+              className={styles.card__thumbnailImage}
+              loading="lazy"
+            />
+          </figure>
+        </a>
       </div>
 
-      <div className={styles.card__information}>
-        <h3 className={styles.card__infoCategory}>{props.company}</h3>
+      {/* Bloco de Período, Cargo e resumo da empresa. */}
+      <div
+        className={`${styles.card__information} ${props.isEven ? styles.card__even : ''}`}
+      >
+        <p className={styles.card__infoPeriod}>{props.period}</p>
+        <h3 className={styles.card__infoTitle}>{props.title}</h3>
         <p className={styles.card__infoDescription}>{props.description}</p>
       </div>
 
-      <div className={styles.card__information}>
+      {/* Bloco de Experiências */}
+      <div
+        className={`${styles.card__information} ${props.isEven ? styles.card__even : ''}`}
+      >
         <details ref={detailsRef} className={styles.card__infoResume}>
           <summary>Clique aqui para saber mais sobre esta experiência.</summary>
           <ul className={styles.card__infoActivities}>
@@ -51,7 +63,7 @@ export function NewCareer(props) {
           </ul>
 
           {props.extraProjects?.length > 0 && (
-            <p className={styles.card__infoDescription}>
+            <p className={styles.card__infoDescriptionTopic}>
               <span>Projeto especial desenvolvido com êxito:</span>
             </p>
           )}

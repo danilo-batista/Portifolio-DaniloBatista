@@ -1,44 +1,42 @@
-@use '../../styles/main' as *;
+@use '../../../styles/main' as *;
 
-/* Elementos da lista de Portifólio */
-.cardList {
+/* Elementos da lista de Experiências */
+.knowledgeList {
     @include flexbox($flexDirection: column, $justifyContent: flex-start, $alignItems: left, $gap: 1rem);
 
-    padding: 1.75rem 1.5rem;
+    padding: 1.75rem 0;
 
     text-align: left;
 
+    background-color: $color__secondary-100;
+
     @media screen and (min-width: $breakpoint__mediumCellPhone) {
-        padding: 1.825rem 1.5rem;
+        padding: 1.825rem 1rem;
     }
 
     @media screen and (min-width: $breakpoint__cellPhone) {
-        padding: 2rem 1.5rem;
+        padding: 2rem 1rem;
     }
 
     @media screen and (min-width: $breakpoint__tablet) {
-        padding: 5rem 1.5rem;
+        padding: 5rem 1rem;
     }
 
     @media screen and (min-width: $breakpoint__smallDesktop) {
-        padding: 5rem 1.5rem;
+        padding: 5rem 1rem;
     }
 
     @media screen and (min-width: $breakpoint__desktop) {
-        padding: 7rem 6.25rem;
-    }
-
-    @media screen and (min-width: $breakpoint__largeDesktop) {
-        padding: 7rem 20rem;
+        padding: 7rem 5rem;
     }
 }
 
-.cardList__title {
+.knowledgeList__title {
     padding-inline: 1.5rem;
 
     font-weight: 700;
     font-size: 1.875rem;
-    line-height: 2.5rem;
+    line-height: 2.25rem;
 
     @media screen and (min-width: $breakpoint__cellPhone) {
         font-size: 2rem;
@@ -58,7 +56,7 @@
     }
 }
 
-.cardList__subtitle {
+.knowledgeList__subtitle {
     padding-inline: 1.5rem;
 
     text-align: left;
@@ -82,74 +80,26 @@
     }
 }
 
-.cardList__cards {
+.knowledgeList__cards {
     display: grid;
-    gap: 2rem;
+    gap: 3rem;
     grid-template-columns: 1fr;
 
     padding-inline: 1.5rem;
     height: 100%;
 
     @media screen and (min-width: $breakpoint__tablet) {
-        grid-template-columns: repeat(2, 1fr);
         padding-inline: 3.5rem;
         margin-top: 1rem;
     }
 
     @media screen and (min-width: $breakpoint__smallDesktop) {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         gap: 2.75rem;
     }
 
     @media screen and (min-width: $breakpoint__largeDesktop) {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         gap: 2.5rem;
-    }
-}
-
-.cardList__links {
-    @include flexbox($justifyContent: center);
-}
-
-.cardList__buttons {
-    @include flexbox($justifyContent: space-around,
-        $alignItems: center,
-        $flexDirection: row);
-
-    margin-top: 1.5rem;
-    padding-inline: 1.5rem;
-
-    @media screen and (min-width: $breakpoint__tablet) {
-        @include flexbox($gap: 2rem);
-        flex-wrap: nowrap;
-        padding: 1rem 3.5rem 0;
-    }
-}
-
-.cardList__button {
-    width: 100%;
-    padding: 1rem 1.5rem;
-    border-radius: 0.5rem;
-
-    font-weight: 700;
-    text-align: center;
-
-    background-color: $color__secondary-700;
-    
-
-    color: $color__secondary-100;
-
-    &:hover {
-            color: $color__secondary-800;
-        background: $color__secondary-500;
-    }
-
-    @media screen and (min-width: $breakpoint__smallDesktop) {
-        font-size: 1.25rem;
-    }
-
-    @media screen and (min-width: $breakpoint__desktop) {
-        padding: 1.5rem 1.5rem;
-        font-size: 1.5rem;
     }
 }

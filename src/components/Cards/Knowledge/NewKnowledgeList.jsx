@@ -1,6 +1,6 @@
-import { knowledgeList } from '../../database/knowledge';
-import styles from '../Knowledge/NewKnowledgeList.module.scss';
+import { knowledgeList } from '../../../database/knowledge';
 import { NewKnowledge } from './NewKnowledge';
+import styles from './NewKnowledgeList.module.scss';
 
 export function NewKnowledgeList() {
   const listToRender = knowledgeList.sort((a, b) => b.id - a.id);

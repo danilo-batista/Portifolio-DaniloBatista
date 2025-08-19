@@ -1,4 +1,4 @@
-import styles from '../PortfolioCard/NewPortfolioCard.module.scss';
+import styles from './NewPortfolioCard.module.scss';
 
 export function NewPortfolioCard(props) {
   return (

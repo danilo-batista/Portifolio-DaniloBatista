@@ -1,6 +1,6 @@
-import { coursesList } from '../../database/courses';
-import styles from '../Courses/NewCoursesList.module.scss';
+import { coursesList } from '../../../database/courses';
 import { NewCourses } from './NewCourses';
+import styles from './NewCoursesList.module.scss';
 
 export function NewCoursesList() {
   const listToRender = coursesList.sort((a, b) => b.id - a.id);

@@ -1,4 +1,4 @@
-import styles from '../Courses/NewCourses.module.scss';
+import styles from './NewCourses.module.scss';
 
 export function NewCourses(props) {
   return (

@@ -1,6 +1,6 @@
-import { careerList } from '../../database/career';
-import styles from '../Career/NewCareerList.module.scss';
+import { careerList } from '../../../database/career';
 import { NewCareer } from './NewCareer';
+import styles from './NewCareerList.module.scss';
 
 export function NewCareerList() {
   const listToRender = careerList.sort((a, b) => b.id - a.id);

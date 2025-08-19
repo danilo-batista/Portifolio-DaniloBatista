@@ -1,8 +1,8 @@
-import { NewCareerList } from '../components/Career/NewCareerList';
-import { NewCoursesList } from '../components/Courses/NewCoursesList';
+import { NewCareerList } from '../components/Cards/Career/NewCareerList';
+import { NewCoursesList } from '../components/Cards/Courses/NewCoursesList';
+import { NewKnowledgeList } from '../components/Cards/Knowledge/NewKnowledgeList';
+import { NewSkills } from '../components/Cards/Skills/NewSkills';
 import { NewHeroAbout } from '../components/Hero/NewHeroAbout';
-import { NewKnowledgeList } from '../components/Knowledge/NewKnowledgeList';
-import { NewSkills } from '../components/Skills/NewSkills';
 
 export function About() {
   return (

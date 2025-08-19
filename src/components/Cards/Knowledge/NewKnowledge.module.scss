@@ -1,15 +1,16 @@
-@use '../../styles/main' as *;
+@use '../../../styles/main' as *;
 
 /* Elementos do bloco de Experiência */
-.career {
+.knowledge {
     @include flexbox($flexDirection: column, $alignItems: flex-start, $justifyContent: flex-start);
 
-    margin: 1rem 0;
+    margin: 1rem 0 0;
 
     background-color: $color__gray-100;
     border-radius: 1rem;
 
     width: 100%;
+    max-width: 100%;
 
     filter: saturate(0.4);
 
@@ -43,13 +44,14 @@
 .card__information {
     @include flexbox($flexDirection: column, $alignItems: flex-start);
 
+    width: 100%;
     padding: 0.5rem 1.5rem;
 
     &:first-of-type {
         min-height: calc(4rem + 1.5rem);
     }
 
-    &:nth-of-type(2) {
+    &:nth-of-type(3) {
         flex-shrink: 0;
     }
 
@@ -101,6 +103,7 @@
 
     &>summary {
         font-weight: 600;
+        margin: 1rem 0;
     }
 
     &>ul {
@@ -114,17 +117,14 @@
 }
 
 .card__infoActivities {
-    @include flexbox($flexDirection: row, $justifyContent: flex-start, $alignItems: center, $gap: 0.375rem);
-    flex-wrap: wrap;
     display: inline-block;
-
     width: 100%;
+
     list-style-type: disc;
+    line-height: 2rem;
 }
 
 .card__infoActivitiesList {
-    padding-bottom: 0.5rem;
-
     margin-left: 1.25rem;
 
     list-style-type: disc;
