@@ -134,14 +134,14 @@
     font-weight: 700;
     text-align: center;
 
-    background-color: $color__gray-900;
-    border: 2px solid $color__gray-700;
+    background-color: $color__secondary-700;
+    
 
-    color: $color__gray-100;
+    color: $color__secondary-100;
 
     &:hover {
-        color: $color__success-800;
-        background: $color__success-100;
+            color: $color__secondary-800;
+        background: $color__secondary-500;
     }
 
     @media screen and (min-width: $breakpoint__smallDesktop) {

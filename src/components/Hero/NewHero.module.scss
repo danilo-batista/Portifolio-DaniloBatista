@@ -129,30 +129,30 @@
     padding: 1rem 1.5rem;
 
     border-radius: 0.5rem;
-    border: 2px solid $color__success-700;
+    border: 2px solid $color__info-700;
 
     font-weight: 700;
     text-align: center;
 
     &:first-child {
         background: $color__white;
-        color: $color__success-700;
+        color: $color__info-700;
 
         &:hover {
-            color: $color__success-800;
-            background: $color__success-100;
+            color: $color__info-800;
+            background: $color__info-100;
         }
     }
 
     &:last-child {
-        background-color: $color__success-600;
+        background-color: $color__info-700;
         border: none;
 
         color: $color__white;
 
         &:hover {
-            color: $color__success-100;
-            background: $color__success-700;
+            color: $color__info-100;
+            background: $color__info-600;
         }
     }
 

@@ -113,11 +113,16 @@
     padding: 1rem 1.5rem;
 
     border-radius: 0.5rem;
-    background-color: $color__success-600;
+    background-color: $color__success-700;
     color: $color__white;
 
     font-weight: 700;
     text-align: center;
+
+    &:hover {
+        color: $color__success-100;
+        background: $color__success-600;
+    }
 
     @media screen and (min-width: $breakpoint__smallDesktop) {
         font-size: 1.25rem;
