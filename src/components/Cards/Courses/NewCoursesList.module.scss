@@ -8,7 +8,7 @@
 
     text-align: left;
 
-    // background-color: $color__info-300;
+    background-color: $color__secondary-200;
 
     @media screen and (min-width: $breakpoint__mediumCellPhone) {
         padding: 1.825rem 1rem;
@@ -82,17 +82,14 @@
 
 .coursesList__cards {
     display: grid;
-    gap: 3rem;
+    gap: 2rem;
     grid-template-columns: 1fr;
 
     padding-inline: 1.5rem;
     height: 100%;
 
-    // background-color: $color__warning-200;
-
     @media screen and (min-width: $breakpoint__tablet) {
         padding-inline: 3.5rem;
-        margin-top: 1rem;
     }
 
     @media screen and (min-width: $breakpoint__smallDesktop) {

@@ -10,8 +10,8 @@ export function About() {
       <NewHeroAbout />
       <NewSkills />
       <NewCareerList />
-      <NewKnowledgeList />
       <NewCoursesList />
+      <NewKnowledgeList />
     </>
   );
 }
