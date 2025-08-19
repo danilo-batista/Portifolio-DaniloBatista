@@ -6,7 +6,7 @@
 
     margin: 1rem 0;
 
-    background-color: $color__success-100;
+    background-color: $color__secondary-200;
     border-radius: 1rem;
 
     width: 100%;
@@ -31,11 +31,21 @@
     object-fit: cover;
     object-position: top;
 
-    border-radius: 1rem 1rem 0 0;
+    background-color: $color__secondary-100;
+    border-color: $color__secondary-200;
+    border-style: solid;
 
-    &:hover {
-        transform: scale(1.02);
-        transition: all 0.3s ease-in;
+    border-radius: 1rem;
+    border-width: 1rem;
+
+    @media screen and (min-width: $breakpoint__tablet) {
+        border-radius: 2.5rem;
+        border-width: 1.5rem;
+    }
+
+    @media screen and (min-width: $breakpoint__desktop) {
+        border-radius: 3rem;
+        border-width: 2rem;
     }
 }
 
