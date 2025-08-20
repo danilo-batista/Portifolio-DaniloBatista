@@ -1,4 +1,4 @@
-import { skillsList } from '../../../database/skillsList';
+import { skillsList } from '../../database/skillsList';
 import styles from './NewSkills.module.scss';
 
 export function NewSkills() {

@@ -20,7 +20,7 @@ const careerDatabase = [
   },
   {
     id: 2,
-    company: 'Grupo Multi',
+    company: 'Multilaser',
     link: 'https://www.multilaser.com.br/',
     period: 'jan/2006 ~ jan/2012',
     title: 'Designer Gráfico',
@@ -48,7 +48,7 @@ const careerDatabase = [
   {
     id: 3,
     company: 'Kalunga',
-    link: 'https://turmadamonica.uol.com.br/',
+    link: 'https://www.kalunga.com.br/',
     period: 'ago/2012 ~ mar/2014',
     title: 'Analista de Embalagens',
     description: 'Rede especializada em comércio de papelaria e eletrônicos.',
@@ -85,6 +85,6 @@ export const careerList = careerDatabase.map((career) => {
   return {
     ...career,
     slug,
-    brand: `/brands/${slug}.png`,
+    brand: `/brands/3x/${slug}-3x.webp`,
   };
 });

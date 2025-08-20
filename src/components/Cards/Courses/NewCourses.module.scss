@@ -65,8 +65,12 @@
 .card__information {
     @include flexbox($flexDirection: column, $alignItems: flex-start, $justifyContent: flex-start);
 
-    padding: 0 1.5rem;
+    padding-inline: 1.5rem;
     margin-bottom: 1rem;
+
+    @media screen and (min-width: $breakpoint__desktop) {
+        padding-inline: 2rem;
+    }
 }
 
 /* Bloco de Período, Cargo e Resumo da empresa. */

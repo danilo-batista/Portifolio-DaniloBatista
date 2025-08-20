@@ -11,10 +11,7 @@
     border-radius: 1rem;
     box-shadow: 1px 4px 8px 1px rgba(0, 0, 0, 0.125);
 
-    filter: saturate(0.4);
-
     &:hover {
-        filter: grayscale(0);
         transform: scale(1.02);
         transition: all 0.3s ease-in;
     }
