@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react';
 import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter } from 'react-router-dom';
 import { ScrollToTop } from './layouts/ScrollToTop';
@@ -10,6 +11,7 @@ export function App() {
         <ScrollToTop />
         <Router />
       </BrowserRouter>
+      <Analytics />
     </HelmetProvider>
   );
 }
