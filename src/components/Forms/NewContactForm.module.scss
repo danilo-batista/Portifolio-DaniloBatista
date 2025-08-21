@@ -1,0 +1,88 @@
+@use '../../styles/main' as *;
+
+/* Elementos do Formulário */
+.contactForm {
+    @include flexbox($flexDirection: column, $justifyContent: flex-start, $alignItems: left, $gap: 3rem);
+
+    width: 100%;
+    padding: 4.75rem 1.5rem;
+
+    background-color: $color__extracolor1-100;
+
+    @media screen and (min-width: $breakpoint__mediumCellPhone) {
+        padding: 4.825rem 1.5rem;
+    }
+
+    @media screen and (min-width: $breakpoint__cellPhone) {
+        padding: 4rem 1.5rem;
+    }
+
+    @media screen and (min-width: $breakpoint__tablet) {
+        @include flexbox($flexDirection: column, $justifyContent: flex-start, $alignItems: left, $gap: 3rem);
+        padding: 5rem 1.5rem;
+    }
+
+    @media screen and (min-width: $breakpoint__smallDesktop) {
+        padding: 5rem 1.5rem;
+    }
+
+    @media screen and (min-width: $breakpoint__desktop) {
+        padding: 7rem 6.25rem;
+    }
+
+    @media screen and (min-width: $breakpoint__largeDesktop) {
+        padding: 7rem 20rem;
+    }
+}
+
+.contactForm__title {
+    padding-inline: 1.5rem;
+
+    font-weight: 700;
+    font-size: 1.875rem;
+    line-height: 2.5rem;
+
+    @media screen and (min-width: $breakpoint__cellPhone) {
+        font-size: 2rem;
+        line-height: 2.75rem;
+    }
+
+    @media screen and (min-width: $breakpoint__tablet) {
+        padding-inline: 3.5rem;
+
+        font-size: 3rem;
+        line-height: 4rem;
+    }
+
+    @media screen and (min-width: $breakpoint__desktop) {
+        font-size: 3.75rem;
+        line-height: 4.25rem;
+    }
+}
+
+.contactForm__form {
+    @include flexbox($flexDirection: column, $alignItems: center, $gap: 1.5rem);
+
+    flex-wrap: wrap;
+    width: 100%;
+    padding-inline: 1.5rem;
+
+    @media screen and (min-width: $breakpoint__tablet) {
+        padding-inline: 3.5rem;
+    }
+}
+
+.contactForm__captcha {
+    transform: scale(0.9);
+    transform-origin: 0 0;
+
+    @media screen and (min-width: 375px) {
+        transform: scale(1);
+    }
+}
+
+.contactForm__error {
+    color: $color__danger-300;
+    font-weight: 600;
+    margin-top: 1rem;
+}

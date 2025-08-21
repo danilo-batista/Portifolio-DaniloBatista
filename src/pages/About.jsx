@@ -1,15 +1,17 @@
-import { CareerList } from '../components/Career/CareerList';
-import { HeroAbout } from '../components/Hero/HeroAbout';
-import { KnowledgeList } from '../components/Knowledge/KnowledgeList';
-import { Skills } from '../components/Skills/Skills';
+import { NewCareerList } from '../components/Cards/Career/NewCareerList';
+import { NewCoursesList } from '../components/Cards/Courses/NewCoursesList';
+import { NewKnowledgeList } from '../components/Cards/Knowledge/NewKnowledgeList';
+import { NewHeroAbout } from '../components/Hero/NewHeroAbout';
+import { NewSkills } from '../components/Skills/NewSkills';
 
 export function About() {
   return (
     <>
-      <HeroAbout />
-      <Skills />
-      <CareerList />
-      <KnowledgeList />
+      <NewHeroAbout />
+      <NewSkills />
+      <NewCareerList />
+      <NewCoursesList />
+      <NewKnowledgeList />
     </>
   );
 }

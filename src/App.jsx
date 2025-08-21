@@ -1,11 +1,15 @@
+import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter } from 'react-router-dom';
-
+import { ScrollToTop } from './layouts/ScrollToTop';
 import { Router } from './Router';
 
 export function App() {
   return (
-    <BrowserRouter>
-      <Router />
-    </BrowserRouter>
+    <HelmetProvider>
+      <BrowserRouter>
+        <ScrollToTop />
+        <Router />
+      </BrowserRouter>
+    </HelmetProvider>
   );
 }

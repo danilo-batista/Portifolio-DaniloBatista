@@ -1,0 +1,10 @@
+/* Disponibiliza os estilos para reutilização. */
+@forward 'base/reset';
+@forward 'base/normalize';
+@forward 'base/global';
+
+/* Disponibiliza os 'mixins' para reutilização. */
+@forward 'utils/mixins.scss';
+
+/* Utiliza os arquivos localmente. */
+@use 'base/global';

@@ -1,5 +1,5 @@
-import { PortfolioMainList } from '../components/PortfolioCard/PortfolioMainList';
+import { NewPortfolioList } from '../components/Cards/PortfolioCard/NewPortfolioList';
 
 export function Portfolio() {
-  return <PortfolioMainList showHighlights={false} showMoreLinks={false} />;
+  return <NewPortfolioList showHighlights={false} showMoreLinks={false} />;
 }

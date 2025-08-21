@@ -1,26 +1,74 @@
-@use "../../styles/base/fonts";
-@use "../../styles/base/colors";
-@use "../../styles/base/global";
+@use '../../styles/main' as *;
 
-.menuList {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+/* Container para agrupar os dois tipos de menus. */
+.menuList__wrapper {
+    @include flexbox($alignItems: center);
 }
 
-.menuList__item {
-    font-weight: 700;
+/* Elementos do Menu Mobile */
+.menuList__mobile {
+    display: flex;
 
-    width: 100%;
-    border-radius: 0.5rem;
-    padding: 1rem;
+    @media screen and (min-width: $breakpoint__tablet) {
+        display: none;
+    }
+}
+
+.menuList {
+    @include flexbox($flexDirection: column,
+        $gap: 1.25rem);
+
+    position: absolute;
+    top: 4rem;
+    right: 0.75rem;
+
+    padding: 1.5rem 2rem;
+    z-index: 1;
     white-space: nowrap;
 
-    a {
-        color: colors.$color__gray-900;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    border: none;
 
-        &:hover {
-            color: colors.$color__primary-500;
-        }
+    background-color: $color__gray-700;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Elementos do Menu Desktop */
+.menuList__desktop {
+    display: none;
+    gap: 1rem;
+
+    @media screen and (min-width: $breakpoint__tablet) {
+        display: flex;
+    }
+}
+
+/* Formatação em comum dos itens dos Menus */
+.menuList__item {
+    padding-inline: 0.5rem;
+
+    font-weight: 700;
+
+    border-radius: 0.5rem;
+    white-space: nowrap;
+
+    @media screen and (min-width: $breakpoint__desktop) {
+        font-size: 1.25rem;
+    }
+}
+
+.menuList__itemActive {
+    color: $color__primary-700;
+    border-bottom: 3px solid $color__primary-500;
+    padding-bottom: 0.25rem;
+    border-radius: 3px;
+}
+
+.menuList__itemLink {
+    color: $color__gray-100;
+
+    &:hover {
+        color: $color__primary-300;
     }
 }

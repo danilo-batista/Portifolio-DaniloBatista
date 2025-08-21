@@ -1,0 +1,24 @@
+@use '../../styles/main.scss' as *;
+
+/* Elementos do Botão */
+.button {
+    width: 100%;
+    padding: 1rem 1.5rem;
+
+    border-radius: 0.5rem;
+    border: none;
+
+    text-align: center;
+
+    background-color: $color__extracolor1-400;
+    color: $color__extracolor1-800;
+
+    &:hover {
+        background-color: $color__extracolor1-500;
+        color: $color__extracolor1-800;
+    }
+
+    @media screen and (min-width: $breakpoint__tablet) {
+        max-width: 16rem;
+    }
+}

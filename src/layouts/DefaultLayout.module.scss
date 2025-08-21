@@ -1,9 +1,5 @@
-@use "../styles/base/fonts";
-@use "../styles/base/colors";
-@use "../styles/base/global";
+@use '../styles/main' as *;
 
 .main {
-    font-family: fonts.$font__carbona;
-    font-weight: 400;
-    font-style: normal;
+    margin: auto 0;
 }

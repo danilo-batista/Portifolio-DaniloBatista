@@ -1,78 +1,57 @@
-@use "../../styles/base/fonts";
-@use "../../styles/base/colors";
-@use "../../styles/base/global";
+@use '../../styles/main' as *;
 
-.container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    max-width: 90rem;
-    margin: 0 auto;
-}
-
-.container__menuFull {
-    display: none;
-
-    @media screen and (min-width: 768px) {
-        display: block;
-    }
-}
-
-.container__menuMobile {
-    display: block;
-
-    @media screen and (min-width: 768px) {
-        display: none;
-    }
-}
-
+/* Elementos do Header */
 .header {
-    background-color: colors.$color__gray-100;
+    @include flexbox($justifyContent: space-between, $alignItems: center);
+    padding-inline: 1.5rem;
 
     height: 5rem;
-    padding: 0 2rem;
-
     position: sticky;
     top: 0;
     left: 0;
     z-index: 1;
 
-    @media screen and (min-width: 768px) {
-        padding: 0 10%;
+    background-color: $color__gray-700;
+
+
+    @media screen and (min-width: $breakpoint__cellPhone) {
+        padding-inline: 2rem;
     }
 
-    @media screen and (min-width: 1024px) {
-        padding: 0 7.5%;
+    @media screen and (min-width: $breakpoint__tablet) {
+        padding-inline: 3rem;
     }
 
-    @media screen and (min-width: 1440px) {
-        padding: 0 7%;
+    @media screen and (min-width: $breakpoint__desktop) {
+        padding-inline: 6.25rem;
     }
 
-    @media screen and (min-width: 2560px) {
-        padding: 0 25.5%;
+    @media screen and (min-width: $breakpoint__largeDesktop) {
+        padding-inline: 20rem;
     }
 }
 
 .header__brand {
     font-weight: 700;
-    font-size: 1.75rem;
+    font-size: 1.625rem;
 
-    span {
+    & span {
         font-weight: 400;
     }
 
-    a {
-        color: colors.$color__info-700;
-        text-decoration: none;
+    & a {
+        color: $color__gray-100;
 
         &:hover {
-            color: colors.$color__primary-400;
+            color: $color__primary-300;
         }
     }
-}
 
-.header__navigation {
-    position: relative;
+    @media screen and (min-width: $breakpoint__cellPhone) {
+        font-size: 1.5rem;
+    }
+
+    @media screen and (min-width: $breakpoint__desktop) {
+        font-size: 2rem;
+    }
 }

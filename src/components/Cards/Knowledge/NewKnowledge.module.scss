@@ -1,0 +1,164 @@
+@use '../../../styles/main' as *;
+
+/* Elementos do bloco de Experiência */
+.knowledge {
+    @include flexbox($flexDirection: column, $alignItems: flex-start, $justifyContent: flex-start);
+
+    margin: 1rem 0;
+
+    background-color: $color__secondary-200;
+    border-radius: 1rem;
+
+    width: 100%;
+
+    &:hover {
+        transform: scale(1.02);
+        transition: all 0.3s ease-in;
+    }
+}
+
+/* Estilos das imagens */
+.card__thumbnail {
+    width: 100%;
+}
+
+.card__thumbnailImage {
+    width: 100%;
+
+    object-fit: cover;
+    object-position: top;
+
+    background-color: $color__secondary-100;
+    border-color: $color__secondary-200;
+    border-style: solid;
+
+    border-radius: 1.5rem;
+    border-width: 1rem;
+
+    @media screen and (min-width: $breakpoint__tablet) {
+        border-radius: 2.5rem;
+        border-width: 1.5rem;
+    }
+
+    @media screen and (min-width: $breakpoint__desktop) {
+        border-radius: 3rem;
+        border-width: 2rem;
+    }
+}
+
+.card__thumbnailCaption {
+    width: 100%;
+    padding: 0.5rem;
+
+    background-color: $color__secondary-700;
+    color: $color__secondary-100;
+
+    font-weight: 600;
+    text-align: center;
+
+    border-radius: 0.5rem 0.5rem 0 0;
+
+    @media screen and (min-width: $breakpoint__desktop) {
+        font-size: 1.25rem;
+        padding: 0.75rem;
+    }
+}
+
+/* Estilos das informações */
+.card__information {
+    @include flexbox($flexDirection: column, $alignItems: flex-start, $justifyContent: flex-start);
+
+    padding-inline: 1.5rem;
+    margin-bottom: 1rem;
+
+    &:last-of-type {
+        margin-top: auto;
+    }
+
+    @media screen and (min-width: $breakpoint__desktop) {
+        padding-inline: 2rem;
+    }
+}
+
+/* Bloco de Período, Cargo e Resumo da empresa. */
+.card__infoPeriod {
+    padding-top: 0.25rem;
+
+    font-weight: 400;
+    font-style: oblique;
+
+    @media screen and (min-width: $breakpoint__cellPhone) {
+        font-size: 1.25rem;
+    }
+
+    @media screen and (min-width: $breakpoint__tablet) {
+        padding-top: 0.5rem;
+    }
+}
+
+.card__infoTitle {
+    font-weight: 700;
+    font-size: 1.25rem;
+
+    color: $color__secondary-700;
+
+    @media screen and (min-width: $breakpoint__cellPhone) {
+        font-size: 1.375rem;
+        line-height: 1.75rem;
+    }
+
+    @media screen and (min-width: $breakpoint__tablet) {
+        padding-top: 0.25rem;
+
+        font-size: 1.75rem;
+        line-height: 2rem;
+    }
+}
+
+/* Bloco de Habilidades aprendidas. */
+.card__infoActivities {
+    @include flexbox($flexDirection: row, $alignItems: center, $justifyContent: left);
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 0.5rem;
+
+    width: 100%;
+    padding-bottom: 1rem;
+}
+
+.card__infoActivitiesList {
+    padding: 0.5rem 1rem;
+
+    list-style-type: none;
+    text-align: left;
+
+    border: 2px solid $color__secondary-600;
+    border-radius: 1rem;
+    background-color: $color__secondary-100;
+
+    @media screen and (min-width: $breakpoint__desktop) {
+        font-size: 1.25rem;
+        padding: 0.75rem 1.25rem;
+    }
+}
+
+.card__infoResume {
+    @include flexbox($flexDirection: column, $alignItems: flex-start);
+
+    width: 100%;
+    padding: 0.75rem 0 0.75rem 0.25rem;
+
+    &>summary {
+        font-weight: 600;
+        color: $color__success-700;
+    }
+
+    &>ul {
+        margin-top: 0.5rem;
+    }
+
+    @media screen and (min-width: $breakpoint__cellPhone) {
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+    }
+}

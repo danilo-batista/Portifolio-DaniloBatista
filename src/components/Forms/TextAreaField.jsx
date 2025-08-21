@@ -1,14 +1,14 @@
-import styles from '../Forms/TextAreaField.module.scss';
+import styles from '../Forms/GenericField.module.scss';
 
 export function TextAreaField(props) {
   return (
-    <article className={styles.textAreaField__data}>
-      <label className={styles.textAreaField__label} htmlFor={props.name}>
+    <article className={styles.genericField__data}>
+      <label className={styles.genericField__label} htmlFor={props.name}>
         {props.label}
       </label>
 
       <textarea
-        className={styles.textAreaField__text}
+        className={styles.genericField__text}
         id={props.name}
         name={props.name}
         value={props.value}

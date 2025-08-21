@@ -1,0 +1,43 @@
+@use '../../styles/main' as *;
+
+.hamburger {
+    @include flexbox($justifyContent: center,
+        $alignItems: center,
+        $flexDirection: column);
+
+    width: 40px;
+    height: 40px;
+    padding: 0;
+
+    background: none;
+    border: none;
+
+    cursor: pointer;
+    z-index: 1000;
+
+    & span {
+        display: block;
+        width: 28px;
+        height: 3px;
+        margin: 0.25rem 0;
+
+        background-color: $color__gray-100;
+        border-radius: 3px;
+
+        transition: transform 0.4s ease, opacity 0.4s ease;
+    }
+
+    &.open {
+        span:nth-child(1) {
+            transform: translateY(11px) rotate(45deg);
+        }
+
+        span:nth-child(2) {
+            opacity: 0;
+        }
+
+        span:nth-child(3) {
+            transform: translateY(-11px) rotate(-45deg);
+        }
+    }
+}
