@@ -35,6 +35,39 @@
     }
 }
 
+.contactForm__message {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    text-align: center;
+    animation: fadeIn 0.3s ease-in-out;
+
+    &.success {
+        background-color: rgba($color__success-500, 0.1);
+        color: $color__success-500;
+        border: 1px solid $color__success-500;
+    }
+
+    &.error {
+        background-color: rgba($color__danger-500, 0.1);
+        color: $color__danger-500;
+        border: 1px solid $color__danger-500;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .contactForm__title {
     padding-inline: 1.5rem;
 

@@ -1,3 +1,4 @@
+import emailjs from '@emailjs/browser';
 import { useEffect, useRef, useState } from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
 import styles from '../Forms/NewContactForm.module.scss';
@@ -23,6 +24,7 @@ export function NewContactForm() {
   const [captcha, setCaptcha] = useState('');
   const [isFormValid, setIsFormValid] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   /* Referências que persistem no form e no Recaptcha para poder manipulá-los. */
   const form = useRef();
@@ -57,7 +59,7 @@ export function NewContactForm() {
   }
 
   /* Função de validação para o envio de e-mail de contato. */
-  function sendEmail(event) {
+  async function sendEmail(event) {
     event.preventDefault();
 
     if (!captcha) {
@@ -70,16 +72,18 @@ export function NewContactForm() {
       return;
     }
 
-    emailjs
-      .sendForm(serviceID, templateID, form.current, {
-        publicKey: publicKey,
-      })
-      .then((result) => {
-        alert('✅ Mensagem enviada com sucesso!');
-        console.log('Email enviado:', result.text);
+    try {
+      setIsSubmitting(true);
+      setErrorMessage('');
 
-        recaptchaRef.current.reset();
-        setCaptcha('');
+      const result = await emailjs.sendForm(
+        serviceID,
+        templateID,
+        form.current,
+        publicKey,
+      );
+
+      if (result.text === 'OK') {
         setFormData({
           user_name: '',
           user_mail: '',
@@ -87,7 +91,18 @@ export function NewContactForm() {
           subject: '',
           message: '',
         });
-      }, setErrorMessage('❌ Ocorreu um erro ao enviar a mensagem.'));
+        recaptchaRef.current.reset();
+        setCaptcha('');
+        setErrorMessage('✅ Mensagem enviada com sucesso!');
+      }
+    } catch (error) {
+      console.error('Erro ao enviar:', error);
+      setErrorMessage(
+        '❌ Ocorreu um erro ao enviar a mensagem. Tente novamente.',
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
   }
 
   return (
@@ -158,11 +173,17 @@ export function NewContactForm() {
         />
 
         {errorMessage && (
-          <p className={styles.contactForm__error}>{errorMessage}</p>
+          <p
+            className={`${styles.contactForm__message} ${
+              errorMessage.includes('✅') ? styles.success : styles.error
+            }`}
+          >
+            {errorMessage}
+          </p>
         )}
 
-        <NewButton type="submit" disabled={!isFormValid} className="filled">
-          Envie um Oi!
+        <NewButton type="submit" disabled={!isFormValid || isSubmitting}>
+          {isSubmitting ? 'Enviando...' : 'Envie um Oi!'}
         </NewButton>
       </form>
     </section>
