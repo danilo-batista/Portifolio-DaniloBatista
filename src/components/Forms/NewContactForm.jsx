@@ -13,18 +13,37 @@ export function NewContactForm() {
   const templateID = import.meta.env.VITE_TEMPLATE_ID;
   const serviceID = import.meta.env.VITE_SERVICE_ID;
 
-  /* Estados que controlam o formulário: */
-  const [formData, setFormData] = useState({
+  /* Estado inicial do formulário */
+  const initialFormState = {
     user_name: '',
     user_mail: '',
     user_phone: '',
     subject: '',
     message: '',
-  });
+  };
+
+  /* Estados que controlam o formulário: */
+  const [formData, setFormData] = useState(initialFormState);
   const [captcha, setCaptcha] = useState('');
   const [isFormValid, setIsFormValid] = useState(false);
-  const [errorMessage, setErrorMessage] = useState('');
+  const [errorMessage, setErrorMessage] = useState(
+    '⚠️ Preencha todos os campos para ativar a verificação',
+  );
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  /* Função para resetar o formulário */
+  const resetForm = () => {
+    setFormData(initialFormState);
+    setCaptcha('');
+    setIsFormValid(false);
+    setErrorMessage('⚠️ Preencha todos os campos para ativar a verificação');
+    if (recaptchaRef.current) {
+      recaptchaRef.current.reset();
+    }
+    if (form.current) {
+      form.current.reset();
+    }
+  };
 
   /* Referências que persistem no form e no Recaptcha para poder manipulá-los. */
   const form = useRef();
@@ -32,14 +51,18 @@ export function NewContactForm() {
 
   /* Verifica se os campos estão preenchidos e atualiza o estado do formulário */
   useEffect(() => {
-    const allFilled = Object.values(formData).every((val) => val.trim() !== '');
+    const values = Object.values(formData);
+    const hasAnyValue = values.some((val) => val.trim() !== '');
+    const allFilled = values.every((val) => val.trim() !== '');
 
     // Atualiza o estado de validação do formulário
     setIsFormValid(allFilled && !!captcha);
 
     // Gerencia mensagens de feedback
-    if (!allFilled && !captcha) {
+    if (!hasAnyValue) {
       setErrorMessage('⚠️ Preencha todos os campos para ativar a verificação');
+    } else if (!allFilled) {
+      setErrorMessage('⚠️ Todos os campos são obrigatórios');
     } else if (allFilled && !captcha) {
       setErrorMessage('⚠️ Agora resolva o reCAPTCHA para enviar');
     } else if (allFilled && captcha) {
@@ -90,16 +113,15 @@ export function NewContactForm() {
       );
 
       if (result.text === 'OK') {
-        setFormData({
-          user_name: '',
-          user_mail: '',
-          user_phone: '',
-          subject: '',
-          message: '',
-        });
-        recaptchaRef.current.reset();
-        setCaptcha('');
+        resetForm();
         setErrorMessage('✅ Mensagem enviada com sucesso!');
+
+        // Limpa a mensagem de sucesso após 3 segundos
+        setTimeout(() => {
+          setErrorMessage(
+            '⚠️ Preencha todos os campos para ativar a verificação',
+          );
+        }, 3000);
       }
     } catch (error) {
       console.error('Erro ao enviar:', error);
@@ -180,12 +202,19 @@ export function NewContactForm() {
           required
         />
 
-        <ReCAPTCHA
-          sitekey={siteKey}
-          onChange={setCaptcha}
-          ref={recaptchaRef}
-          className={styles.contactForm__captcha}
-        />
+        <div className={styles.contactForm__captchaWrapper}>
+          <ReCAPTCHA
+            sitekey={siteKey}
+            onChange={setCaptcha}
+            ref={recaptchaRef}
+            className={styles.contactForm__captcha}
+          />
+          {!Object.values(formData).every((val) => val.trim() !== '') && (
+            <div className={styles.contactForm__captchaOverlay}>
+              <span>Preencha todos os campos primeiro</span>
+            </div>
+          )}
+        </div>
 
         <NewButton type="submit" disabled={!isFormValid || isSubmitting}>
           {isSubmitting ? 'Enviando...' : 'Envie um Oi!'}
