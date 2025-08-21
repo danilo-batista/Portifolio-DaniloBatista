@@ -30,13 +30,19 @@ export function NewContactForm() {
   const form = useRef();
   const recaptchaRef = useRef();
 
-  /* Efeito colateral que verifica se todos os campos do formulário estão preenchidos e se o Recaptcha foi resolvido. */
+  /* Verifica se os campos estão preenchidos e atualiza o estado do formulário */
   useEffect(() => {
     const allFilled = Object.values(formData).every((val) => val.trim() !== '');
 
+    // Atualiza o estado de validação do formulário
     setIsFormValid(allFilled && !!captcha);
 
-    if (allFilled && captcha) {
+    // Gerencia mensagens de feedback
+    if (!allFilled && !captcha) {
+      setErrorMessage('⚠️ Preencha todos os campos para ativar a verificação');
+    } else if (allFilled && !captcha) {
+      setErrorMessage('⚠️ Agora resolva o reCAPTCHA para enviar');
+    } else if (allFilled && captcha) {
       setErrorMessage('');
     }
   }, [formData, captcha]);
@@ -115,6 +121,15 @@ export function NewContactForm() {
         onSubmit={sendEmail}
         className={styles.contactForm__form}
       >
+        {errorMessage && (
+          <p
+            className={`${styles.contactForm__message} ${
+              errorMessage.includes('✅') ? styles.success : styles.error
+            }`}
+          >
+            {errorMessage}
+          </p>
+        )}
         <InputField
           label="Nome"
           type="text"
@@ -171,16 +186,6 @@ export function NewContactForm() {
           ref={recaptchaRef}
           className={styles.contactForm__captcha}
         />
-
-        {errorMessage && (
-          <p
-            className={`${styles.contactForm__message} ${
-              errorMessage.includes('✅') ? styles.success : styles.error
-            }`}
-          >
-            {errorMessage}
-          </p>
-        )}
 
         <NewButton type="submit" disabled={!isFormValid || isSubmitting}>
           {isSubmitting ? 'Enviando...' : 'Envie um Oi!'}
