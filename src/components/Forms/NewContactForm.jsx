@@ -36,7 +36,7 @@ export function NewContactForm() {
     setFormData(initialFormState);
     setCaptcha('');
     setIsFormValid(false);
-    setErrorMessage('⚠️ Preencha todos os campos para ativar a verificação');
+    setErrorMessage('⚠️ Todos os campos são obrigatórios');
     if (recaptchaRef.current) {
       recaptchaRef.current.reset();
     }
@@ -52,16 +52,13 @@ export function NewContactForm() {
   /* Verifica se os campos estão preenchidos e atualiza o estado do formulário */
   useEffect(() => {
     const values = Object.values(formData);
-    const hasAnyValue = values.some((val) => val.trim() !== '');
     const allFilled = values.every((val) => val.trim() !== '');
 
     // Atualiza o estado de validação do formulário
     setIsFormValid(allFilled && !!captcha);
 
     // Gerencia mensagens de feedback
-    if (!hasAnyValue) {
-      setErrorMessage('⚠️ Preencha todos os campos para ativar a verificação');
-    } else if (!allFilled) {
+    if (!allFilled) {
       setErrorMessage('⚠️ Todos os campos são obrigatórios');
     } else if (allFilled && !captcha) {
       setErrorMessage('⚠️ Agora resolva o reCAPTCHA para enviar');
@@ -211,7 +208,7 @@ export function NewContactForm() {
           />
           {!Object.values(formData).every((val) => val.trim() !== '') && (
             <div className={styles.contactForm__captchaOverlay}>
-              <span>Preencha todos os campos primeiro</span>
+              <span>⚠️ Preencha todos os campos para ativar a verificação</span>
             </div>
           )}
         </div>
