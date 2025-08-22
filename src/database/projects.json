@@ -20,7 +20,7 @@
     "description": "Livraria fictícia com foco em tecnologia, apresentando destaques, categorias e avaliações para explorar livros da Alura.",
     "period": "fev/2025",
     "client": "rocketseat",
-    "highlight": false,
+    "highlight": true,
     "category": "desenvolvimento",
     "tags": ["html", "css"],
     "link": "https://danilo-batista.github.io/alura-books"
@@ -102,18 +102,5 @@
     "category": "desenvolvimento",
     "tags": ["react", "css modules"],
     "link": "https://ignite-feed-six-silk.vercel.app/"
-  },
-  {
-    "id": 9,
-    "title": "Danilo Batista",
-    "slug": "portifolio-danilobatista",
-    "thumbnail": "portifolio-danilo-batista.webp",
-    "description": "Portifólio Danilo Batista.",
-    "period": "ago/2025",
-    "client": "danilobatista",
-    "highlight": true,
-    "category": "desenvolvimento",
-    "tags": ["react", "sass", "css modules"],
-    "link": "https://www.danilobatista.com/"
   }
 ]
