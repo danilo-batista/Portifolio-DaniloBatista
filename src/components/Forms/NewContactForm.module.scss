@@ -98,9 +98,22 @@
 
 .contactForm__form {
     @include flexbox($flexDirection: column, $alignItems: center, $gap: 1.5rem);
+    padding-inline: 0.5rem;
 
     flex-wrap: wrap;
     width: 100%;
+
+    @media screen and (min-width: $breakpoint__tablet) {
+        padding-inline: 3.5rem;
+    }
+
+    @media screen and (min-width: $breakpoint__smallDesktop) {
+        padding-inline: 4rem;
+    }
+
+    @media screen and (min-width: $breakpoint__desktop) {
+        padding-inline: 3.5rem;
+    }
 }
 
 .contactForm__captchaWrapper {

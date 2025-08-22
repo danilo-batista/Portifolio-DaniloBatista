@@ -1,9 +1,13 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import daniloBatistaPicture from '../../assets/images/danilo-batista.webp';
+import { useScrollToTop } from '../../hooks/useScrollToTop';
 import styles from '../Footer/NewMainFooter.module.scss';
 import { NewFooter } from './NewFooter';
 
 export function NewMainFooter() {
+  const navigate = useNavigate();
+  const { scrollToElement, pathname } = useScrollToTop();
+
   return (
     <>
       <footer className={styles.footer}>
@@ -63,7 +67,18 @@ export function NewMainFooter() {
             Github
           </Link>
 
-          <Link to="/contato" className={styles.cardList__button}>
+          <Link
+            to="/contato"
+            className={styles.cardList__button}
+            onClick={(event) => {
+              event.preventDefault();
+              if (pathname === '/contato') {
+                scrollToElement(elementId);
+              } else {
+                navigate('/contato');
+              }
+            }}
+          >
             Fale comigo
           </Link>
         </div>

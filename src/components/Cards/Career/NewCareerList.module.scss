@@ -5,6 +5,7 @@
     @include flexbox($flexDirection: column, $justifyContent: flex-start, $alignItems: left, $gap: 1rem);
 
     padding: 1.75rem 0;
+    position: relative;
 
     text-align: left;
 

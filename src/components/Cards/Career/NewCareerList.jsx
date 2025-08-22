@@ -1,11 +1,13 @@
+import { useId } from 'react';
 import { careerList } from '../../../database/career';
 import { NewCareer } from './NewCareer';
 import styles from './NewCareerList.module.scss';
 
 export function NewCareerList() {
   const listToRender = careerList.sort((a, b) => b.id - a.id);
+  const careerListId = useId();
   return (
-    <section className={styles.careerList}>
+    <section className={styles.careerList} id={careerListId}>
       <h2 className={styles.careerList__title}>Experiências</h2>
       <p className={styles.careerList__subtitle}>
         Explore minha trajetória e descubra os desafios que marcaram minha
