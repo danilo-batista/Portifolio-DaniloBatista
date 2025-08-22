@@ -34,23 +34,23 @@ export function NewHeroAbout() {
         </p>
 
         <p className={styles.hero__description}>
-          Minha bagagem no <span>Design</span> me proporcionou não apenas um{' '}
-          <span>olhar apurado para a estética,</span> mas também{' '}
-          <span>fortaleceu minha comunicação</span> e a
-          <span> colaboração com equipes multidisciplinares.</span> Ao longo dos
-          anos, sempre atuei como um <span>parceiro criativo,</span> alguém que
+          Minha experiência em <span>Design</span> me proporcionou um{' '}
+          <span>olhar apurado para a estética,</span> além de ter{' '}
+          <span>fortalecido minhas habilidades de comunicação</span> e
+          <span> colaboração em equipes multidisciplinares.</span> Ao longo da
+          carreira, atuei como um <span>parceiro criativo,</span> alguém que
           escuta, entende o contexto e{' '}
           <span>transforma ideias em experiências visuais e funcionais.</span>
         </p>
 
         <p className={styles.hero__description}>
           Hoje, unindo minha <span>trajetória no design</span> às{' '}
-          <span>habilidades como desenvolvedor front-end,</span> mantenho essa{' '}
+          <span>competências como desenvolvedor front-end,</span> mantenho uma{' '}
           <span>abordagem colaborativa</span> para
           <span>
             {' '}
-            cocriar soluções que façam sentido para o usuário, para o negócio e
-            para todos os envolvidos no processo.
+            cocriar soluções relevantes para o usuário, para o negócio e para
+            todos os envolvidos no processo.
           </span>
         </p>
         <div className={styles.download__buttons}>

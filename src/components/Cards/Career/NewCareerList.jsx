@@ -1,17 +1,17 @@
 import { useId } from 'react';
-import { careerList } from '../../../database/career';
+import career from '../../../database/career.json';
 import { NewCareer } from './NewCareer';
 import styles from './NewCareerList.module.scss';
 
 export function NewCareerList() {
-  const listToRender = careerList.sort((a, b) => b.id - a.id);
-  const careerListId = useId();
+  const listToRender = career.sort((a, b) => b.id - a.id);
+  const careerId = useId();
   return (
-    <section className={styles.careerList} id={careerListId}>
+    <section className={styles.careerList} id={careerId}>
       <h2 className={styles.careerList__title}>Experiências</h2>
       <p className={styles.careerList__subtitle}>
-        Explore minha trajetória e descubra os desafios que marcaram minha
-        carreira.
+        Conheça minha trajetória profissional e os desafios que fortaleceram
+        minha carreira.
       </p>
       <div className={styles.careerList__cards}>
         {listToRender.map((career, index) => {

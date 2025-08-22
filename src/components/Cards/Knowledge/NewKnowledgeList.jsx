@@ -1,15 +1,15 @@
-import { knowledgeList } from '../../../database/knowledge';
+import knowledge from '../../../database/knowledge.json';
 import { NewKnowledge } from './NewKnowledge';
 import styles from './NewKnowledgeList.module.scss';
 
 export function NewKnowledgeList() {
-  const listToRender = knowledgeList.sort((a, b) => b.id - a.id);
+  const listToRender = knowledge.sort((a, b) => b.id - a.id);
   return (
     <section className={styles.knowledgeList}>
       <h2 className={styles.knowledgeList__title}>Formação Acadêmica</h2>
       <p className={styles.knowledgeList__subtitle}>
-        Explore minha jornada acadêmica e as etapas que moldaram meu
-        conhecimento.
+        Minha formação acadêmica e os aprendizados que fundamentam minha
+        carreira.
       </p>
       <div className={styles.knowledgeList__cards}>
         {listToRender.map((knowledge) => {

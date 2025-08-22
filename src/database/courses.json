@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "company": "DKM & J. Soares Consultoria e Assessoria Empresarial",
+    "slug": "dkm-j-soares-consultoria-e-assessoria-empresarial",
+    "brand": "/brands/dkm-j-soares-consultoria-e-assessoria-empresarial.png",
+    "link": "",
+    "period": "out/2005",
+    "title": "Certificação de auditor interno ISO 9001:2000",
+    "description": ["ISO 9001", "Auditoria Interna"],
+    "extraProjects": []
+  },
+  {
+    "id": 2,
+    "company": "ESPM Escola Superior de Propaganda e Marketing",
+    "slug": "espm-escola-superior-de-propaganda-e-marketing",
+    "brand": "/brands/espm-escola-superior-de-propaganda-e-marketing.png",
+    "link": "https://www.espm.br",
+    "period": "mai/2008",
+    "title": "Programa Intensivo de Marketing",
+    "description": ["Estratégias de Marketing", "Planejamento de Marketing", "Marketing Editorial"],
+    "extraProjects": []
+  },
+  {
+    "id": 3,
+    "company": "Certiprof",
+    "slug": "certiprof",
+    "brand": "/brands/certiprof.png",
+    "link": "https://certiprof.com/pt",
+    "period": "jan/2019",
+    "title": "Scrum Foundation Professional Certificate (SFPC)",
+    "description": ["Scrum", "Metodologias Ágeis"],
+    "extraProjects": []
+  },
+  {
+    "id": 4,
+    "company": "Caelum | Alura",
+    "slug": "caelum-alura",
+    "brand": "/brands/caelum-alura.png",
+    "link": "https://www.alura.com.br",
+    "period": "dez/2020 ~ jan/2021",
+    "title": "Desenvolvimento Web com JavaScript",
+    "description": ["HTML5 Semântico", "CSS3", "Web design responsivo", "JavaScript", "Desenvolvimento de front-end", "Consumo de API", "PWA (Progressive Web App)"],
+    "extraProjects": []
+  },
+  {
+    "id": 5,
+    "company": "Digital House Brasil | Rocketseat",
+    "slug": "digital-house-brasil-rocketseat",
+    "brand": "/brands/digital-house-brasil-rocketseat.png",
+    "link": "https://www.rocketseat.com.br",
+    "period": "jun/2022 ~ mar/2023",
+    "title": "Desenvolvimento Web Fullstack com JavaScript",
+    "description": [
+      "React.js",
+      "Redux",
+      "Node.js",
+      "Express.js",
+      "Sequelize.js",
+      "EJS",
+      "SQL",
+      "MVC",
+      "Desenvolvimento back-end",
+      "Consumo de APIs back-end",
+      "GitFlow",
+      "GitHub",
+      "Gestão de equipes",
+      "Gestão de tempo",
+      "Gestão de projetos",
+      "Programação pareada",
+      "E-Commerce",
+      "Scrum",
+      "Metodologias Ágeis"
+    ],
+    "extraProjects": ["DhGeek - E-commerce Disney"]
+  },
+  {
+    "id": 6,
+    "company": "Ada.tech",
+    "slug": "ada-tech",
+    "brand": "/brands/ada-tech.png",
+    "link": "https://ada.tech",
+    "period": "jan/2025 ~ atualmente",
+    "title": "Front-end com React.js",
+    "description": ["React.js", "React Hooks", "Redux", "TypeScript", "Programação orientada a objetos (POO)", "CSS Modules", "Styled Components", "SASS"],
+    "extraProjects": []
+  },
+  {
+    "id": 7,
+    "company": "Conquer",
+    "slug": "conquer",
+    "brand": "/brands/conquer.png",
+    "link": "https://escolaconquer.com.br",
+    "period": "jan/2023 ~ atualmente",
+    "title": "Soft-skills e Produtividade",
+    "description": ["Relações humanas", "Produtividade inteligente"],
+    "extraProjects": []
+  },
+  {
+    "id": 8,
+    "company": "Alura",
+    "slug": "alura",
+    "brand": "/brands/alura.png",
+    "link": "https://www.alura.com.br",
+    "period": "jan/2023 ~ atualmente",
+    "title": "IA, soft-skills e front-end",
+    "description": ["CSS Avançado", "Front-end", "Hábitos", "Foco", "Produtividade", "IA Generativa"],
+    "extraProjects": []
+  }
+]

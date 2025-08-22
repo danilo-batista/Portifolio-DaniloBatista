@@ -56,12 +56,42 @@
     }
 }
 
+.skill__subtitle {
+    padding-inline: 1.5rem;
+    margin-top: 3rem;
+
+    text-align: left;
+    font-weight: 700;
+
+    @media screen and (min-width: $breakpoint__cellPhone) {
+        font-size: 1.125rem;
+    }
+
+    @media screen and (min-width: $breakpoint__tablet) {
+        padding-inline: 3.5rem;
+    }
+
+    @media screen and (min-width: $breakpoint__smallDesktop) {
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+
+    @media screen and (min-width: $breakpoint__desktop) {
+        font-size: 1.75rem;
+        line-height: 2.5rem;
+    }
+}
+
 .skill__listItems {
     @include flexbox($flexDirection: row, $justifyContent: center, $alignItems: center, $gap: 2.25rem);
 
     flex-wrap: wrap;
     padding-inline: 1.5rem;
     margin-top: auto;
+
+    @media screen and (min-width: $breakpoint__tablet) {
+        padding-inline: 3.5rem;
+    }
 }
 
 .skill__items {
@@ -70,7 +100,7 @@
 
     font-size: 1.25rem;
     line-height: 1.625rem;
-    
+
     color: $color__gray-900;
     border-bottom: 2px solid $color__secondary-700;
 

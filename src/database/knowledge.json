@@ -1,0 +1,101 @@
+[
+  {
+    "id": 1,
+    "company": "ETE Professor Camargo Aranha",
+    "slug": "ete-professor-camargo-aranha",
+    "brand": "/brands/ete-professor-camargo-aranha.png",
+    "link": "https://eteccamargoaranha.cps.sp.gov.br/",
+    "period": "jan/2002 ~ jun/2002",
+    "title": "Auxiliar de Informática",
+    "type": "Técnico",
+    "description": ["SQL", "Lógica de Programação"],
+    "extraProjects": []
+  },
+  {
+    "id": 2,
+    "company": "SENAI Theobaldo de Nigris",
+    "slug": "senai-theobaldo-de-nigris",
+    "brand": "/brands/senai-theobaldo-de-nigris.png",
+    "link": "https://sp.senai.br/unidade/grafica/",
+    "period": "jul/2001 ~ jun/2003",
+    "title": "Produtor Gráfico em Pré-Impressão",
+    "type": "Técnico",
+    "description": ["Produção Gráfica", "Colorimetria"],
+    "extraProjects": []
+  },
+  {
+    "id": 3,
+    "company": "Universidade São Judas",
+    "slug": "universidade-sao-judas",
+    "brand": "/brands/universidade-sao-judas.png",
+    "link": "https://www.usjt.br",
+    "period": "jan/2004 ~ dez/2007",
+    "title": "Bacharelado em Design Gráfico",
+    "type": "Bacharelado",
+    "description": [
+      "Photoshop",
+      "Illustrator",
+      "CorelDraw",
+      "InDesign",
+      "macOS",
+      "Windows",
+      "Cores",
+      "Tipografia",
+      "Embalagens",
+      "Teorias de Design"
+    ],
+    "extraProjects": [
+      "O design de embalagem para a criação e o desenvolvimento de marcas próprias direcionadas ao segmento de autosserviço."
+    ]
+  },
+  {
+    "id": 4,
+    "company": "Instituto Federal São Paulo",
+    "slug": "instituto-federal-sao-paulo",
+    "brand": "/brands/instituto-federal-sao-paulo.png",
+    "link": "http://gru.ifsp.edu.br",
+    "period": "jan/2014 ~ jun/2020",
+    "title": "Tecnólogo em Análise e Desenvolvimento de Sistemas",
+    "type": "Tecnólogo",
+    "description": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Bootstrap",
+      "Java",
+      "PHP",
+      "SQL",
+      "Scrum",
+      "Kanban",
+      "BPMN",
+      "Orientação a Objetos",
+      "Engenharia de Software",
+      "Modelagem de Banco de Dados",
+      "GIT | GitHub"
+    ],
+    "extraProjects": [
+      "Acessibilização do Instituto Federal São Paulo - Câmpus Guarulhos para usuários com surdez por meio da sinalização física."
+    ]
+  },
+  {
+    "id": 5,
+    "company": "Instituto Europeo di Design",
+    "slug": "instituto-europeo-di-design",
+    "brand": "/brands/instituto-europeo-di-design.png",
+    "link": "https://ied.edu.br",
+    "period": "jul/2009 ~ jun/2011",
+    "title": "Especialização em Design Estratégico e Inovação",
+    "type": "Especialização",
+    "description": [
+      "Design Thinking",
+      "Double Diamond",
+      "OmniGraffle",
+      "Gestão de Design",
+      "Planejamento de Marketing",
+      "Gráfico de Gantt",
+      "Sustentabilidade",
+      "Desenvolvimento de Pesquisas"
+    ],
+    "extraProjects": ["Uso da ferramenta RPG para recriar histórias."]
+  }
+]

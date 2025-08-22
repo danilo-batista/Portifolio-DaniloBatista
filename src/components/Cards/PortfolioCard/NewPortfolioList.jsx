@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom';
-import { projectsList } from '../../../database/projects';
+import projects from '../../../database/projects.json';
 import { NewPortfolioCard } from './NewPortfolioCard';
 import styles from './NewPortfolioList.module.scss';
 
 export function NewPortfolioList(props) {
   /* Cria uma nova lista ao percorrer a anterior, reorganizando por ordem descrescente e filtrando os projetos a serem destacados. */
-  const listToRender = projectsList
+  const listToRender = projects
     .sort((a, b) => b.id - a.id)
     .filter((project) => (props.showHighlights ? project.highlight : true));
 
@@ -13,8 +13,7 @@ export function NewPortfolioList(props) {
     <section className={styles.cardList}>
       <h2 className={styles.cardList__title}>Projetos</h2>
       <p className={styles.cardList__subtitle}>
-        Desafios técnicos e criativos que impulsionaram minha evolução na área
-        de Tecnologia.
+        Experiências práticas que refletem meu crescimento técnico e criativo.
       </p>
       <div className={styles.cardList__cards}>
         {/* */}
