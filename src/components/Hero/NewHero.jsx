@@ -12,15 +12,15 @@ export function NewHero() {
           Soluções completas: do visual ao funcional
         </li>
         <li className={styles.hero__listItems}>
-          Experiência que entende de negócios e pessoas
+          Experiência com foco em negócios e pessoas
         </li>
         <li className={styles.hero__listItems}>
-          Cocriação com foco em gerar valor real
+          Cocriação para gerar valor real
         </li>
       </ul>
       <div className={styles.hero__buttons}>
         <NavLink to="/sobre-mim" className={styles.hero__button}>
-          Minha Jornada
+          Sobre mim
         </NavLink>
 
         <NavLink to="/contato" className={styles.hero__button}>

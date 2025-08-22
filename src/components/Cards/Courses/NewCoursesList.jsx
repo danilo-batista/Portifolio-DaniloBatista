@@ -1,14 +1,14 @@
-import { coursesList } from '../../../database/courses';
+import courses from '../../../database/courses.json';
 import { NewCourses } from './NewCourses';
 import styles from './NewCoursesList.module.scss';
 
 export function NewCoursesList() {
-  const listToRender = coursesList.sort((a, b) => b.id - a.id);
+  const listToRender = courses.sort((a, b) => b.id - a.id);
   return (
     <section className={styles.coursesList}>
       <h2 className={styles.coursesList__title}>Cursos Extras</h2>
       <p className={styles.coursesList__subtitle}>
-        Aprendizado contínuo além da formação acadêmica.
+        Aprendizado contínuo que vai além da formação acadêmica.
       </p>
       <div className={styles.coursesList__cards}>
         {listToRender.map((courses) => {

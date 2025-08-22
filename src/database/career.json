@@ -1,0 +1,81 @@
+[
+  {
+    "id": 1,
+    "company": "Alfaflex",
+    "slug": "alfaflex",
+    "brand": "/brands/3x/alfaflex-3x.webp",
+    "link": "https://alfaflex.com.br/",
+    "period": "set/2002 ~ dez/2005",
+    "title": "Técnico em Pré-Impressão",
+    "description": "Gráfica especializada na produção de painéis adesivos e circuitos impressos flexíveis para produtos eletrônicos, utilizando o sistema serigráfico. Obs.: durante o período em que trabalhei, a empresa era conhecida como Condugraf Produtos Eletrônicos.",
+    "resume": [
+      "Arte-finalizei digitalmente painéis adesivos, circuitos impressos e teclados de membrana a partir de amostras físicas e desenhos técnicos.",
+      "Defini processos gráficos em conformidade com as necessidades específicas dos clientes.",
+      "Elaborei, revisei e diagramei documentações de processos em conformidade com a norma ISO 9001, aumentando a clareza e o uso interno na área de Desenvolvimento de Produtos Gráficos."
+    ],
+    "extraProjects": [
+      "Desenvolvi uma escala física de cores \"Condugraf\", que reduziu custos e aumentou a produtividade tanto na área de Vendas e atendimento ao Cliente quanto no processo de Produção Gráfica."
+    ]
+  },
+  {
+    "id": 2,
+    "company": "Multilaser",
+    "slug": "multilaser",
+    "brand": "/brands/3x/multilaser-3x.webp",
+    "link": "https://www.multilaser.com.br/",
+    "period": "jan/2006 ~ jan/2012",
+    "title": "Designer Gráfico",
+    "description": "Empresa especializada em suprimentos de informática e eletrônicos.",
+    "resume": [
+      "Desenvolvi o design de embalagens para diversas linhas de produtos da empresa, fortalecendo a identidade visual da marca.",
+      "Criei projetos de comunicação interna em parceria com a área de Recursos Humanos.",
+      "Produzi materiais gráficos de suporte à equipe comercial em campanhas, ações promocionais e treinamentos.",
+      "Gerenciei a equipe interna de designers, coordenando criação, fluxos de trabalho e prazos.",
+      "Orientei fornecedores internacionais em processos de adaptação e padronização de layouts.",
+      "Realizei visitas técnicas a gráficas, validando parcerias em conjunto com a área de Compras.",
+      "Inspecionei embalagens importadas diretamente no centro de distribuição, garantindo qualidade e conformidade.",
+      "Colaborei tecnicamente no redesign da marca principal, apoiando a agência externa de branding na aplicação da marca em embalagens e produtos.",
+      "Desenvolvi materiais digitais, como e-mail marketing, para impulsionar o time de vendas."
+    ],
+    "extraProjects": [
+      "Liderei o projeto de redesign de toda a linha de embalagens, integrando fornecedores, equipe de design e time de vendas.",
+      "Aumentei a visibilidade e relevância dos produtos nos pontos de venda, recuperando espaço perdido para concorrentes.",
+      "Dirigi a parte artística dos catálogos de produtos, transformando-os nas principais ferramentas de conversão de vendas."
+    ]
+  },
+  {
+    "id": 3,
+    "company": "Kalunga",
+    "slug": "kalunga",
+    "brand": "/brands/3x/kalunga-3x.webp",
+    "link": "https://www.kalunga.com.br/",
+    "period": "ago/2012 ~ mar/2014",
+    "title": "Analista de Embalagens",
+    "description": "Rede especializada em comércio de papelaria e eletrônicos.",
+    "resume": [
+      "Atualizei e padronizei layouts de embalagens de produtos de marca própria, garantindo consistência visual e alinhamento estratégico.",
+      "Realizei estudos de viabilidade para materiais gráficos, incluindo embalagens, manuais de instruções e materiais de ponto de venda.",
+      "Coordenei a equipe interna de designers e produtores gráficos, otimizando fluxos de trabalho e prazos.",
+      "Orientei fornecedores internacionais em processos de adaptação e conformidade de materiais."
+    ],
+    "extraProjects": []
+  },
+  {
+    "id": 4,
+    "company": "MSP Estúdios",
+    "slug": "msp-estudios",
+    "brand": "/brands/3x/msp-estudios-3x.webp",
+    "link": "https://turmadamonica.uol.com.br/",
+    "period": "abr/2014 ~ dez/2024",
+    "title": "Letrista - Designer",
+    "description": "Estúdio de quadrinhos responsável pela criação e expansão do Universo da Turma da Mônica.",
+    "resume": [
+      "Desenvolvi balões, títulos e onomatopeias customizadas para histórias em quadrinhos e livros didáticos.",
+      "Ilustrei histórias temáticas da coleção \"Grandes Paródias do Cinema\".",
+      "Vetorizei artes originais, convertendo produções no papel para o meio digital."
+    ],
+    "extraProjects": [
+      "Implementei a atualização de ferramentas gráficas que otimizou o tempo de produção das HQs e viabilizou a expansão internacional por meio da personalização de diálogos em diferentes idiomas."
+    ]
+  }
+]

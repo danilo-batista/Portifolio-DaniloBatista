@@ -1,0 +1,48 @@
+{
+  "techSkills": [
+    "HTML",
+    "CSS",
+    "SASS",
+    "JavaScript",
+    "TypeScript",
+    "React.js",
+    "Redux",
+    "CSS Modules",
+    "Styled Components",
+    "Node.js",
+    "Express.js",
+    "Sequelize.js",
+    "SQL",
+    "MVC",
+    "Consumo de APIs",
+    "Bootstrap",
+    "Web Design Responsivo",
+    "Programação Orientada a Objetos (POO)",
+    "Git | Github"
+  ],
+  "softSkills": [
+    "Scrum",
+    "Design Thinking",
+    "Kanban",
+    "BPMN",
+    "Proatividade",
+    "Melhoria contínua",
+    "Trabalho em equipe",
+    "Resolução de problemas",
+    "Liderança",
+    "Gestão de equipes",
+    "Planejamento de projetos",
+    "Comunicação assertiva",
+    "Cocriação / colaboração multidisciplinar",
+    "Curiosidade / aprendizado contínuo",
+    "Produtividade inteligente",
+    "Design Estratégico"
+  ],
+  "designTools": [
+    "Photoshop",
+    "Illustrator",
+    "InDesign",
+    "CorelDraw",
+    "Produção Gráfica / Pré-impressão"
+  ]
+}
