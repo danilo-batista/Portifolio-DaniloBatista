@@ -1,12 +1,12 @@
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import daniloBatistaPicture from '../../assets/images/danilo-batista.webp';
 import { useScrollToTop } from '../../hooks/useScrollToTop';
 import styles from '../Footer/NewMainFooter.module.scss';
 import { NewFooter } from './NewFooter';
 
 export function NewMainFooter() {
-  const navigate = useNavigate();
   const { scrollToElement, pathname } = useScrollToTop();
+  const formId = 'contactFormId';
 
   return (
     <>
@@ -68,14 +68,12 @@ export function NewMainFooter() {
           </Link>
 
           <Link
-            to="/contato"
+            to={`/contato#${formId}`}
             className={styles.cardList__button}
             onClick={(event) => {
-              event.preventDefault();
               if (pathname === '/contato') {
-                scrollToElement(elementId);
-              } else {
-                navigate('/contato');
+                event.preventDefault();
+                scrollToElement(formId);
               }
             }}
           >

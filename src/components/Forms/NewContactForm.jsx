@@ -1,5 +1,5 @@
 import emailjs from '@emailjs/browser';
-import { useEffect, useId, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
 import styles from '../Forms/NewContactForm.module.scss';
 import { InputField } from './InputField';
@@ -12,8 +12,6 @@ export function NewContactForm() {
   const publicKey = import.meta.env.VITE_PUBLIC_KEY;
   const templateID = import.meta.env.VITE_TEMPLATE_ID;
   const serviceID = import.meta.env.VITE_SERVICE_ID;
-
-  const contactFormId = useId();
 
   /* Estado inicial do formulário */
   const initialFormState = {
@@ -114,13 +112,6 @@ export function NewContactForm() {
       if (result.text === 'OK') {
         resetForm();
         setErrorMessage('✅ Mensagem enviada com sucesso!');
-
-        // Limpa a mensagem de sucesso após 3 segundos
-        setTimeout(() => {
-          setErrorMessage(
-            '⚠️ Preencha todos os campos para ativar a verificação',
-          );
-        }, 3000);
       }
     } catch (error) {
       console.error('Erro ao enviar:', error);
@@ -133,7 +124,7 @@ export function NewContactForm() {
   }
 
   return (
-    <section className={styles.contactForm} id={contactFormId}>
+    <section className={styles.contactForm} id="contactFormId">
       <h2 className={styles.contactForm__title}>
         Gostou do meu trabalho? Diga "Oi!" e vamos crescer juntos!
       </h2>
