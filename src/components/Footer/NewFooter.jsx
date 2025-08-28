@@ -9,7 +9,7 @@ export function NewFooter() {
         target="_blank"
         className={styles.footerCopyright__link}
       >
-        danilo<span>batista®</span> 2025
+        <span>portifólio de design |</span> danilo<span>batista®</span> 2025
       </Link>
     </section>
   );
