@@ -1,13 +1,21 @@
 import react from "@vitejs/plugin-react";
 import { defineConfig } from "vite";
 
-// https://vite.dev/config/
 export default defineConfig({
-  plugins: [react()],
-  build: {
-    outDir: "dist"
-  },
-  server: {
-    historyApiFallback: true
-  }
+	plugins: [react()],
+	build: {
+		outDir: "dist",
+		minify: "esbuild",
+		sourcemap: false,
+		target: "esnext",
+		cssCodeSplit: true,
+		rollupOptions: {
+			output: {
+				manualChunks: undefined,
+			},
+		},
+	},
+	server: {
+		historyApiFallback: true,
+	},
 });

@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useClickAway } from 'react-use';
-import { menuList } from '../../Router';
+import menuList from '../../database/menuList.json';
 import styles from '../Menus/Menu.module.scss';
 import { HamburgerButton } from './HamburgerButton';
 
