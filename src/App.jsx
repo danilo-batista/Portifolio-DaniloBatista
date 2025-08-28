@@ -13,10 +13,8 @@ function ScrollToTopWrapper() {
 export function App() {
   return (
     <HelmetProvider>
-      <BrowserRouter>
-        <ScrollToTopWrapper />
-        <Router />
-      </BrowserRouter>
+      <ScrollToTopWrapper />
+      <Router />
       <Analytics />
     </HelmetProvider>
   );
