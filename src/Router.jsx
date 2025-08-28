@@ -11,25 +11,29 @@ export const menuList = [
     to: '/',
     title: 'Home',
     element: <Home />,
-    description: 'Home',
+    description:
+      'Portfólio profissional de Danilo Batista, desenvolvedor front-end e designer gráfico.',
   },
   {
     to: '/sobre-mim',
     title: 'Sobre Mim',
     element: <About />,
-    description: 'Sobre mim',
+    description:
+      'Conheça a história de Danilo Batista: designer gráfico e desenvolvedor front-end com experiência em embalagens, quadrinhos e projetos digitais.',
   },
   {
     to: '/portifolio',
     title: 'Portifólio',
     element: <Portfolio />,
-    description: 'Portfólio',
+    description:
+      'Explore os destaques do portfólio de Danilo Batista — projetos front-end criativos desenvolvidos em React, JavaScript, HTML e CSS, com forte base em design gráfico',
   },
   {
     to: '/contato',
     title: 'Contato',
     element: <Contact />,
-    description: 'Contato',
+    description:
+      'Entre em contato com Danilo Batista — desenvolvedor front-end e designer gráfico. Vamos conversar sobre como cocriar soluções digitais com criatividade e impacto.',
   },
 ];
 
