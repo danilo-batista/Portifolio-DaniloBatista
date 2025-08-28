@@ -1,4 +1,4 @@
-import styles from '../Forms/NewButton.module.scss';
+import styles from './NewButton.module.scss';
 
 export function NewButton(props) {
   return (

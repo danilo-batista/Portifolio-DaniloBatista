@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import styles from '../Footer/NewFooter.module.scss';
+import styles from './NewFooter.module.scss';
 
 export function NewFooter() {
   return (

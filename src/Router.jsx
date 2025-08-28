@@ -1,11 +1,11 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
-import { Page } from './components/Page';
-import menuList from './database/menuList.json';
-import { DefaultLayout } from './layouts/DefaultLayout';
-import { About } from './pages/About';
-import { Contact } from './pages/Contact';
-import { Home } from './pages/Home';
-import { Portfolio } from './pages/Portfolio';
+import { Page } from '@/components/Page';
+import menuList from '@/database/menuList.json';
+import { DefaultLayout } from '@/layouts/DefaultLayout';
+import { About } from '@/pages/About';
+import { Contact } from '@/pages/Contact';
+import { Home } from '@/pages/Home';
+import { Portfolio } from '@/pages/Portfolio';
 
 const pagesList = {
   Home,

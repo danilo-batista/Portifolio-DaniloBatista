@@ -1,5 +1,5 @@
 import { useId } from 'react';
-import career from '../../../database/career.json';
+import career from '@/database/career.json';
 import { NewCareer } from './NewCareer';
 import styles from './NewCareerList.module.scss';
 

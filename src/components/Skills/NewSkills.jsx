@@ -1,8 +1,4 @@
-import {
-  designTools,
-  softSkills,
-  techSkills,
-} from '../../database/skills.json';
+import { designTools, softSkills, techSkills } from '@/database/skills.json';
 import styles from './NewSkills.module.scss';
 
 export function NewSkills() {

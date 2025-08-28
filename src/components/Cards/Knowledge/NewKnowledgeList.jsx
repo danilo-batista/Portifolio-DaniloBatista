@@ -1,4 +1,4 @@
-import knowledge from '../../../database/knowledge.json';
+import knowledge from '@/database/knowledge.json';
 import { NewKnowledge } from './NewKnowledge';
 import styles from './NewKnowledgeList.module.scss';
 

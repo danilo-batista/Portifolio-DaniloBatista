@@ -1,4 +1,4 @@
-import courses from '../../../database/courses.json';
+import courses from '@/database/courses.json';
 import { NewCourses } from './NewCourses';
 import styles from './NewCoursesList.module.scss';
 

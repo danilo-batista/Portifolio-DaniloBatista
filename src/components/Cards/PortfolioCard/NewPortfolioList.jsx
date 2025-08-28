@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import projects from '../../../database/projects.json';
+import projects from '@/database/projects.json';
 import { NewPortfolioCard } from './NewPortfolioCard';
 import styles from './NewPortfolioList.module.scss';
 

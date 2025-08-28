@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
-import daniloBatistaPicture from '../../assets/images/danilo-batista.webp';
-import { useScrollToTop } from '../../hooks/useScrollToTop';
-import styles from '../Footer/NewMainFooter.module.scss';
+import daniloBatistaPicture from '@/assets/images/danilo-batista.webp';
+import { useScrollToTop } from '@/hooks/useScrollToTop';
 import { NewFooter } from './NewFooter';
+import styles from './NewMainFooter.module.scss';
 
 export function NewMainFooter() {
   const { scrollToElement, pathname } = useScrollToTop();

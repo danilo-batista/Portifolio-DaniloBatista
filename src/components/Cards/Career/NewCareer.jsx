@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import styles from '../Career/NewCareer.module.scss';
+import styles from './NewCareer.module.scss';
 
 export function NewCareer(props) {
   /* Cria um useRef apontando para <details> */

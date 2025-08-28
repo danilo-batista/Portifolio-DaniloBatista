@@ -1,4 +1,4 @@
-@use '../../styles/main' as *;
+@use '@/styles/main' as *;
 
 .genericField__data {
     @include flexbox($flexDirection: column, $alignItems: flex-start, $gap: 0.25rem);

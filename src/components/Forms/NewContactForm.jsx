@@ -1,9 +1,9 @@
 import emailjs from '@emailjs/browser';
 import { useEffect, useRef, useState } from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
-import styles from '../Forms/NewContactForm.module.scss';
 import { InputField } from './InputField';
 import { NewButton } from './NewButton';
+import styles from './NewContactForm.module.scss';
 import { TextAreaField } from './TextAreaField';
 
 export function NewContactForm() {

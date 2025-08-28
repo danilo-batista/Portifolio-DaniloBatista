@@ -1,5 +1,5 @@
-import daniloBatistaPicture from '../../assets/images/danilo-batista.webp';
-import styles from '../Hero/HeroPicture.module.scss';
+import daniloBatistaPicture from '@/assets/images/danilo-batista.webp';
+import styles from './HeroPicture.module.scss';
 
 export function HeroPicture() {
   return (
