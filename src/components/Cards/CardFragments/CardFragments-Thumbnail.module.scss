@@ -1,0 +1,20 @@
+@use '@/styles/main' as *;
+
+.card__thumbnail {
+    @include flexbox($justifyContent: center,
+        $alignItems: center);
+    width: 100%;
+    background-color: $color__secondary-200;
+}
+
+.card__thumbnailImage {
+    width: 90%;
+    margin: 1.75rem;
+
+    object-fit: cover;
+    object-position: center;
+
+    background-color: $color__secondary-100;
+    border-radius: 1rem;
+    transition: all 0.3s ease-in-out;
+}

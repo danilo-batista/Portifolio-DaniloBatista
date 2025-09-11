@@ -7,8 +7,10 @@
     "link": "https://eteccamargoaranha.cps.sp.gov.br/",
     "period": "jan/2002 ~ jun/2002",
     "title": "Auxiliar de Informática",
+    "tags": ["SQL", "Lógica de Programação"],
     "type": "Técnico",
-    "description": ["SQL", "Lógica de Programação"],
+    "extraContent": "o Projeto de Conclusão de curso", 
+    "resume": [],
     "extraProjects": []
   },
   {
@@ -20,7 +22,9 @@
     "period": "jul/2001 ~ jun/2003",
     "title": "Produtor Gráfico em Pré-Impressão",
     "type": "Técnico",
-    "description": ["Produção Gráfica", "Colorimetria"],
+    "tags": ["Produção Gráfica", "Colorimetria"],
+    "extraContent": "o Projeto de Conclusão de curso", 
+    "resume": [],
     "extraProjects": []
   },
   {
@@ -32,7 +36,7 @@
     "period": "jan/2004 ~ dez/2007",
     "title": "Bacharelado em Design Gráfico",
     "type": "Bacharelado",
-    "description": [
+    "tags": [
       "Photoshop",
       "Illustrator",
       "CorelDraw",
@@ -44,9 +48,11 @@
       "Embalagens",
       "Teorias de Design"
     ],
-    "extraProjects": [
+    "extraContent": "o Projeto de Conclusão de curso", 
+    "resume": [
       "O design de embalagem para a criação e o desenvolvimento de marcas próprias direcionadas ao segmento de autosserviço."
-    ]
+    ],
+    "extraProjects": []
   },
   {
     "id": 4,
@@ -57,7 +63,7 @@
     "period": "jan/2014 ~ jun/2020",
     "title": "Tecnólogo em Análise e Desenvolvimento de Sistemas",
     "type": "Tecnólogo",
-    "description": [
+    "tags": [
       "HTML",
       "CSS",
       "JavaScript",
@@ -73,7 +79,8 @@
       "Modelagem de Banco de Dados",
       "GIT | GitHub"
     ],
-    "extraProjects": [
+    "extraContent": "o Projeto de Conclusão de curso", 
+    "resume": [
       "Acessibilização do Instituto Federal São Paulo - Câmpus Guarulhos para usuários com surdez por meio da sinalização física."
     ]
   },
@@ -86,7 +93,7 @@
     "period": "jul/2009 ~ jun/2011",
     "title": "Especialização em Design Estratégico e Inovação",
     "type": "Especialização",
-    "description": [
+    "tags": [
       "Design Thinking",
       "Double Diamond",
       "OmniGraffle",
@@ -96,6 +103,8 @@
       "Sustentabilidade",
       "Desenvolvimento de Pesquisas"
     ],
-    "extraProjects": ["Uso da ferramenta RPG para recriar histórias."]
+    "extraContent": "o Projeto de Conclusão de curso", 
+    "resume": ["Uso da ferramenta RPG para recriar histórias."],
+    "extraProjects": []
   }
 ]

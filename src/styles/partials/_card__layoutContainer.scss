@@ -1,0 +1,25 @@
+@use '@/styles/main' as *;
+
+.card__layoutContainer {
+    display: grid;
+    grid-template-rows: subgrid;
+
+    background-color: $color__secondary-200;
+    border-radius: 1rem;
+
+    width: 100%;
+    gap: 0rem;
+
+    &:hover {
+        transform: scale(1.02);
+        transition: all 0.3s ease-in;
+
+        & img {
+            width: 100%;
+            border-radius: 0rem;
+            transition: all 0.3s ease-in-out;
+
+            margin: 0 0 0.75rem 0;
+        }
+    }
+}

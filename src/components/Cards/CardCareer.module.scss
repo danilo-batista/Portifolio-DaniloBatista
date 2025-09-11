@@ -1,0 +1,30 @@
+@use '@/styles/main' as *;
+@use '@/styles/partials/_card__information';
+@use '@/styles/partials/_card__thumbnailCaption';
+@use '@/styles/partials/_card__layoutContainer';
+
+.cardLayout__container {
+    @extend .card__layoutContainer;
+    grid-row: span 3;
+}
+
+.card__thumbnailCaption {
+    @extend .card__thumbnailCaption;
+}
+
+.card__information {
+    @extend .card__information;
+}
+
+.card__infoDescription {
+    padding-top: 0.75rem;
+
+    &>span {
+        font-weight: 700;
+    }
+
+    @media screen and (min-width: $breakpoint__cellPhone) {
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+    }
+}

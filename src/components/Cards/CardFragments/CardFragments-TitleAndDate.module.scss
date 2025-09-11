@@ -1,0 +1,35 @@
+@use '@/styles/main' as *;
+
+.card__infoPeriod {
+    padding-top: 0.25rem;
+
+    font-weight: 400;
+    font-style: oblique;
+
+    @media screen and (min-width: $breakpoint__cellPhone) {
+        font-size: 1.25rem;
+    }
+
+    @media screen and (min-width: $breakpoint__tablet) {
+        padding-top: 0.5rem;
+    }
+}
+
+.card__infoTitle {
+    font-weight: 700;
+    font-size: 1.25rem;
+
+    color: $color__success-700;
+
+    @media screen and (min-width: $breakpoint__cellPhone) {
+        font-size: 1.375rem;
+        line-height: 1.75rem;
+    }
+
+    @media screen and (min-width: $breakpoint__tablet) {
+        padding-top: 0.25rem;
+
+        font-size: 1.75rem;
+        line-height: 2rem;
+    }
+}
