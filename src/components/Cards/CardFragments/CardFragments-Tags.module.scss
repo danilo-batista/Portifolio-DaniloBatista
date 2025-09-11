@@ -1,0 +1,30 @@
+@use '@/styles/main' as *;
+
+.card__infoTagActivitiesList {
+    @include flexbox($flexDirection: row,
+        $gap: 1rem,
+        $justifyContent: left,
+        $alignItems: center,
+        $flexWrap: wrap);
+
+    width: 100%;
+    margin: 1.75rem 0 0.5rem 0;
+}
+
+
+.card__infoTagActivitiesItems {
+    flex-grow: 1;
+    padding: 0.5rem 1rem;
+
+    list-style-type: none;
+    text-align: center;
+
+    border: 2px solid $color__secondary-600;
+    border-radius: 2rem;
+    background-color: $color__secondary-100;
+
+    @media screen and (min-width: $breakpoint__desktop) {
+        font-size: 1.25rem;
+        padding: 0.75rem 1.25rem;
+    }
+}

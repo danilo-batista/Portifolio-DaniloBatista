@@ -1,0 +1,31 @@
+@use '@/styles/main' as *;
+
+.section__layoutContainer {
+    @include flexbox($flexDirection: column,
+        $gap: 1rem,
+        $justifyContent: flex-start,
+        $alignItems: left);
+
+    padding: 4.75rem 0.5rem;
+    text-align: left;
+
+    @media screen and (min-width: $breakpoint__mediumCellPhone) {
+        padding: 4.825rem 1rem;
+    }
+
+    @media screen and (min-width: $breakpoint__cellPhone) {
+        padding: 5rem 1rem;
+    }
+
+    @media screen and (min-width: $breakpoint__tablet) {
+        padding: 5.25rem 1rem;
+    }
+
+    @media screen and (min-width: $breakpoint__smallDesktop) {
+        padding: 6rem 1rem;
+    }
+
+    @media screen and (min-width: $breakpoint__desktop) {
+        padding: 7rem 5rem;
+    }
+}

@@ -1,9 +1,9 @@
 import { useRef, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useClickAway } from 'react-use';
-import { menuList } from '../../Router';
-import styles from '../Menus/Menu.module.scss';
+import menuList from '@/database/menuList.json';
 import { HamburgerButton } from './HamburgerButton';
+import styles from './Menu.module.scss';
 
 export function Menu() {
   /* Estado para controlar o Menu (começa fechado). */

@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import styles from '../Hero/NewHero.module.scss';
+import styles from './NewHero.module.scss';
 
 export function NewHero() {
   return (

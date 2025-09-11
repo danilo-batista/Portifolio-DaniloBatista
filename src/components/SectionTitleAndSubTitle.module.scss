@@ -1,0 +1,52 @@
+@use '@/styles/main' as *;
+
+/* Elementos do Título e Subtítulo das Seções */
+.section__title {
+    padding-inline: 1.5rem;
+
+    font-weight: 700;
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+
+    @media screen and (min-width: $breakpoint__cellPhone) {
+        font-size: 2rem;
+        line-height: 2.75rem;
+    }
+
+    @media screen and (min-width: $breakpoint__tablet) {
+        padding-inline: 3.5rem;
+
+        font-size: 3rem;
+        line-height: 4rem;
+    }
+
+    @media screen and (min-width: $breakpoint__desktop) {
+        font-size: 3.75rem;
+        line-height: 4.25rem;
+    }
+}
+
+.section__subtitle {
+    padding-inline: 1.5rem;
+
+    text-align: left;
+
+    @media screen and (min-width: $breakpoint__cellPhone) {
+        font-size: 1.125rem;
+    }
+
+    @media screen and (min-width: $breakpoint__tablet) {
+        padding-inline: 3.5rem;
+        font-size: 1.25rem;
+    }
+
+    @media screen and (min-width: $breakpoint__smallDesktop) {
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+
+    @media screen and (min-width: $breakpoint__desktop) {
+        font-size: 1.75rem;
+        line-height: 2.5rem;
+    }
+}

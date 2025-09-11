@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "component": "CardCareer",
+    "listItem": "career",
+    "title": "Experiências",
+    "subtitle": "Conheça minha trajetória profissional e os desafios que fortaleceram minha carreira."
+  },
+  {
+    "id": 2,
+    "component": "CardCourses",
+    "listItem": "courses",
+    "title": "Cursos Extras",
+    "subtitle": "Aprendizado contínuo que vai além da formação acadêmica."
+  },
+  {
+    "id": 3,
+    "component": "CardKnowledge",
+    "listItem": "knowledge",
+    "title": "Formação Acadêmica",
+    "subtitle": " Minha formação acadêmica e os aprendizados que fundamentam minha carreira."
+  }
+]

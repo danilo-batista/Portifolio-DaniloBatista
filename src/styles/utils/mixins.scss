@@ -1,11 +1,10 @@
 @use '../base/global' as *;
 
-@mixin flexbox($justifyContent: space-between,
-    $alignItems: center,
-    $flexDirection: row, $gap: gap) {
+@mixin flexbox($flexDirection: row, $gap: gap, $justifyContent: space-between, $alignItems: center, $flexWrap: flex-wrap) {
     display: flex;
-    justify-content: $justifyContent;
-    align-items: $alignItems;
     flex-direction: $flexDirection;
     gap: $gap;
+    justify-content: $justifyContent;
+    align-items: $alignItems;
+    flex-wrap: $flexWrap;
 }

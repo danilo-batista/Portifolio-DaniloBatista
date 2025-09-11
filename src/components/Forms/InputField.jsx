@@ -1,4 +1,4 @@
-import styles from '../Forms/GenericField.module.scss';
+import styles from './GenericField.module.scss';
 
 export function InputField(props) {
   return (

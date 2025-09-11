@@ -1,13 +1,16 @@
 [
   {
     "id": 1,
-    "company": "DKM & J. Soares Consultoria e Assessoria Empresarial",
-    "slug": "dkm-j-soares-consultoria-e-assessoria-empresarial",
-    "brand": "/brands/dkm-j-soares-consultoria-e-assessoria-empresarial.png",
+    "company": "DKM & J. Soares Consultori Empresarial",
+    "slug": "dkm-j-soares-consultoria-empresarial",
+    "brand": "/brands/dkm-j-soares-consultoria-empresarial.png",
     "link": "",
     "period": "out/2005",
     "title": "Certificação de auditor interno ISO 9001:2000",
-    "description": ["ISO 9001", "Auditoria Interna"],
+
+    "tags": ["ISO 9001", "Auditoria Interna"],
+    "extraContent": [],
+    "resume": [],
     "extraProjects": []
   },
   {
@@ -18,7 +21,9 @@
     "link": "https://www.espm.br",
     "period": "mai/2008",
     "title": "Programa Intensivo de Marketing",
-    "description": ["Estratégias de Marketing", "Planejamento de Marketing", "Marketing Editorial"],
+    "tags": ["Estratégias de Marketing", "Planejamento de Marketing", "Marketing Editorial"],
+    "extraContent": [],
+    "resume": [],
     "extraProjects": []
   },
   {
@@ -29,7 +34,9 @@
     "link": "https://certiprof.com/pt",
     "period": "jan/2019",
     "title": "Scrum Foundation Professional Certificate (SFPC)",
-    "description": ["Scrum", "Metodologias Ágeis"],
+    "tags": ["Scrum", "Metodologias Ágeis"],
+    "extraContent": [],
+    "resume": [],
     "extraProjects": []
   },
   {
@@ -40,7 +47,9 @@
     "link": "https://www.alura.com.br",
     "period": "dez/2020 ~ jan/2021",
     "title": "Desenvolvimento Web com JavaScript",
-    "description": ["HTML5 Semântico", "CSS3", "Web design responsivo", "JavaScript", "Desenvolvimento de front-end", "Consumo de API", "PWA (Progressive Web App)"],
+    "tags": ["HTML5 Semântico", "CSS3", "Web design responsivo", "JavaScript", "Desenvolvimento de front-end", "Consumo de API", "PWA (Progressive Web App)"],
+    "extraContent": [],
+    "resume": [],
     "extraProjects": []
   },
   {
@@ -51,7 +60,7 @@
     "link": "https://www.rocketseat.com.br",
     "period": "jun/2022 ~ mar/2023",
     "title": "Desenvolvimento Web Fullstack com JavaScript",
-    "description": [
+    "tags": [
       "React.js",
       "Redux",
       "Node.js",
@@ -72,6 +81,8 @@
       "Scrum",
       "Metodologias Ágeis"
     ],
+    "extraContent": [],
+    "resume": [],
     "extraProjects": ["DhGeek - E-commerce Disney"]
   },
   {
@@ -82,7 +93,9 @@
     "link": "https://ada.tech",
     "period": "jan/2025 ~ atualmente",
     "title": "Front-end com React.js",
-    "description": ["React.js", "React Hooks", "Redux", "TypeScript", "Programação orientada a objetos (POO)", "CSS Modules", "Styled Components", "SASS"],
+    "tags": ["React.js", "React Hooks", "Redux", "TypeScript", "Programação orientada a objetos (POO)", "CSS Modules", "Styled Components", "SASS"],
+    "extraContent": [],
+    "resume": [],
     "extraProjects": []
   },
   {
@@ -93,7 +106,8 @@
     "link": "https://escolaconquer.com.br",
     "period": "jan/2023 ~ atualmente",
     "title": "Soft-skills e Produtividade",
-    "description": ["Relações humanas", "Produtividade inteligente"],
+    "tags": ["Relações humanas", "Produtividade inteligente"],
+    "extraContent": [],
     "extraProjects": []
   },
   {
@@ -104,7 +118,9 @@
     "link": "https://www.alura.com.br",
     "period": "jan/2023 ~ atualmente",
     "title": "IA, soft-skills e front-end",
-    "description": ["CSS Avançado", "Front-end", "Hábitos", "Foco", "Produtividade", "IA Generativa"],
+    "tags": ["CSS Avançado", "Front-end", "Hábitos", "Foco", "Produtividade", "IA Generativa"],
+    "extraContent": [],
+    "resume": [],
     "extraProjects": []
   }
 ]

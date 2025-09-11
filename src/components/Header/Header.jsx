@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
-import styles from '../Header/Header.module.scss';
 import { Menu } from '../Menus/Menu';
+import styles from './Header.module.scss';
 
 export function Header() {
   return (

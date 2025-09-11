@@ -1,0 +1,40 @@
+@use '@/styles/main' as *;
+@use '@/styles/partials/_section__layoutContainer';
+
+/* Elementos da lista de Experiências */
+.section__layoutContainer {
+    @extend .section__layoutContainer;
+    background-color: $color__secondary-100;
+}
+
+.cardLists__even {
+    background-color: $color__white;
+}
+
+.cardLists__card {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+
+    padding: 0.5rem 1.5rem;
+    height: 100%;
+
+    @media screen and (min-width: $breakpoint__cellPhone) {
+        gap: 2.5rem;
+    }
+
+    @media screen and (min-width: $breakpoint__tablet) {
+        padding: 0.5rem 3.5rem;
+        margin-top: 1rem;
+    }
+
+    @media screen and (min-width: $breakpoint__smallDesktop) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2.75rem;
+    }
+
+    @media screen and (min-width: $breakpoint__largeDesktop) {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2.5rem;
+    }
+}
