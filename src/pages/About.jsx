@@ -1,17 +1,27 @@
-import { NewCareerList } from '@/components/Cards/Career/NewCareerList';
-import { NewCoursesList } from '@/components/Cards/Courses/NewCoursesList';
-import { NewKnowledgeList } from '@/components/Cards/Knowledge/NewKnowledgeList';
 import { NewHeroAbout } from '@/components/Hero/NewHeroAbout';
-import { NewSkills } from '@/components/Skills/NewSkills';
+import cardListTypes from '@/database/cardListTypes.json';
+import { CardList } from '../components/Cards/CardList';
+import { Skills } from '../components/Skills/Skills';
 
 export function About() {
   return (
     <>
       <NewHeroAbout />
-      <NewSkills />
-      <NewCareerList />
-      <NewCoursesList />
-      <NewKnowledgeList />
+      <Skills />
+
+      {cardListTypes.map((cardList) => {
+        const isEven = cardList.id % 2 === 0;
+        return (
+          <CardList
+            key={cardList.component}
+            component={cardList.component}
+            listItem={cardList.listItem}
+            title={cardList.title}
+            subtitle={cardList.subtitle}
+            isEven={isEven}
+          />
+        );
+      })}
     </>
   );
 }

@@ -1,0 +1,13 @@
+/* Utiliza os arquivos localmente. */
+@use '@/styles/main' as *;
+
+.card__information {
+    @include flexbox($flexDirection: column, $alignItems: flex-start, $justifyContent: flex-start);
+
+    padding-inline: 1.5rem;
+
+    @media screen and (min-width: $breakpoint__desktop) {
+        padding-inline: 2rem;
+
+    }
+}

@@ -1,0 +1,17 @@
+@use '@/styles/main' as *;
+@use '@/styles/partials/_card__information';
+@use '@/styles/partials/_card__thumbnailCaption';
+@use '@/styles/partials/_card__layoutContainer';
+
+.card__layoutContainer {
+    @extend .card__layoutContainer;
+    grid-row: span 4;
+}
+
+.card__thumbnailCaption {
+    @extend .card__thumbnailCaption;
+}
+
+.card__information {
+    @extend .card__information;
+}
