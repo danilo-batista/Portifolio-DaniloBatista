@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
-import styles from './CopyrightFooter.module.scss';
+import styles from './FooterCopyright.module.scss';
 
-export function CopyrightFooter() {
+export function FooterCopyright() {
   return (
     <section className={styles.footerCopyright}>
       <Link
