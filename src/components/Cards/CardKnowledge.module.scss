@@ -5,6 +5,7 @@
 
 .card__layoutContainer {
     @extend .card__layoutContainer;
+    background-color: $color__secondary-200;
     grid-row: span 4;
 }
 

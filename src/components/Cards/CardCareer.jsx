@@ -11,6 +11,7 @@ export function CardCareer({
   resume,
   slug,
   link,
+  alt,
   extraContent,
   extraProjects,
 }) {
@@ -18,11 +19,11 @@ export function CardCareer({
     <div className={styles.cardLayout__container}>
       <a href={link} rel="noopener noreferrer">
         <div className={styles.card__thumbnailCaption}>{company}</div>
-        <CardThumbnail slug={slug} company={company} />
+        <CardThumbnail slug={slug} alt={alt} folder="brands" />
       </a>
 
       <div className={styles.card__information}>
-        <CardTitleAndDate period={period} title={title} />
+        <CardTitleAndDate complement={period} title={title} />
         <p className={styles.card__infoDescription}>{description}</p>
       </div>
 

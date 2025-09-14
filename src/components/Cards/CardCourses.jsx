@@ -10,7 +10,7 @@ export function CardCourses({ company, period, title, tags, link }) {
       </a>
 
       <div className={styles.card__information}>
-        <CardTitleAndDate period={period} title={title} />
+        <CardTitleAndDate complement={period} title={title} />
       </div>
 
       <div className={styles.card__information}>

@@ -1,10 +1,12 @@
 @use '@/styles/main' as *;
 @use '@/styles/partials/_card__information';
+@use '@/styles/partials/_card__infoDescription';
 @use '@/styles/partials/_card__thumbnailCaption';
 @use '@/styles/partials/_card__layoutContainer';
 
 .cardLayout__container {
     @extend .card__layoutContainer;
+    background-color: $color__secondary-200;
     grid-row: span 3;
 }
 
@@ -17,14 +19,5 @@
 }
 
 .card__infoDescription {
-    padding-top: 0.75rem;
-
-    &>span {
-        font-weight: 700;
-    }
-
-    @media screen and (min-width: $breakpoint__cellPhone) {
-        font-size: 1.25rem;
-        line-height: 1.75rem;
-    }
+    @extend .card__infoDescription;
 }

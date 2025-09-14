@@ -1,10 +1,11 @@
 @use '@/styles/main' as *;
 
-.card__infoPeriod {
+.card__infoComplement {
     padding-top: 0.25rem;
 
-    font-weight: 400;
+    font-weight: 600;
     font-style: oblique;
+    color: $color__success-700;
 
     @media screen and (min-width: $breakpoint__cellPhone) {
         font-size: 1.25rem;

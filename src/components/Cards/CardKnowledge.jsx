@@ -11,6 +11,7 @@ export function CardKnowledge({
   resume,
   tags,
   slug,
+  alt,
   link,
   extraContent,
   extraProjects,
@@ -19,11 +20,11 @@ export function CardKnowledge({
     <div className={styles.card__layoutContainer}>
       <a href={link} rel="noopener noreferrer">
         <div className={styles.card__thumbnailCaption}>{company}</div>
-        <CardThumbnail slug={slug} company={company} />
+        <CardThumbnail slug={slug} alt={alt} folder="brands" />
       </a>
 
       <div className={styles.card__information}>
-        <CardTitleAndDate period={period} title={title} />
+        <CardTitleAndDate complement={period} title={title} />
       </div>
 
       <div className={styles.card__information}>
