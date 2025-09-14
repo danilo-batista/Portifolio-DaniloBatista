@@ -1,38 +1,25 @@
-import styles from './NewPortfolioCard.module.scss';
+import { CardThumbnail } from '../GenericCards/CardFragments-Thumbnail';
+import { CardTitleAndDate } from '../GenericCards/CardFragments-TitleAndDate';
+import styles from './CardPortfolio.module.scss';
 
-export function NewPortfolioCard(props) {
+export function CardPortfolio({ isOdd, ...props }) {
   return (
-    <article
-      className={`${styles.card} ${props.isEven ? styles.card__even : ''}`}
+    <div
+      className={`${styles.card__layoutContainer} ${isOdd ? styles.cardLists__even : ''}`}
     >
-      <div className={styles.card__thumbnail}>
-        <a href={props.link} rel="noopener noreferrer">
-          <img
-            src={`/thumbnails/${props.thumbnail}`}
-            alt={`Imagem de capa do projeto ${props.title}.`}
-            className={styles.card__thumbnailImage}
-            loading="lazy"
-          />
-        </a>
+      <a href={props.link} rel="noopener noreferrer">
+        <CardThumbnail slug={props.slug} alt={props.alt} folder="thumbnails" />
+      </a>
+
+      <div className={styles.card__information}>
+        <CardTitleAndDate title={props.title} complement={props.category} />
       </div>
 
-      <div
-        className={`${styles.card__information} ${props.isEven ? styles.card__even : ''}`}
-      >
-        <ul className={styles.card__infoPills}>
-          {props.tags.map((tag) => (
-            <li className={styles.card__listItemsPills} key={tag}>
-              {tag}
-            </li>
-          ))}
-        </ul>
-        <h3 className={styles.card__infoTitle}>{props.title}</h3>
-        <p className={styles.card__infoCategory}>{props.category}</p>
-
+      <div className={styles.card__information}>
         <p className={styles.card__infoDescription}>{props.description}</p>
       </div>
 
-      <div className={styles.card__containerLinks}>
+      <div className={styles.card__information}>
         <div className={styles.card__links}>
           <a
             href={`https://github.com/danilo-batista/${props.slug}`}
@@ -79,6 +66,16 @@ export function NewPortfolioCard(props) {
           </a>
         </div>
       </div>
-    </article>
+
+      <div className={styles.card__information}>
+        <ul className={styles.card__infoPills}>
+          {props.tags.map((tag) => (
+            <li className={styles.card__listItemsPills} key={tag}>
+              {tag}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
   );
 }

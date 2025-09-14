@@ -1,0 +1,15 @@
+/* Utiliza os arquivos localmente. */
+@use '@/styles/main' as *;
+
+.card__infoDescription {
+    padding-top: 0.75rem;
+
+    &>span {
+        font-weight: 700;
+    }
+
+    @media screen and (min-width: $breakpoint__cellPhone) {
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+    }
+}

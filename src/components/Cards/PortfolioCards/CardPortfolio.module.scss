@@ -1,0 +1,131 @@
+@use '@/styles/main' as *;
+@use '@/styles/partials/_card__information';
+@use '@/styles/partials/_card__infoDescription';
+@use '@/styles/partials/_card__layoutContainer';
+
+.card__layoutContainer {
+    @extend .card__layoutContainer;
+    background-color: $color__secondary-100;
+    grid-row: span 6;
+
+    &:hover {
+        & img {
+            border-radius: 1rem 1rem 0rem 0rem;
+        }
+    }
+}
+
+.card__information {
+    @extend .card__information;
+}
+
+.cardLists__even {
+    background-color: $color__secondary-200;
+    border-radius: 1rem;
+
+    .card__infoCategory {
+        color: $color__secondary-600;
+    }
+
+    .card__infoTitle {
+        color: $color__secondary-700;
+    }
+}
+
+.card__infoCategory {
+    padding-top: 0.25rem;
+
+    font-weight: 400;
+    font-style: oblique;
+    color: $color__secondary-700;
+
+    @media screen and (min-width: $breakpoint__cellPhone) {
+        font-size: 1.25rem;
+    }
+
+    @media screen and (min-width: $breakpoint__tablet) {
+        padding-top: 0.5rem;
+    }
+
+}
+
+.card__infoDescription {
+    @extend .card__infoDescription;
+}
+
+/* Estilos de tags*/
+.card__infoPills {
+    @include flexbox($flexDirection: row,
+        $gap: 0.375rem,
+        $justifyContent: flex-start,
+        $alignItems: center,
+        $flexWrap: wrap);
+
+    width: 100%;
+}
+
+.card__listItemsPills {
+    padding: 0.25rem 0.75rem;
+
+    color: $color__secondary-800;
+    background-color: $color__secondary-200;
+
+    border-radius: 1.5rem;
+
+    font-weight: 600;
+    line-height: 1.125rem;
+}
+
+.card__links {
+    @include flexbox($alignItems: left, $gap: 1rem);
+    flex-wrap: nowrap;
+
+    padding: 2rem 0 1rem 0;
+
+    & a {
+        @include flexbox($alignItems: center, $gap: 0.25rem);
+
+        font-weight: 700;
+        line-height: 1.5rem;
+
+        border-radius: 0.5rem;
+        color: $color__gray-700;
+
+        &:hover {
+            color: $color__gray-500;
+
+            & svg {
+                stroke: $color__gray-500;
+            }
+        }
+    }
+
+    & svg {
+        stroke: $color__gray-700;
+    }
+}
+
+/* Estilos de tags*/
+.card__infoPills {
+    @include flexbox($flexDirection: row,
+        $gap: 0.375rem,
+        $justifyContent: flex-start,
+        $alignItems: center,
+        $flexWrap: wrap);
+
+    width: 100%;
+    margin-top: 1.25rem;
+}
+
+.card__listItemsPills {
+    padding: 0.5rem 1rem;
+
+    color: $color__secondary-900;
+    background-color: $color__white;
+
+    border-radius: 1.5rem;
+    border: 2px solid $color__secondary-300;
+
+    font-weight: 600;
+    line-height: 1.125rem;
+}

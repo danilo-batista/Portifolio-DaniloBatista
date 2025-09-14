@@ -4,12 +4,13 @@
     "title": "Alura Plus",
     "slug": "alura-plus",
     "thumbnail": "alura-plus.webp",
+    "alt": "Imagem de tela do projeto Alura Plus",
     "description": "Plataforma fictícia desenvolvida como projeto de estudo, simulando um serviço de streaming de cursos da Alura.",
     "period": "fev/2025",
     "client": "alura",
     "highlight": false,
     "category": "desenvolvimento",
-    "tags": ["html", "css"],
+    "tags": ["css", "html"],
     "link": "https://danilo-batista.github.io/alura-plus"
   },
   {
@@ -17,12 +18,13 @@
     "title": "Alura Books",
     "slug": "alura-books",
     "thumbnail": "alura-books.webp",
+    "alt": "Imagem de tela do projeto Alura Books",
     "description": "Livraria fictícia com foco em tecnologia, apresentando destaques, categorias e avaliações para explorar livros da Alura.",
     "period": "fev/2025",
     "client": "rocketseat",
     "highlight": true,
     "category": "desenvolvimento",
-    "tags": ["html", "css"],
+    "tags": ["css", "html"],
     "link": "https://danilo-batista.github.io/alura-books"
   },
   {
@@ -30,12 +32,13 @@
     "title": "Luz & Cena",
     "slug": "luz-e-cena",
     "thumbnail": "luz-e-cena.webp",
+       "alt": "Imagem de tela do projeto Luz & Cena",
     "description": "Luz & Cena é um projeto fictício que simula uma produtora audiovisual, destacando os filmes em cartaz.",
     "period": "fev/2025",
     "client": "alura",
     "highlight": false,
     "category": "desenvolvimento",
-    "tags": ["html", "css"],
+    "tags": ["css", "html"],
     "link": "https://danilo-batista.github.io/luz-e-cena"
   },
   {
@@ -43,12 +46,13 @@
     "title": "UseDev",
     "slug": "usedev",
     "thumbnail": "usedev.webp",
+       "alt": "Imagem de tela do projeto UseDev",
     "description": "Usedev é um projeto fictício de uma home de e-commerce voltado ao público dev, com temático nerd.",
     "period": "mar/2025",
     "client": "alura",
     "highlight": false,
     "category": "desenvolvimento",
-    "tags": ["html", "css"],
+    "tags": ["css", "html"],
     "link": "https://danilo-batista.github.io/usedev"
   },
   {
@@ -56,12 +60,13 @@
     "title": "PetPark",
     "slug": "petpark",
     "thumbnail": "petpark.webp",
+       "alt": "Imagem de tela do projeto PetPark",
     "description": "Projeto fictício de landing page para um pet shop, com foco em serviços e design amigável.",
     "period": "mar/2025",
     "client": "alura",
     "highlight": false,
     "category": "desenvolvimento",
-    "tags": ["html", "css"],
+    "tags": ["css", "html"],
     "link": "https://danilo-batista.github.io/petpark"
   },
   {
@@ -69,12 +74,13 @@
     "title": "Alura Start",
     "slug": "alura-start",
     "thumbnail": "alura-start.webp",
+       "alt": "Imagem de tela do projeto Alura Start",
     "description": "Página institucional fictícia para uma escola criativa, destacando cursos e depoimentos.",
     "period": "mar/2025",
     "client": "alura",
     "highlight": false,
     "category": "desenvolvimento",
-    "tags": ["html", "css"],
+    "tags": ["css", "html"],
     "link": "https://danilo-batista.github.io/alura-start"
   },
   {
@@ -82,12 +88,13 @@
     "title": "Serenatto",
     "slug": "serenatto",
     "thumbnail": "serenatto.webp",
+       "alt": "Imagem de tela do projeto Serenatto",
     "description": "Landing page fictícia de uma cafeteria, destacando o cardápio, ambiente e identidade da marca.",
     "period": "mar/2025",
     "client": "alura",
     "highlight": true,
     "category": "desenvolvimento",
-    "tags": ["html", "sass"],
+    "tags": ["sass", "html"],
     "link": "https://serenatto-mocha.vercel.app/"
   },
   {
@@ -95,12 +102,13 @@
     "title": "Ignite Feed",
     "slug": "ignite-feed",
     "thumbnail": "ignite-feed.webp",
+       "alt": "Imagem de tela do projeto Ignite Feed",
     "description": "Projeto fictício de feed que permite criar, curtir e excluir comentários.",
     "period": "fev/2025",
     "client": "rocketseat",
     "highlight": true,
     "category": "desenvolvimento",
-    "tags": ["react", "css modules"],
+    "tags": ["react", "css modules", "sass"],
     "link": "https://ignite-feed-six-silk.vercel.app/"
   }
 ]
