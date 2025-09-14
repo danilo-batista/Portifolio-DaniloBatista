@@ -4,7 +4,7 @@
     @include flexbox($justifyContent: center,
         $alignItems: center);
     width: 100%;
-    background-color: $color__secondary-200;
+    border-radius: 2rem;
 }
 
 .card__thumbnailImage {
@@ -12,9 +12,10 @@
     margin: 1.75rem;
 
     object-fit: cover;
-    object-position: center;
 
     background-color: $color__secondary-100;
-    border-radius: 1rem;
+    border-radius: 0.5rem;
     transition: all 0.3s ease-in-out;
+
+    box-shadow: 0px 4px 8px 4px rgba(0, 0, 0, 0.125);
 }

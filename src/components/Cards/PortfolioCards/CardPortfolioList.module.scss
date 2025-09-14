@@ -1,0 +1,92 @@
+@use '@/styles/main' as *;
+@use '@/styles/partials/_section__layoutContainer';
+
+.section__layoutContainer {
+    @extend .section__layoutContainer;
+    background-color: $color__white;
+}
+
+.cardLists__card {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+
+    padding: 0.5rem 1.5rem;
+    height: 100%;
+
+    >* {
+        grid-column: auto;
+    }
+
+    @media screen and (min-width: $breakpoint__cellPhone) {
+        gap: 2.5rem;
+    }
+
+    @media screen and (min-width: $breakpoint__tablet) {
+        grid-template-columns: repeat(2, 1fr);
+
+        padding: 0.5rem 3.5rem;
+        margin-top: 1rem;
+    }
+
+    @media screen and (min-width: $breakpoint__smallDesktop) {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2.75rem;
+    }
+
+    @media screen and (min-width: $breakpoint__desktop) {
+        gap: 2.5rem;
+    }
+
+    @media screen and (min-width: $breakpoint__largeDesktop) {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2.5rem;
+    }
+}
+
+.cardList__links {
+    @include flexbox($justifyContent: center);
+}
+
+.cardList__buttons {
+    @include flexbox($justifyContent: space-around,
+        $alignItems: center,
+        $flexDirection: row);
+
+    margin-top: 1.5rem;
+    padding-inline: 1.5rem;
+
+    @media screen and (min-width: $breakpoint__tablet) {
+        @include flexbox($gap: 2rem);
+        flex-wrap: nowrap;
+        padding: 1rem 3.5rem 0;
+    }
+}
+
+.cardList__button {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+
+    font-weight: 700;
+    text-align: center;
+
+    background-color: $color__secondary-700;
+
+
+    color: $color__secondary-100;
+
+    &:hover {
+        color: $color__secondary-800;
+        background: $color__secondary-500;
+    }
+
+    @media screen and (min-width: $breakpoint__smallDesktop) {
+        font-size: 1.25rem;
+    }
+
+    @media screen and (min-width: $breakpoint__desktop) {
+        padding: 1.5rem 1.5rem;
+        font-size: 1.5rem;
+    }
+}

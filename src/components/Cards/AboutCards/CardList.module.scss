@@ -33,6 +33,11 @@
         gap: 2.75rem;
     }
 
+    @media screen and (min-width: $breakpoint__desktop) {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2.5rem;
+    }
+
     @media screen and (min-width: $breakpoint__largeDesktop) {
         grid-template-columns: repeat(4, 1fr);
         gap: 2.5rem;

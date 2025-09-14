@@ -1,6 +1,6 @@
+import { CardTags } from '../GenericCards/CardFragments-Tags';
+import { CardTitleAndDate } from '../GenericCards/CardFragments-TitleAndDate';
 import styles from './CardCourses.module.scss';
-import { CardTags } from './CardFragments/CardFragments-Tags';
-import { CardTitleAndDate } from './CardFragments/CardFragments-TitleAndDate';
 
 export function CardCourses({ company, period, title, tags, link }) {
   return (
@@ -10,7 +10,7 @@ export function CardCourses({ company, period, title, tags, link }) {
       </a>
 
       <div className={styles.card__information}>
-        <CardTitleAndDate period={period} title={title} />
+        <CardTitleAndDate complement={period} title={title} />
       </div>
 
       <div className={styles.card__information}>
