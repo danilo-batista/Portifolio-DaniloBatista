@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom';
 import daniloBatistaPicture from '@/assets/images/danilo-batista.webp';
 import { useScrollToTop } from '@/hooks/useScrollToTop';
-import { NewFooter } from './NewFooter';
-import styles from './NewMainFooter.module.scss';
+import { CopyrightFooter } from './CopyrightFooter';
+import styles from './MainFooter.module.scss';
 
-export function NewMainFooter() {
+export function MainFooter() {
   const { scrollToElement, pathname } = useScrollToTop();
   const formId = 'contactFormId';
 
@@ -81,7 +81,7 @@ export function NewMainFooter() {
           </Link>
         </div>
       </footer>
-      <NewFooter />
+      <CopyrightFooter />
     </>
   );
 }
