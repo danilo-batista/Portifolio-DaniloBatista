@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom';
-import styles from './NewHero.module.scss';
+import styles from './HeroHome.module.scss';
 
-export function NewHero() {
+export function HeroHome() {
   return (
     <section className={styles.hero}>
       <h2 className={styles.hero__title}>
