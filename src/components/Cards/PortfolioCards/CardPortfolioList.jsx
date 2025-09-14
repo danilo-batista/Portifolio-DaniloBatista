@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { SectionTitleAndSubTitle } from '../../SectionTitleAndSubTitle';
+import { SectionTitleAndSubTitle } from '@/components/SectionTitleAndSubTitle';
 import { CardPortfolio } from './CardPortfolio';
-import styles from './PortfolioList.module.scss';
+import styles from './CardPortfolioList.module.scss';
 
 export function PortfolioList(props) {
   const [state, setState] = useState({ listToRender: [] });
@@ -26,7 +26,7 @@ export function PortfolioList(props) {
   }, [props.showHighlights]);
 
   return (
-    <section id="portfolioId" className={styles.section__layoutContainer}>
+    <section className={styles.section__layoutContainer} id="portfolioId">
       <SectionTitleAndSubTitle
         title="Projetos"
         subtitle="Experiências práticas que refletem meu crescimento técnico e criativo."

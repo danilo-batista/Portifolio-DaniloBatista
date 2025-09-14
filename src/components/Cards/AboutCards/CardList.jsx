@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { SectionTitleAndSubTitle } from '../SectionTitleAndSubTitle';
+import { SectionTitleAndSubTitle } from '@/components/SectionTitleAndSubTitle';
 import styles from './CardList.module.scss';
 
 const componentsMap = {

@@ -1,22 +1,23 @@
-import styles from './CardCareer.module.scss';
-import { CardExtraInfo } from './CardFragments/CardFragments-ExtraInfo';
-import { CardThumbnail } from './CardFragments/CardFragments-Thumbnail';
-import { CardTitleAndDate } from './CardFragments/CardFragments-TitleAndDate';
+import { CardExtraInfo } from '../GenericCards/CardFragments-ExtraInfo';
+import { CardTags } from '../GenericCards/CardFragments-Tags';
+import { CardThumbnail } from '../GenericCards/CardFragments-Thumbnail';
+import { CardTitleAndDate } from '../GenericCards/CardFragments-TitleAndDate';
+import styles from './CardKnowledge.module.scss';
 
-export function CardCareer({
+export function CardKnowledge({
   company,
   period,
   title,
-  description,
   resume,
+  tags,
   slug,
-  link,
   alt,
+  link,
   extraContent,
   extraProjects,
 }) {
   return (
-    <div className={styles.cardLayout__container}>
+    <div className={styles.card__layoutContainer}>
       <a href={link} rel="noopener noreferrer">
         <div className={styles.card__thumbnailCaption}>{company}</div>
         <CardThumbnail slug={slug} alt={alt} folder="brands" />
@@ -24,7 +25,10 @@ export function CardCareer({
 
       <div className={styles.card__information}>
         <CardTitleAndDate complement={period} title={title} />
-        <p className={styles.card__infoDescription}>{description}</p>
+      </div>
+
+      <div className={styles.card__information}>
+        <CardTags tags={tags} />
       </div>
 
       <div className={styles.card__information}>

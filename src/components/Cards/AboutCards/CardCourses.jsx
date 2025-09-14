@@ -1,6 +1,6 @@
+import { CardTags } from '../GenericCards/CardFragments-Tags';
+import { CardTitleAndDate } from '../GenericCards/CardFragments-TitleAndDate';
 import styles from './CardCourses.module.scss';
-import { CardTags } from './CardFragments/CardFragments-Tags';
-import { CardTitleAndDate } from './CardFragments/CardFragments-TitleAndDate';
 
 export function CardCourses({ company, period, title, tags, link }) {
   return (

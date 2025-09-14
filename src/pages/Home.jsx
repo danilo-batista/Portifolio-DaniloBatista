@@ -1,4 +1,4 @@
-import { PortfolioList } from '@/components/Cards/PortfolioCard/PortfolioList';
+import { PortfolioList } from '@/components/Cards/PortfolioCards/CardPortfolioList';
 import { NewHero } from '@/components/Hero/NewHero';
 
 export function Home() {

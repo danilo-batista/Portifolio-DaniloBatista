@@ -1,5 +1,5 @@
-import { CardThumbnail } from '../CardFragments/CardFragments-Thumbnail';
-import { CardTitleAndDate } from '../CardFragments/CardFragments-TitleAndDate';
+import { CardThumbnail } from '../GenericCards/CardFragments-Thumbnail';
+import { CardTitleAndDate } from '../GenericCards/CardFragments-TitleAndDate';
 import styles from './CardPortfolio.module.scss';
 
 export function CardPortfolio({ isOdd, ...props }) {
