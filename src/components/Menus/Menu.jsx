@@ -2,7 +2,7 @@ import { useRef, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useClickAway } from 'react-use';
 import menuList from '@/database/menuList.json';
-import { HamburgerButton } from './HamburgerButton';
+import { ButtonHamburger } from './ButtonHamburger';
 import styles from './Menu.module.scss';
 
 export function Menu() {
@@ -29,7 +29,7 @@ export function Menu() {
   return (
     <nav className={styles.menuList__wrapper}>
       <div className={styles.menuList__mobile} ref={ref}>
-        <HamburgerButton isOpen={isOpen} onToggle={setIsOpen} />
+        <ButtonHamburger isOpen={isOpen} onToggle={setIsOpen} />
         {isOpen && (
           <ul className={styles.menuList}>
             {menuList.map((menu) => {

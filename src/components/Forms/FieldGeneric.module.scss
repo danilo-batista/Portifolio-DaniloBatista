@@ -1,7 +1,11 @@
 @use '@/styles/main' as *;
 
+
 .genericField__data {
-    @include flexbox($flexDirection: column, $alignItems: flex-start, $gap: 0.25rem);
+    @include flexbox($flexDirection: column,
+        $gap: 0.25rem,
+        $alignItems: flex-start,
+    );
     width: 100%;
 }
 

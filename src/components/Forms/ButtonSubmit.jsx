@@ -1,6 +1,6 @@
-import styles from './NewButton.module.scss';
+import styles from './ButtonSubmit.module.scss';
 
-export function NewButton(props) {
+export function ButtonSubmit(props) {
   return (
     <button
       type={props.type}

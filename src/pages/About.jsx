@@ -1,12 +1,12 @@
 import { CardList } from '@/components/Cards/AboutCards/CardList';
-import { NewHeroAbout } from '@/components/Hero/NewHeroAbout';
+import { HeroAbout } from '@/components/Hero/HeroAbout';
 import { Skills } from '@/components/Skills/Skills';
 import cardListTypes from '@/database/cardListTypes.json';
 
 export function About() {
   return (
     <>
-      <NewHeroAbout />
+      <HeroAbout />
       <Skills />
 
       {cardListTypes.map((cardList) => {

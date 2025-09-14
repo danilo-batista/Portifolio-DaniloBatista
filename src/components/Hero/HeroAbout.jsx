@@ -1,7 +1,7 @@
+import styles from './HeroAbout.module.scss';
 import { HeroPicture } from './HeroPicture';
-import styles from './NewHeroAbout.module.scss';
 
-export function NewHeroAbout() {
+export function HeroAbout() {
   return (
     <section className={styles.hero}>
       <HeroPicture />

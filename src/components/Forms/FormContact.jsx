@@ -1,12 +1,12 @@
 import emailjs from '@emailjs/browser';
 import { useEffect, useRef, useState } from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
-import { InputField } from './InputField';
-import { NewButton } from './NewButton';
-import styles from './NewContactForm.module.scss';
-import { TextAreaField } from './TextAreaField';
+import { ButtonSubmit } from './ButtonSubmit';
+import { FieldInput } from './FieldInput';
+import { FieldTextArea } from './FieldTextArea';
+import styles from './FormContact.module.scss';
 
-export function NewContactForm() {
+export function FormContact() {
   /* Chaves aplicadas em variáveis de ambiente para uso de serviços como o Recaptcha e EmailJs  */
   const siteKey = import.meta.env.VITE_SITE_KEY;
   const publicKey = import.meta.env.VITE_PUBLIC_KEY;
@@ -142,7 +142,7 @@ export function NewContactForm() {
             {errorMessage}
           </p>
         )}
-        <InputField
+        <FieldInput
           label="Nome"
           type="text"
           placeholder="Seu nome"
@@ -152,7 +152,7 @@ export function NewContactForm() {
           required
         />
 
-        <InputField
+        <FieldInput
           label="E-mail"
           type="email"
           placeholder="seunome@email.com"
@@ -162,7 +162,7 @@ export function NewContactForm() {
           required
         />
 
-        <InputField
+        <FieldInput
           label="Telefone"
           type="tel"
           placeholder="(00) 00000-0000"
@@ -173,7 +173,7 @@ export function NewContactForm() {
           required
         />
 
-        <InputField
+        <FieldInput
           label="Assunto"
           type="text"
           placeholder="Novos Projetos!"
@@ -183,7 +183,7 @@ export function NewContactForm() {
           required
         />
 
-        <TextAreaField
+        <FieldTextArea
           label="Mensagem"
           name="message"
           placeholder="Conte-me mais sobre o assunto..."
@@ -206,9 +206,9 @@ export function NewContactForm() {
           )}
         </div>
 
-        <NewButton type="submit" disabled={!isFormValid || isSubmitting}>
+        <ButtonSubmit type="submit" disabled={!isFormValid || isSubmitting}>
           {isSubmitting ? 'Enviando...' : 'Envie um Oi!'}
-        </NewButton>
+        </ButtonSubmit>
       </form>
     </section>
   );
