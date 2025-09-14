@@ -1,6 +1,6 @@
-import styles from './HamburgerButton.module.scss';
+import styles from './ButtonHamburger.module.scss';
 
-export function HamburgerButton({ isOpen, onToggle }) {
+export function ButtonHamburger({ isOpen, onToggle }) {
   return (
     <button
       type="button"
