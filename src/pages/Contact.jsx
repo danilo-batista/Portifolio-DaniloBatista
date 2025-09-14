@@ -1,5 +1,5 @@
-import { NewContactForm } from '@/components/Forms/NewContactForm';
+import { FormContact } from '@/components/Forms/FormContact';
 
 export function Contact() {
-  return <NewContactForm />;
+  return <FormContact />;
 }

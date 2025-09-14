@@ -1,13 +1,13 @@
-import styles from './GenericField.module.scss';
+import styles from './FieldGeneric.module.scss';
 
-export function InputField(props) {
+export function FieldTextArea(props) {
   return (
     <article className={styles.genericField__data}>
       <label className={styles.genericField__label} htmlFor={props.name}>
         {props.label}
       </label>
 
-      <input
+      <textarea
         className={styles.genericField__text}
         id={props.name}
         name={props.name}
@@ -15,8 +15,7 @@ export function InputField(props) {
         onChange={props.onChange}
         placeholder={props.placeholder}
         required={props.required}
-        pattern={props.pattern}
-        type={props.type}
+        rows="5"
       />
     </article>
   );
