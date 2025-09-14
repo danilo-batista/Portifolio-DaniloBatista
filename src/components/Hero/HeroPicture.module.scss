@@ -1,6 +1,5 @@
 @use '@/styles/main' as *;
 
-/* Elementos da Imagem Danilo Batista */
 .container {
     @include flexbox($flexDirection: column);
     gap: 2rem;
