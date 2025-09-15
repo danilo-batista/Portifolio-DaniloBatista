@@ -40,7 +40,7 @@ Para as próximas versões:
 
 Fiquem à vontade para explorar e me enviar feedbacks. Quem sabe a sua sugestão não entra no próximo sprint? 😉
 
-hashtag#lifelonglearning hashtag#frontend hashtag#react hashtag#sass hashtag#uidesign
+#lifelonglearning #frontend #react #sass #uidesign
 
 <br>
 
