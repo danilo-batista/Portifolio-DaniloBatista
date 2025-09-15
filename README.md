@@ -7,23 +7,54 @@
 
 ## Descrição do projeto
 
-O objetivo do projeto é criar um portifólio.
+🚀 Lançamento oficial: Portfólio Desenvolvedor v1.0
 
-* **Base**: HTML, CSS e JavaScript
-* **Front-end**: React.js
+É com muito orgulho que compartilho a primeira versão do meu portfólio como Desenvolvedor Front-end! 🙌
+
+No fim de 2024 encerrei um ciclo na MSP Estúdios e decidi retomar um antigo objetivo: migrar para a área de Tecnologia.
+
+O primeiro semestre de 2025 foi desafiador, cheio de aprendizados e treinamentos intensivos. Agora chegou a hora de colocar a mão na massa.
+
+👉 Tecnologias aplicadas nesta versão:
+
+1. React.js: Componentização, CSS Modules, Hooks (useState, useEffect, useRef, useLocation), React Router e React Helmet
+2. SASS para estilização avançada e responsividade
+3. EmailJs para integração de envio de e-mails
+4. Gitflow + GitHub para versionamento
+5. Deploy com GitHub Pages e Vercel
+
+📌 Além do aspecto técnico, estou estruturando este projeto como um produto em evolução, aplicando práticas inspiradas em metodologias ágeis:
+
+- Organização do backlog
+- Definição de sprints curtas para entrega de novas features
+- Refatorações contínuas e incrementais
+
+💡 O objetivo é demonstrar não só as habilidades técnicas, mas também a mentalidade de desenvolvimento iterativo e incremental, tão presente em metodologias ágeis como Scrum.
+
+Para as próximas versões:
+- Revisões de código
+- Melhorias planejadas de design e usabilidade
+- Inclusão dos projetos de design gráfico realizados anteriormente na minha carreira, unificando os portifólios
+
+🔗 Confira o projeto aqui: https://lnkd.in/dZRubaJP
+
+Fiquem à vontade para explorar e me enviar feedbacks. Quem sabe a sua sugestão não entra no próximo sprint? 😉
+
+hashtag#lifelonglearning hashtag#frontend hashtag#react hashtag#sass hashtag#uidesign
 
 <br>
 
 ## 🔨 Funcionalidades do projeto
 
-Em breve...
+Projeto foi todo desenvolvido **mobile-first**.
+
+Por ser um portifólio pessoal, o projeto é composto por quatro páginas: Home, Sobre, Portifólio e Contato.
+
+Possui integração com serviço de emails para contato e acesso dinâmico nos diversos tipos de cards (projetos, cursos, habilidades e experiências).
+
 
 <br>
 
-## 📁 Acesso ao projeto
-Em breve...
-
-<br>
 
 ## 🛠️ Como configurar o projeto
 Para executar o projeto, siga estes passos:
