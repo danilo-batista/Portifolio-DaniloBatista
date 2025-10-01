@@ -110,5 +110,33 @@
     "category": "desenvolvimento",
     "tags": ["react", "css modules", "sass"],
     "link": "https://ignite-feed-six-silk.vercel.app/"
+  },
+  {
+    "id": 9,
+    "title": "Portifolio DaniloBatista",
+    "slug": "portifolio",
+    "thumbnail": "portifolio-DaniloBatista.webp",
+       "alt": "Imagem de tela do projeto Portifólio",
+    "description": "Projeto de portifólio pessoal de desenvolvedor.",
+    "period": "set/2025",
+    "client": "danilobatista",
+    "highlight": true,
+    "category": "desenvolvimento",
+    "tags": ["react", "css modules", "sass"],
+    "link": "https://www.danilobatista.com/"
+  },
+  {
+    "id": 10,
+    "title": "Tecboard",
+    "slug": "tecboard",
+    "thumbnail": "tecboard.webp",
+       "alt": "Imagem de tela do projeto Tecboard",
+    "description": "Projeto fictício de calendário que permite criar eventos.",
+    "period": "set/2025",
+    "client": "alura",
+    "highlight": true,
+    "category": "desenvolvimento",
+    "tags": ["react", "css modules"],
+    "link": "https://tecboard-six.vercel.app/"
   }
 ]
