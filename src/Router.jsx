@@ -1,11 +1,11 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
-import { Page } from '@/components/Page';
 import menuList from '@/database/menuList.json';
 import { DefaultLayout } from '@/layouts/DefaultLayout';
 import { About } from '@/pages/About';
 import { Contact } from '@/pages/Contact';
 import { Home } from '@/pages/Home';
 import { Portfolio } from '@/pages/Portfolio';
+import { TemplateSEO } from './components';
 
 const pagesList = {
   Home,
@@ -25,14 +25,14 @@ export function Router() {
               key={menu.title}
               path={menu.to === '/' ? '' : menu.to.slice(1)}
               element={
-                <Page
+                <TemplateSEO
                   title={menu.title}
                   description={menu.description}
                   keywords={menu.keywords}
                   ogImage={menu.ogImage}
                 >
                   <Component />
-                </Page>
+                </TemplateSEO>
               }
             />
           );
