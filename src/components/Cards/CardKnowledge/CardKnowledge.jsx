@@ -1,7 +1,9 @@
-import { CardExtraInfo } from '../GenericCards/CardFragments-ExtraInfo';
-import { CardTags } from '../GenericCards/CardFragments-Tags';
-import { CardThumbnail } from '../GenericCards/CardFragments-Thumbnail';
-import { CardTitleAndDate } from '../GenericCards/CardFragments-TitleAndDate';
+import {
+  CardExtraInfo,
+  CardTags,
+  CardThumbnail,
+  CardTitleAndDate,
+} from '@/components/Cards';
 import styles from './CardKnowledge.module.scss';
 
 export function CardKnowledge({

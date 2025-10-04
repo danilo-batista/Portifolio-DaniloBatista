@@ -1,6 +1,8 @@
-import { CardExtraInfo } from '../GenericCards/CardFragments-ExtraInfo';
-import { CardThumbnail } from '../GenericCards/CardFragments-Thumbnail';
-import { CardTitleAndDate } from '../GenericCards/CardFragments-TitleAndDate';
+import {
+  CardExtraInfo,
+  CardThumbnail,
+  CardTitleAndDate,
+} from '@/components/cards';
 import styles from './CardCareer.module.scss';
 
 export function CardCareer({

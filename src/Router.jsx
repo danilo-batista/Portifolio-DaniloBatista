@@ -1,11 +1,11 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
+import { TemplateSEO } from '@/components';
 import menuList from '@/database/menuList.json';
-import { DefaultLayout } from '@/layouts/DefaultLayout';
+import { DefaultLayout } from '@/layouts';
 import { About } from '@/pages/About';
 import { Contact } from '@/pages/Contact';
 import { Home } from '@/pages/Home';
 import { Portfolio } from '@/pages/Portfolio';
-import { TemplateSEO } from './components';
 
 const pagesList = {
   Home,

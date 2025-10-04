@@ -1,4 +1,4 @@
-import styles from './CardFragments-Tags.module.scss';
+import styles from './CardTags.module.scss';
 
 export function CardTags({ tags }) {
   return (

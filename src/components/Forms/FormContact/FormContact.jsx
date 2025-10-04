@@ -1,9 +1,8 @@
 import emailjs from '@emailjs/browser';
 import { useEffect, useRef, useState } from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
-import { ButtonSubmit } from './ButtonSubmit';
-import { FieldInput } from './FieldInput';
-import { FieldTextArea } from './FieldTextArea';
+import { ButtonSubmit } from '@/components/Buttons';
+import { FormInput, FormTextArea } from '@/components/Forms';
 import styles from './FormContact.module.scss';
 
 export function FormContact() {
@@ -135,14 +134,13 @@ export function FormContact() {
       >
         {errorMessage && (
           <p
-            className={`${styles.contactForm__message} ${
-              errorMessage.includes('✅') ? styles.success : styles.error
-            }`}
+            className={`${styles.contactForm__message} ${errorMessage.includes('✅') ? styles.success : styles.error
+              }`}
           >
             {errorMessage}
           </p>
         )}
-        <FieldInput
+        <FormInput
           label="Nome"
           type="text"
           placeholder="Seu nome"
@@ -152,7 +150,7 @@ export function FormContact() {
           required
         />
 
-        <FieldInput
+        <FormInput
           label="E-mail"
           type="email"
           placeholder="seunome@email.com"
@@ -162,7 +160,7 @@ export function FormContact() {
           required
         />
 
-        <FieldInput
+        <FormInput
           label="Telefone"
           type="tel"
           placeholder="(00) 00000-0000"
@@ -173,7 +171,7 @@ export function FormContact() {
           required
         />
 
-        <FieldInput
+        <FormInput
           label="Assunto"
           type="text"
           placeholder="Novos Projetos!"
@@ -183,7 +181,7 @@ export function FormContact() {
           required
         />
 
-        <FieldTextArea
+        <FormTextArea
           label="Mensagem"
           name="message"
           placeholder="Conte-me mais sobre o assunto..."

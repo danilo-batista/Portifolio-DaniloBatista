@@ -1,5 +1,5 @@
+import { HeroPicture } from '@/components/Heros';
 import styles from './HeroAbout.module.scss';
-import { HeroPicture } from './HeroPicture';
 
 export function HeroAbout() {
   return (

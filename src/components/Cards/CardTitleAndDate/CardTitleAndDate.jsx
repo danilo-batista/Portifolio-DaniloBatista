@@ -1,4 +1,4 @@
-import styles from './CardFragments-TitleAndDate.module.scss';
+import styles from './CardTitleAndDate.module.scss';
 
 export function CardTitleAndDate({ title, complement }) {
   return (

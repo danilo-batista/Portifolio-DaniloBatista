@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
-import { SectionTitleAndSubTitle } from '@/components/SectionTitleAndSubTitle';
+import { SectionTitleAndSubTitle } from '@/components/Partials';
 import styles from './CardList.module.scss';
 
 const componentsMap = {
-  CardCareer: () => import('./CardCareer'),
-  CardCourses: () => import('./CardCourses'),
-  CardKnowledge: () => import('./CardKnowledge'),
+  CardCareer: () => import('@/components/Cards/CardCareer'),
+  CardCourses: () => import('@/components/Cards/CardCourses'),
+  CardKnowledge: () => import('@/components/Cards/CardKnowledge'),
 };
 
 export function CardList({ component, listItem, title, subtitle, isEven }) {

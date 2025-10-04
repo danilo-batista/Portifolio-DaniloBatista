@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { SectionTitleAndSubTitle } from '@/components/SectionTitleAndSubTitle';
-import { CardPortfolio } from './CardPortfolio';
+import { CardPortfolio } from '@/components/Cards';
+import { SectionTitleAndSubTitle } from '@/components/Partials';
 import styles from './CardPortfolioList.module.scss';
 
 export function PortfolioList(props) {

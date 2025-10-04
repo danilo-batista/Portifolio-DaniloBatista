@@ -1,4 +1,4 @@
-import styles from './CardFragments-Thumbnail.module.scss';
+import styles from './CardThumbnail.module.scss';
 
 export function CardThumbnail({ slug, brand, alt, folder }) {
   return (

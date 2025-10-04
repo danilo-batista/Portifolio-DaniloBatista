@@ -1,7 +1,13 @@
 import { Helmet } from 'react-helmet-async';
 import { useLocation } from 'react-router-dom';
 
-export function Page({ title, description, keywords, ogImage, children }) {
+export function TemplateSEO({
+  title,
+  description,
+  keywords,
+  ogImage,
+  children,
+}) {
   const location = useLocation();
   const canonicalUrl = `https://www.danilobatista.com${location.pathname}`;
 

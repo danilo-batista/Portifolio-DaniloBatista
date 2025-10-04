@@ -1,6 +1,4 @@
-import { CardList } from '@/components/Cards/AboutCards/CardList';
-import { HeroAbout } from '@/components/Hero/HeroAbout';
-import { Skills } from '@/components/Skills/Skills';
+import { CardList, HeroAbout, Skills } from '@/components';
 import cardListTypes from '@/database/cardListTypes.json';
 
 export function About() {

@@ -1,6 +1,6 @@
-import styles from './FieldGeneric.module.scss';
+import styles from '@/components/Forms/FormGenericInput.module.scss';
 
-export function FieldInput(props) {
+export function FormInput(props) {
   return (
     <article className={styles.genericField__data}>
       <label className={styles.genericField__label} htmlFor={props.name}>

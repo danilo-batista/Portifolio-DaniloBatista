@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import { Menu } from '../Menus/Menu';
+import { Menu } from '@/components/Menus';
 import styles from './Header.module.scss';
 
 export function Header() {

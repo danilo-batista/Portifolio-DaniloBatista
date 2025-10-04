@@ -1,8 +1,8 @@
 import { useRef, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useClickAway } from 'react-use';
+import { ButtonHamburger } from '@/components/Buttons';
 import menuList from '@/database/menuList.json';
-import { ButtonHamburger } from './ButtonHamburger';
 import styles from './Menu.module.scss';
 
 export function Menu() {

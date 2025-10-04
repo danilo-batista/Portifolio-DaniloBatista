@@ -1,1 +1,3 @@
-export * from './Heros';
+export * from './HeroAbout';
+export * from './HeroHome';
+export * from './HeroPicture';

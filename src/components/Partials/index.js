@@ -1,1 +1,1 @@
-export * from './Partials';
+export * from './SectionTitleAndSubTitle';

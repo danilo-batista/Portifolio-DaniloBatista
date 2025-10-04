@@ -1,6 +1,5 @@
 @use '@/styles/main' as *;
 
-/* Elementos do Footer */
 .footerCopyright {
     @include flexbox($justifyContent: center);
 }

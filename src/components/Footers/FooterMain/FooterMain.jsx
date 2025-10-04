@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import daniloBatistaPicture from '@/assets/images/danilo-batista.webp';
+import { FooterCopyright } from '@/components/Footers';
 import { useScrollToTop } from '@/hooks/useScrollToTop';
-import { FooterCopyright } from './FooterCopyright';
 import styles from './FooterMain.module.scss';
 
 export function FooterMain() {

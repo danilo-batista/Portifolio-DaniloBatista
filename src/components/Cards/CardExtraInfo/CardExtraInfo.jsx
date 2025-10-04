@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import styles from './CardFragments-ExtraInfo.module.scss';
+import styles from './CardExtraInfo.module.scss';
 
 export function CardExtraInfo({ resume, extraProjects, extraContent }) {
   const detailsRef = useRef(null);
