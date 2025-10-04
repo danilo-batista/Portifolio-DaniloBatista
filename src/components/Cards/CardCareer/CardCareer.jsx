@@ -2,7 +2,7 @@ import {
   CardExtraInfo,
   CardThumbnail,
   CardTitleAndDate,
-} from '@/components/cards';
+} from '@/components/Cards';
 import styles from './CardCareer.module.scss';
 
 export function CardCareer({
