@@ -1,5 +1,5 @@
+import { SectionTitleAndSubTitle } from '@/components/Partials';
 import { designTools, softSkills, techSkills } from '@/database/skills.json';
-import { SectionTitleAndSubTitle } from '../SectionTitleAndSubTitle';
 import styles from './Skills.module.scss';
 
 export function Skills() {
