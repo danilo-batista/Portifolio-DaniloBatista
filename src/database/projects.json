@@ -108,25 +108,11 @@
     "client": "rocketseat",
     "highlight": true,
     "category": "desenvolvimento",
-    "tags": ["react", "css modules", "sass"],
+    "tags": ["react", "hooks", "css modules", "sass"],
     "link": "https://ignite-feed-six-silk.vercel.app/"
   },
   {
     "id": 9,
-    "title": "Portifolio DaniloBatista",
-    "slug": "portifolio",
-    "thumbnail": "portifolio-DaniloBatista.webp",
-       "alt": "Imagem de tela do projeto Portifólio",
-    "description": "Projeto de portifólio pessoal de desenvolvedor.",
-    "period": "set/2025",
-    "client": "danilobatista",
-    "highlight": true,
-    "category": "desenvolvimento",
-    "tags": ["react", "css modules", "sass"],
-    "link": "https://www.danilobatista.com/"
-  },
-  {
-    "id": 10,
     "title": "Tecboard",
     "slug": "tecboard",
     "thumbnail": "tecboard.webp",
@@ -136,7 +122,35 @@
     "client": "alura",
     "highlight": true,
     "category": "desenvolvimento",
-    "tags": ["react", "css modules"],
+    "tags": ["react", "hooks", "css modules"],
     "link": "https://tecboard-six.vercel.app/"
+  },
+  {
+    "id": 10,
+    "title": "Checklist",
+    "slug": "checklist",
+    "thumbnail": "checklist.webp",
+    "alt": "Imagem de tela do projeto Checklist",
+    "description": "Projeto fictício de lista de tarefas.",
+    "period": "out/2025",
+    "client": "alura",
+    "highlight": true,
+    "category": "desenvolvimento",
+    "tags": ["react", "hooks", "context API","css" ],
+    "link": "https://checklist-nine.vercel.app/"
+  },
+  {
+    "id": 11,
+    "title": "Portifolio DaniloBatista",
+    "slug": "portifolio",
+    "thumbnail": "portifolio-DaniloBatista.webp",
+       "alt": "Imagem de tela do projeto Portifólio",
+    "description": "Projeto de portifólio pessoal de desenvolvedor.",
+    "period": "set/2025",
+    "client": "danilobatista",
+    "highlight": true,
+    "category": "desenvolvimento",
+    "tags": ["react", "hooks", "css modules", "sass"],
+    "link": "https://www.danilobatista.com/"
   }
 ]
