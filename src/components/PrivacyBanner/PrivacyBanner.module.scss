@@ -1,0 +1,69 @@
+@use '@/styles/main' as *;
+
+.cookieBanner {
+    position: fixed;
+    bottom: 1rem;
+    left: 1rem;
+    right: 1rem;
+    background: #111;
+    color: #fff;
+    padding: 1rem 1.5rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+    z-index: 9999;
+    font-size: 0.9rem;
+    animation: fadeIn 0.5s ease;
+}
+
+.cookieBanner__content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.cookieBanner__actions {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: flex-end;
+}
+
+.cookieAccept,
+.cookieDecline {
+    border: none;
+    cursor: pointer;
+    padding: 0.6rem 1rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.cookieAccept {
+    background: #00b67a;
+    color: #fff;
+}
+
+.cookieDecline {
+    background: #333;
+    color: #aaa;
+}
+
+.cookieAccept:hover {
+    background: #00a06b;
+}
+
+.cookieDecline:hover {
+    color: #fff;
+    background: #444;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
