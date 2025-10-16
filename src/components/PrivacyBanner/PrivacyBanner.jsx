@@ -7,38 +7,54 @@ export function PrivacyBanner() {
 
   useEffect(() => {
     const consentGiven = localStorage.getItem('cookie_consent');
-    if (!consentGiven) setVisible(true);
+    if (consentGiven !== 'true') {
+      setVisible(true);
+    }
   }, []);
+
+  // Handler para aceitar cookies
+  const handleAccept = () => {
+    localStorage.setItem('cookie_consent', 'true');
+    setVisible(false);
+  };
+
+  // Handler para recusar cookies
+  const handleDecline = () => {
+    localStorage.setItem('cookie_consent', 'false');
+    setVisible(false);
+  };
 
   if (!visible) return null;
 
   return (
-    <div id={cookieBannerId} className={styles.cookieBanner}>
-      <div className={styles.cookieBanner__content}>
-        <p>
-          Usamos cookies para melhorar sua experiência e analisar o tráfego. Ao
-          aceitar, você concorda com o uso de cookies para fins de estatísticas.
-        </p>
-        <div className="cookie-banner__actions">
-          <button
-            type="button"
-            onClick={() => window.acceptCookies()}
-            className={styles.cookieAccept}
-          >
-            Aceitar
-          </button>
-          <button
-            type="button"
-            onClick={() => {
-              localStorage.setItem('cookie_consent', 'false');
-              setVisible(false);
-            }}
-            className={styles.cookieDecline}
-          >
-            Recusar
-          </button>
+    <>
+      <div className={styles.cookieOverlay} />
+
+      <div id={cookieBannerId} className={styles.cookieBanner}>
+        <div className={styles.cookieBanner__content}>
+          <p>
+            Usamos cookies para melhorar sua experiência e analisar o tráfego.
+            Ao aceitar, você concorda com o uso de cookies para fins de
+            estatísticas.
+          </p>
+          <div className={styles.cookieBanner__actions}>
+            <button
+              type="button"
+              onClick={handleDecline}
+              className={styles.cookieDecline}
+            >
+              Recusar
+            </button>
+            <button
+              type="button"
+              onClick={handleAccept}
+              className={styles.cookieAccept}
+            >
+              Aceitar
+            </button>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }

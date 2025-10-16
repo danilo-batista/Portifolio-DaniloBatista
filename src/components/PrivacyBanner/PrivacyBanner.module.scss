@@ -1,60 +1,83 @@
 @use '@/styles/main' as *;
 
+.cookieOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+
+    background: rgba(0, 0, 0, 0.4);
+}
+
 .cookieBanner {
     position: fixed;
     bottom: 1rem;
     left: 1rem;
     right: 1rem;
-    background: #111;
-    color: #fff;
     padding: 1rem 1.5rem;
+    z-index: 1000;
+
     border-radius: 0.75rem;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
-    z-index: 9999;
-    font-size: 0.9rem;
+    background-color: $color__gray-900;
+
+    color: $color__white;
     animation: fadeIn 0.5s ease;
+
+    @media screen and (min-width: $breakpoint__tablet) {
+        max-width: 425px;
+        left: auto;
+    }
 }
 
 .cookieBanner__content {
     display: flex;
     flex-direction: column;
-    gap: 0.75rem;
+    gap: 1rem;
 }
 
 .cookieBanner__actions {
     display: flex;
-    gap: 0.5rem;
-    justify-content: flex-end;
+    gap: 1rem;
 }
 
 .cookieAccept,
 .cookieDecline {
+    width: 100%;
+    padding: 0.75rem 1.5rem;
+
     border: none;
-    cursor: pointer;
-    padding: 0.6rem 1rem;
     border-radius: 0.5rem;
-    font-weight: 500;
+
+    cursor: pointer;
     transition: all 0.2s ease;
+
+    @media screen and (min-width: $breakpoint__desktop) {
+        padding: 0.5rem;
+    }
 }
 
 .cookieAccept {
-    background: #00b67a;
-    color: #fff;
+    background-color: $color__secondary-600;
+    color: $color__secondary-900;
+
+    &:hover {
+        background-color: $color__secondary-400;
+    }
 }
 
 .cookieDecline {
-    background: #333;
-    color: #aaa;
+    background-color: $color__gray-400;
+    color: $color__gray-900;
+
+    &:hover {
+        background-color: $color__gray-300;
+    }
 }
 
-.cookieAccept:hover {
-    background: #00a06b;
-}
-
-.cookieDecline:hover {
-    color: #fff;
-    background: #444;
-}
 
 @keyframes fadeIn {
     from {
@@ -67,3 +90,69 @@
         transform: translateY(0);
     }
 }
+
+/* 
+@media screen and (min-width: $breakpoint__tablet) {}
+*/
+
+/*
+
+
+.cookieBanner__actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    font-size: 1rem;
+
+    @media screen and (min-width: $breakpoint__desktop) {
+        padding: 0.5rem;
+    }
+}
+
+.cookieAccept,
+.cookieDecline {
+    width: 100%;
+    padding: 0.75rem 1.5rem;
+
+    border: none;
+    border-radius: 0.5rem;
+
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    @media screen and (min-width: $breakpoint__desktop) {
+        padding: 0.5rem;
+    }
+}
+
+.cookieAccept {
+    background-color: $color__secondary-600;
+    color: $color__secondary-900;
+
+    &:hover {
+        background-color: $color__secondary-400;
+    }
+}
+
+.cookieDecline {
+    background-color: $color__gray-400;
+    color: $color__gray-900;
+
+    &:hover {
+        background-color: $color__gray-300;
+    }
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+*/
