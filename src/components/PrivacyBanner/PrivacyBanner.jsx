@@ -1,4 +1,5 @@
 import { useEffect, useId, useState } from 'react';
+import { Button } from '../Buttons';
 import styles from './PrivacyBanner.module.scss';
 
 export function PrivacyBanner() {
@@ -38,20 +39,17 @@ export function PrivacyBanner() {
             estatísticas.
           </p>
           <div className={styles.cookieBanner__actions}>
-            <button
-              type="button"
-              onClick={handleDecline}
-              className={styles.cookieDecline}
-            >
+            <Button type="button" onClick={handleDecline} intent="secondary">
               Recusar
-            </button>
-            <button
+            </Button>
+            <Button
               type="button"
               onClick={handleAccept}
-              className={styles.cookieAccept}
+              intent="primary"
+              colors="success"
             >
               Aceitar
-            </button>
+            </Button>
           </div>
         </div>
       </div>

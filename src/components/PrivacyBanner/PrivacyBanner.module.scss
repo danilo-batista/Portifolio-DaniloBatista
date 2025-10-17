@@ -37,6 +37,13 @@
     display: flex;
     flex-direction: column;
     gap: 1rem;
+
+    @media screen and (min-width: $breakpoint__desktop) {
+        & p {
+            font-size: 1.25rem;
+            line-height: 150%;
+        }
+    }
 }
 
 .cookieBanner__actions {
@@ -90,69 +97,3 @@
         transform: translateY(0);
     }
 }
-
-/* 
-@media screen and (min-width: $breakpoint__tablet) {}
-*/
-
-/*
-
-
-.cookieBanner__actions {
-    display: flex;
-    justify-content: flex-end;
-    gap: 1rem;
-    font-size: 1rem;
-
-    @media screen and (min-width: $breakpoint__desktop) {
-        padding: 0.5rem;
-    }
-}
-
-.cookieAccept,
-.cookieDecline {
-    width: 100%;
-    padding: 0.75rem 1.5rem;
-
-    border: none;
-    border-radius: 0.5rem;
-
-    cursor: pointer;
-    transition: all 0.2s ease;
-
-    @media screen and (min-width: $breakpoint__desktop) {
-        padding: 0.5rem;
-    }
-}
-
-.cookieAccept {
-    background-color: $color__secondary-600;
-    color: $color__secondary-900;
-
-    &:hover {
-        background-color: $color__secondary-400;
-    }
-}
-
-.cookieDecline {
-    background-color: $color__gray-400;
-    color: $color__gray-900;
-
-    &:hover {
-        background-color: $color__gray-300;
-    }
-}
-
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(15px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-*/
