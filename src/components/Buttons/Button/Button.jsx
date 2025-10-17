@@ -7,6 +7,7 @@ const button = cva(styles.base, {
     intent: {
       primary: styles.primary,
       secondary: styles.secondary,
+      terciary: styles.terciary,
     },
     sizes: {
       small: styles.small,

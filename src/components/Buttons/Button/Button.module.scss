@@ -23,6 +23,7 @@
 
     &.enabled:hover {
         background-color: var(--intent-hover, $color__gray-700);
+        border: 2px solid var(--intent-hover-bg, $color__gray-500);
     }
 }
 
@@ -35,6 +36,28 @@
         color: var(--intent-hover-text, $color__gray-900);
         background-color: var(--intent-hover-bg, $color__gray-300);
         border: 2px solid var(--intent-hover-bg, $color__gray-300);
+    }
+}
+
+.terciary {
+    @include flexbox($flexDirection: row,
+        $gap: 0.5rem,
+        $justifyContent: center,
+        $alignItems: center,
+    );
+
+    color: var(--intent-color, $color__white);
+    background-color: transparent;
+    border: 2px solid var(--intent-color, $color__gray-500);
+
+    &.enabled:hover {
+        color: var(--intent-hover-text, $color__gray-900);
+        background-color: var(--intent-hover-bg, $color__gray-300);
+        border: 2px solid var(--intent-hover-bg, $color__gray-300);
+
+        & svg {
+            stroke: var(--intent-hover-text, $color__gray-900);
+        }
     }
 }
 

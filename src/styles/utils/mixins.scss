@@ -9,31 +9,32 @@
     flex-wrap: $flexWrap;
 }
 
-@mixin font-variable($size: 1rem, $weight: 400, $slant: null, $ital: null, $opsz: auto, $width: null, $lineHeight: 1.5rem) {
+@mixin font-variable($size: 1rem, $weight: 400, $slnt: null, $ital: null, $opsz: auto, $width: null, $lineHeight: 1.5rem, $mono: 0) {
     font-family: $font__carbona;
     font-weight: $weight;
     font-size: $size;
     line-height: $lineHeight;
+    font-optical-sizing: $opsz;
 
     $font-settings: (
     );
 
-$font-settings: append($font-settings, "'wght' #{$weight}", comma);
+$font-settings: append($font-settings, 'wght'#{$weight}, comma);
 
-@if $slant !=null {
-    $font-settings: append($font-settings, "'slnt' #{$slant}", comma);
+@if $mono !=null {
+    $font-settings: append($font-settings, 'MONO'#{$mono}, comma);
+}
+
+@if $slnt !=null {
+    $font-settings: append($font-settings, 'slnt'#{$slnt}, comma);
 }
 
 @if $ital !=null {
-    $font-settings: append($font-settings, "'ital' #{$ital}", comma);
-}
-
-@if $opsz !=null {
-    $font-settings: append($font-settings, "'opsz' #{$opsz}", comma);
+    $font-settings: append($font-settings, 'ital'#{$ital}, comma);
 }
 
 @if $width !=null {
-    $font-settings: append($font-settings, "'wdth' #{$width}", comma);
+    $font-settings: append($font-settings, 'wdth'#{$width}, comma);
 }
 
 font-variation-settings: $font-settings;
