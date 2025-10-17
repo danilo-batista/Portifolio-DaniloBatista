@@ -2,7 +2,9 @@
 @use '@/styles/main' as *;
 
 .card__information {
-    @include flexbox($flexDirection: column, $alignItems: flex-start, $justifyContent: flex-start);
+    @include flexbox($flexDirection: column,
+        $justifyContent: flex-start,
+        $alignItems: flex-start);
 
     padding-inline: 1.5rem;
 

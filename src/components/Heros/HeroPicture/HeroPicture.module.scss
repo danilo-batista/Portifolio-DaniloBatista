@@ -1,8 +1,7 @@
 @use '@/styles/main' as *;
 
 .container {
-    @include flexbox($flexDirection: column);
-    gap: 2rem;
+    @include flexbox($flexDirection: column, $gap: 2rem);
 }
 
 .hero__profilePicture {

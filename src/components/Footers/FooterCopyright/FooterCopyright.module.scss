@@ -5,17 +5,17 @@
 }
 
 .footerCopyright__link {
+    @include font-variable($weight: 700);
+    text-align: center;
+
     width: 100%;
     padding: 1rem 3rem;
 
     background-color: $color__gray-900;
     color: $color__gray-400;
 
-    font-weight: 700;
-    text-align: center;
-
     & span {
-        font-weight: 400;
+        @include font-variable($weight: 400);
     }
 
     &:hover {
@@ -23,11 +23,19 @@
     }
 
     @media screen and (min-width: $breakpoint__tablet) {
-        font-size: 1.125rem;
+        @include font-variable($size: 1.125rem, $weight: 700);
+
+        & span {
+            @include font-variable($size: 1.125rem, $weight: 400);
+        }
     }
 
     @media screen and (min-width: $breakpoint__desktop) {
+        @include font-variable($size: 1.25rem, $weight: 700);
         padding: 1.5rem 3rem;
-        font-size: 1.5rem;
+
+        & span {
+            @include font-variable($size: 1.25rem, $weight: 400);
+        }
     }
 }

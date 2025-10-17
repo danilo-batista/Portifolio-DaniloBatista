@@ -1,38 +1,29 @@
 @use '@/styles/main' as *;
 
 .base {
+    @include responsive-button;
+    text-align: center;
+
     width: 100%;
-    padding: 0.75rem;
-
-    font-weight: 700;
-    font-size: 1rem;
-    line-height: 1.5rem;
-
     border-radius: 0.5rem;
     border: transparent;
     transition: all 0.5s ease;
     cursor: pointer;
 
     @media screen and (min-width: $breakpoint__tablet) {
-        width: 10rem;
+        width: auto;
     }
-
-    @media screen and (min-width: $breakpoint__smallDesktop) {
-        font-size: 1.25rem;
-        padding: 1rem;
-    }
-
-    @media screen and (min-width: $breakpoint__desktop) {}
 }
 
 /* Intents */
 .primary {
-    color: var(--intent-hover-text, $color__white);
+    color: var(--intent-color-text, $color__white);
     background-color: var(--intent-color, $color__gray-500);
     border: transparent;
 
     &.enabled:hover {
         background-color: var(--intent-hover, $color__gray-700);
+        border: 2px solid var(--intent-hover-bg, $color__gray-500);
     }
 }
 
@@ -48,6 +39,28 @@
     }
 }
 
+.terciary {
+    @include flexbox($flexDirection: row,
+        $gap: 0.5rem,
+        $justifyContent: center,
+        $alignItems: center,
+    );
+
+    color: var(--intent-color, $color__white);
+    background-color: transparent;
+    border: 2px solid var(--intent-color, $color__gray-500);
+
+    &.enabled:hover {
+        color: var(--intent-hover-text, $color__gray-900);
+        background-color: var(--intent-hover-bg, $color__gray-300);
+        border: 2px solid var(--intent-hover-bg, $color__gray-300);
+
+        & svg {
+            stroke: var(--intent-hover-text, $color__gray-900);
+        }
+    }
+}
+
 .disabled {
     opacity: 0.5;
     cursor: not-allowed;
@@ -56,6 +69,7 @@
 /* Colors */
 .info {
     --intent-color: #{$color__info-600};
+    --intent-color-text: #{$color__info-100};
     --intent-hover: #{$color__info-500};
     --intent-hover-bg: #{$color__info-300};
     --intent-hover-text: #{$color__info-900};
@@ -63,6 +77,7 @@
 
 .success {
     --intent-color: #{$color__success-600};
+    --intent-color-text: #{$color__success-100};
     --intent-hover: #{$color__success-500};
     --intent-hover-bg: #{$color__success-300};
     --intent-hover-text: #{$color__success-900};
@@ -70,6 +85,7 @@
 
 .warning {
     --intent-color: #{$color__warning-600};
+    --intent-color-text: #{$color__warning-100};
     --intent-hover: #{$color__warning-500};
     --intent-hover-bg: #{$color__warning-300};
     --intent-hover-text: #{$color__warning-900};
@@ -77,6 +93,7 @@
 
 .danger {
     --intent-color: #{$color__danger-600};
+    --intent-color-text: #{$color__danger-100};
     --intent-hover: #{$color__danger-500};
     --intent-hover-bg: #{$color__danger-300};
     --intent-hover-text: #{$color__danger-900};
@@ -84,19 +101,17 @@
 
 /* Sizes */
 .small {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-    padding: 0.25rem 0.5rem;
+    @include button-size(0.875rem, 700, 1.25rem, 0.25rem 0.5rem);
 }
 
 .medium {
-    font-size: 1rem;
-    line-height: 1.5rem;
-    padding: 0.5rem 1rem;
+    @include button-size(1rem, 700, 1.5rem, 0.5rem 1.25rem);
 }
 
-.big {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-    padding: 0.75rem 1.25rem;
+.large {
+    @include button-size(1.25rem, 700, 1.75rem, 0.75rem 1.75rem);
+}
+
+.extraLarge {
+    @include button-size(1.5rem, 700, 2.25rem, 1rem 2.25rem);
 }
