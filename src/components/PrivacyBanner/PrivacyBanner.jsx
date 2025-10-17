@@ -1,29 +1,11 @@
-import { useEffect, useId, useState } from 'react';
-import { Button } from '../Buttons';
+import { useId } from 'react';
+import { Button } from '@/components/Buttons';
+import { usePrivacyConsent } from '@/hooks/usePrivacyConsent';
 import styles from './PrivacyBanner.module.scss';
 
 export function PrivacyBanner() {
-  const [visible, setVisible] = useState(false);
   const cookieBannerId = useId();
-
-  useEffect(() => {
-    const consentGiven = localStorage.getItem('cookie_consent');
-    if (consentGiven !== 'true') {
-      setVisible(true);
-    }
-  }, []);
-
-  // Handler para aceitar cookies
-  const handleAccept = () => {
-    localStorage.setItem('cookie_consent', 'true');
-    setVisible(false);
-  };
-
-  // Handler para recusar cookies
-  const handleDecline = () => {
-    localStorage.setItem('cookie_consent', 'false');
-    setVisible(false);
-  };
+  const { visible, handleAccept, handleDecline } = usePrivacyConsent();
 
   if (!visible) return null;
 
