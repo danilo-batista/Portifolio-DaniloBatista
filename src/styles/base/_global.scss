@@ -1,10 +1,12 @@
 /* Disponibiliza os estilos para reutilização. */
 @forward './colors';
+@forward './fonts-fallbacks';
 @forward './fonts';
 @forward './tokens';
 
 /* Utiliza os arquivos localmente. */
 @use './colors' as *;
+@use './fonts-fallbacks' as *;
 @use './fonts' as *;
 @use './tokens' as *;
 
@@ -23,7 +25,7 @@
     input,
     textarea,
     button {
-        font-family: $font__carbona;
+        font-family: $font__carbona, $fallback-font-family;
         font-style: normal;
 
         font-synthesis: none;
@@ -39,7 +41,7 @@
         font-size: 1rem;
         line-height: 1.5rem;
 
-        :focus {
+        &:focus {
             outline: 0;
         }
     }
