@@ -1,4 +1,5 @@
 import { cva } from 'class-variance-authority';
+import { NavLink } from 'react-router-dom';
 import styles from './Button.module.scss';
 
 const button = cva(styles.base, {
@@ -10,7 +11,8 @@ const button = cva(styles.base, {
     sizes: {
       small: styles.small,
       medium: styles.medium,
-      big: styles.big,
+      large: styles.large,
+      extraLarge: styles.extraLarge,
     },
     colors: {
       info: styles.info,
@@ -33,18 +35,36 @@ const button = cva(styles.base, {
 });
 
 export function Button({
+  as = 'button',
+  to,
+  href,
   className,
   intent,
-  size,
+  sizes,
   colors,
   disabled,
+  children,
   ...props
 }) {
+  let Component;
+
+  if (href) {
+    Component = 'a';
+  } else if (to) {
+    Component = NavLink;
+  } else {
+    Component = as;
+  }
+
   return (
-    <button
-      className={button({ intent, size, colors, disabled, className })}
+    <Component
+      to={to}
+      href={href}
+      className={button({ intent, sizes, colors, disabled, className })}
       disabled={disabled || undefined}
       {...props}
-    />
+    >
+      {children}
+    </Component>
   );
 }

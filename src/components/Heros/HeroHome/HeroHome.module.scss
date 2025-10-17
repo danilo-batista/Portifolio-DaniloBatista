@@ -6,17 +6,17 @@
         $justifyContent: flex-start,
         $alignItems: left);
 
-    padding: 1.75rem 1.5rem;
+    padding: 1.75rem 1.5rem 4.75rem 1.5rem;
 
     text-align: left;
     background-color: $color__info-100;
 
     @media screen and (min-width: $breakpoint__mediumCellPhone) {
-        padding: 1.825rem 1.5rem;
+        padding: 1.825rem 1.5rem 4.75rem 1.5rem;
     }
 
     @media screen and (min-width: $breakpoint__cellPhone) {
-        padding: 2rem 1.5rem;
+        padding: 2rem 1.5rem 4.75rem 1.5rem;
     }
 
     @media screen and (min-width: $breakpoint__tablet) {
@@ -42,34 +42,26 @@
 }
 
 .hero__title {
+    @include font-variable($size: 1.875rem, $weight: 700, $lineHeight: 2.5rem);
+
     padding-inline: 1.5rem;
-
-    font-weight: 700;
-    font-size: 1.875rem;
-    line-height: 2.5rem;
-
     color: $color__info-700;
 
     @media screen and (min-width: $breakpoint__cellPhone) {
-        font-size: 2rem;
-        line-height: 2.75rem;
+        @include font-variable($size: 2rem, $weight: 700, $lineHeight: 2.75rem);
     }
 
     @media screen and (min-width: $breakpoint__tablet) {
+        @include font-variable($size: 3rem, $weight: 700, $lineHeight: 4rem);
         padding-inline: 3.5rem;
-
-        font-size: 3rem;
-        line-height: 4rem;
     }
 
     @media screen and (min-width: $breakpoint__smallDesktop) {
-        font-size: 3.75rem;
-        line-height: 4.25rem;
+        @include font-variable($size: 3.75rem, $weight: 700, $lineHeight: 4.25rem);
     }
 
     @media screen and (min-width: $breakpoint__desktop) {
-        font-size: 4.5rem;
-        line-height: 5.125rem;
+        @include font-variable($size: 4.5rem, $weight: 700, $lineHeight: 5.125rem);
     }
 }
 
@@ -88,8 +80,7 @@
     text-align: left;
 
     @media screen and (min-width: $breakpoint__cellPhone) {
-        font-size: 1.125rem;
-        line-height: 1.25rem;
+        @include font-variable($size: 1.125rem, $lineHeight: 1.25rem);
     }
 
     @media screen and (min-width: $breakpoint__tablet) {
@@ -97,79 +88,27 @@
     }
 
     @media screen and (min-width: $breakpoint__smallDesktop) {
-        font-size: 1.5rem;
-        line-height: 2rem;
+        @include font-variable($size: 1.5rem, $lineHeight: 2rem);
     }
 
     @media screen and (min-width: $breakpoint__desktop) {
-        font-size: 1.75rem;
-        line-height: 2.5rem;
+        @include font-variable($size: 1.75rem, $lineHeight: 2.5rem);
     }
 }
 
 .hero__buttons {
-    @include flexbox($justifyContent: space-around,
+    @include flexbox($flexDirection: row,
+        $gap: 1rem,
+        $justifyContent: space-around,
         $alignItems: center,
-        $flexDirection: row, $gap: 1rem);
+        $flexWrap: wrap);
 
-    flex-wrap: wrap;
     padding-inline: 1.5rem;
 
     @media screen and (min-width: $breakpoint__tablet) {
-        @include flexbox($justifyContent: left, $gap: 2rem);
-        flex-wrap: nowrap;
+        @include flexbox($gap: 2rem,
+            $justifyContent: left,
+            $flexWrap: nowrap);
         padding: 1rem 3.5rem 0;
-    }
-
-    @media screen and (min-width: $breakpoint__smallDesktop) {
-        width: 75%;
-    }
-
-    @media screen and (min-width: $breakpoint__desktop) {
-        width: 85%;
-    }
-}
-
-.hero__button {
-    width: 100%;
-    padding: 1rem 1.5rem;
-
-    border-radius: 0.5rem;
-    border: 2px solid $color__info-700;
-
-    font-weight: 700;
-    text-align: center;
-
-    &:first-child {
-        background: $color__white;
-        color: $color__info-700;
-
-        &:hover {
-            color: $color__info-800;
-            background: $color__info-100;
-        }
-    }
-
-    &:last-child {
-        background-color: $color__info-700;
-        border: none;
-
-        color: $color__white;
-
-        &:hover {
-            color: $color__info-100;
-            background: $color__info-600;
-        }
-    }
-
-    @media screen and (min-width: $breakpoint__smallDesktop) {
-        font-size: 1.25rem;
-    }
-
-    @media screen and (min-width: $breakpoint__desktop) {
-        max-width: 16rem;
-
-        padding: 1.5rem 1.5rem;
-        font-size: 1.5rem;
     }
 }

@@ -38,3 +38,24 @@ $font-settings: append($font-settings, "'wght' #{$weight}", comma);
 
 font-variation-settings: $font-settings;
 }
+
+@mixin button-size($size, $weight, $lineHeight, $padding) {
+    @include font-variable($size: $size, $weight: $weight, $lineHeight: $lineHeight);
+    padding: $padding;
+}
+
+@mixin responsive-button {
+    @include button-size(1rem, 700, 1.5rem, 0.75rem 1rem);
+
+    @media screen and (min-width: $breakpoint__tablet) {
+        @include button-size(1rem, 700, 1.5rem, 0.5rem 1.25rem);
+    }
+
+    @media screen and (min-width: $breakpoint__smallDesktop) {
+        @include button-size(1.25rem, 700, 1.75rem, 0.75rem 1.75rem);
+    }
+
+    @media screen and (min-width: $breakpoint__desktop) {
+        @include button-size(1.5rem, 700, 2.25rem, 1rem 2.25rem);
+    }
+}

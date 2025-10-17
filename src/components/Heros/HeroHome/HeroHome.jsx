@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom';
+import { Button } from '@/components/Buttons';
 import styles from './HeroHome.module.scss';
 
 export function HeroHome() {
@@ -19,13 +19,12 @@ export function HeroHome() {
         </li>
       </ul>
       <div className={styles.hero__buttons}>
-        <NavLink to="/sobre-mim" className={styles.hero__button}>
-          Sobre mim
-        </NavLink>
-
-        <NavLink to="/contato" className={styles.hero__button}>
+        <Button to="/sobre-mim" intent="secondary" colors="info">
+          Sobre Mim
+        </Button>
+        <Button to="/contato" intent="primary" colors="info">
           Fale comigo
-        </NavLink>
+        </Button>
       </div>
     </section>
   );
