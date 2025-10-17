@@ -1,9 +1,0 @@
-$fallback-font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-
-// Fallback class to prevent layout shifts
-.font-fallback {
-    font-family: $fallback-font-family;
-    letter-spacing: -0.02em;
-    word-spacing: 0.1em;
-    line-height: 1.5;
-}

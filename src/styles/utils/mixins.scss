@@ -8,3 +8,33 @@
     align-items: $alignItems;
     flex-wrap: $flexWrap;
 }
+
+@mixin font-variable($size: 1rem, $weight: 400, $slant: null, $ital: null, $opsz: auto, $width: null, $lineHeight: 1.5rem) {
+    font-family: $font__carbona;
+    font-weight: $weight;
+    font-size: $size;
+    line-height: $lineHeight;
+
+    $font-settings: (
+    );
+
+$font-settings: append($font-settings, "'wght' #{$weight}", comma);
+
+@if $slant !=null {
+    $font-settings: append($font-settings, "'slnt' #{$slant}", comma);
+}
+
+@if $ital !=null {
+    $font-settings: append($font-settings, "'ital' #{$ital}", comma);
+}
+
+@if $opsz !=null {
+    $font-settings: append($font-settings, "'opsz' #{$opsz}", comma);
+}
+
+@if $width !=null {
+    $font-settings: append($font-settings, "'wdth' #{$width}", comma);
+}
+
+font-variation-settings: $font-settings;
+}

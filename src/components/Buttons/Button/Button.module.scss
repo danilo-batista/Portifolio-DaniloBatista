@@ -4,9 +4,7 @@
     width: 100%;
     padding: 0.75rem;
 
-    font-weight: 700;
-    font-size: 1rem;
-    line-height: 1.5rem;
+    @include font-variable($weight: 700);
 
     border-radius: 0.5rem;
     border: transparent;
@@ -18,11 +16,9 @@
     }
 
     @media screen and (min-width: $breakpoint__smallDesktop) {
-        font-size: 1.25rem;
+        @include font-variable($size: 1.25rem, $weight: 700);
         padding: 1rem;
     }
-
-    @media screen and (min-width: $breakpoint__desktop) {}
 }
 
 /* Intents */
