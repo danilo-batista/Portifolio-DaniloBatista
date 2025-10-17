@@ -1,4 +1,5 @@
 @use '../base/global' as *;
+@use 'sass:list';
 
 @mixin flexbox($flexDirection: row, $gap: gap, $justifyContent: space-between, $alignItems: center, $flexWrap: flex-wrap) {
     display: flex;
@@ -19,22 +20,22 @@
     $font-settings: (
     );
 
-$font-settings: append($font-settings, 'wght'#{$weight}, comma);
+$font-settings: list.append($font-settings, 'wght'#{$weight}, comma);
 
 @if $mono !=null {
-    $font-settings: append($font-settings, 'MONO'#{$mono}, comma);
+    $font-settings: list.append($font-settings, 'MONO'#{$mono}, comma);
 }
 
 @if $slnt !=null {
-    $font-settings: append($font-settings, 'slnt'#{$slnt}, comma);
+    $font-settings: list.append($font-settings, 'slnt'#{$slnt}, comma);
 }
 
 @if $ital !=null {
-    $font-settings: append($font-settings, 'ital'#{$ital}, comma);
+    $font-settings: list.append($font-settings, 'ital'#{$ital}, comma);
 }
 
 @if $width !=null {
-    $font-settings: append($font-settings, 'wdth'#{$width}, comma);
+    $font-settings: list.append($font-settings, 'wdth'#{$width}, comma);
 }
 
 font-variation-settings: $font-settings;

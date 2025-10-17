@@ -1,15 +1,15 @@
 @use '@/styles/main' as *;
 
 .base {
-    @include responsive-button;
-    text-align: center;
-
     width: 100%;
     border-radius: 0.5rem;
     border: transparent;
     transition: all 0.5s ease;
     cursor: pointer;
-
+    text-align: center;
+    
+    @include responsive-button;
+    
     @media screen and (min-width: $breakpoint__tablet) {
         width: auto;
     }
