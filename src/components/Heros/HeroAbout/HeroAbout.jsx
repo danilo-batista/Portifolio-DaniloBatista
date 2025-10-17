@@ -1,3 +1,4 @@
+import { Button } from '@/components/Buttons';
 import { HeroPicture } from '@/components/Heros';
 import styles from './HeroAbout.module.scss';
 
@@ -53,14 +54,16 @@ export function HeroAbout() {
             todos os envolvidos no processo.
           </span>
         </p>
+
         <div className={styles.download__buttons}>
-          <a
+          <Button
+            intent="primary"
+            colors="success"
             href="/files/DaniloBatista-curriculo_desenvolvedor.pdf"
             download="/DaniloBatista-curriculo_desenvolvedor.pdf"
-            className={styles.download__button}
           >
-            Meu currículo
-          </a>
+            Meu currículo (pdf)
+          </Button>
         </div>
       </div>
     </section>

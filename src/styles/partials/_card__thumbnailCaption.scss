@@ -1,19 +1,18 @@
 @use '@/styles/main' as *;
 
 .card__thumbnailCaption {
+    @include font-variable($weight: 600);
+    text-align: center;
+
     width: 100%;
     padding: 0.5rem;
 
     background-color: $color__secondary-700;
     color: $color__secondary-100;
-
-    font-weight: 600;
-    text-align: center;
-
     border-radius: 0.5rem 0.5rem 0 0;
 
     @media screen and (min-width: $breakpoint__desktop) {
-        font-size: 1.25rem;
+        @include font-variable($size: 1.25rem, $weight: 600);
         padding: 0.75rem;
     }
 }

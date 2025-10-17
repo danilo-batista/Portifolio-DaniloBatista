@@ -1,0 +1,54 @@
+@use '@/styles/main' as *;
+
+.loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+
+    &__overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($color__white, 0.8);
+    }
+
+    &__content {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+
+        span {
+            color: $color__gray-500;
+            font-size: 1rem;
+        }
+    }
+
+    &__spinner {
+        width: 48px;
+        height: 48px;
+        border: 5px solid $color__gray-200;
+        border-bottom-color: $color__gray-500;
+        border-radius: 50%;
+        animation: rotation 1s linear infinite;
+    }
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
