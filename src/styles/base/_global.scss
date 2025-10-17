@@ -10,10 +10,6 @@
 
 /* Estilos globais. */
 :root {
-    :focus {
-        outline: 0;
-    }
-
     html {
         scroll-behavior: smooth;
     }
@@ -29,9 +25,6 @@
     button {
         font-family: $font__carbona;
         font-style: normal;
-        font-weight: 400;
-        font-size: 1rem;
-        line-height: 1.5rem;
 
         font-synthesis: none;
         text-rendering: optimizeLegibility;
@@ -39,21 +32,15 @@
         -moz-osx-font-smoothing: grayscale;
     }
 
-    button {
-        font-weight: 700;
+    body,
+    input,
+    textarea {
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 1.5rem;
 
-        @media screen and (min-width: $breakpoint__tablet) {
-            width: 100%;
-        }
-
-        @media screen and (min-width: $breakpoint__smallDesktop) {
-            width: 50%;
-            font-size: 1.25rem;
-        }
-
-        @media screen and (min-width: $breakpoint__desktop) {
-            padding: 1.5rem 1.5rem;
-            font-size: 1.5rem;
+        :focus {
+            outline: 0;
         }
     }
 

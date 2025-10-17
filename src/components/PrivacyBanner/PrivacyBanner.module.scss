@@ -1,0 +1,99 @@
+@use '@/styles/main' as *;
+
+.cookieOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.cookieBanner {
+    position: fixed;
+    bottom: 1rem;
+    left: 1rem;
+    right: 1rem;
+    padding: 1rem 1.5rem;
+    z-index: 1000;
+
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+    background-color: $color__gray-900;
+
+    color: $color__white;
+    animation: fadeIn 0.5s ease;
+
+    @media screen and (min-width: $breakpoint__tablet) {
+        max-width: 425px;
+        left: auto;
+    }
+}
+
+.cookieBanner__content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    @media screen and (min-width: $breakpoint__desktop) {
+        & p {
+            font-size: 1.25rem;
+            line-height: 150%;
+        }
+    }
+}
+
+.cookieBanner__actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.cookieAccept,
+.cookieDecline {
+    width: 100%;
+    padding: 0.75rem 1.5rem;
+
+    border: none;
+    border-radius: 0.5rem;
+
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    @media screen and (min-width: $breakpoint__desktop) {
+        padding: 0.5rem;
+    }
+}
+
+.cookieAccept {
+    background-color: $color__secondary-600;
+    color: $color__secondary-900;
+
+    &:hover {
+        background-color: $color__secondary-400;
+    }
+}
+
+.cookieDecline {
+    background-color: $color__gray-400;
+    color: $color__gray-900;
+
+    &:hover {
+        background-color: $color__gray-300;
+    }
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

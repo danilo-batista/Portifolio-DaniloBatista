@@ -6,5 +6,6 @@ export * from './Headers';
 export * from './Heros';
 export * from './Menus';
 export * from './Partials';
+export * from './PrivacyBanner';
 export * from './Skills';
 export * from './TemplateSEO';
