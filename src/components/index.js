@@ -4,6 +4,7 @@ export * from './Footers';
 export * from './Forms';
 export * from './Headers';
 export * from './Heros';
+export * from './Loading';
 export * from './Menus';
 export * from './Partials';
 export * from './PrivacyBanner';
