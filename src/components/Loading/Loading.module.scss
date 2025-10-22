@@ -1,14 +1,12 @@
 @use '@/styles/main' as *;
 
 .loading {
+    @include flexbox($justifyContent: center);
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     z-index: 999;
 
     &__overlay {
@@ -21,15 +19,12 @@
     }
 
     &__content {
+        @include flexbox($flexDirection: column, $gap: 1rem);
         position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
 
         span {
             color: $color__gray-500;
-            font-size: 1rem;
+            @include font-variable($weight: 700);
         }
     }
 

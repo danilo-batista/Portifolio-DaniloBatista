@@ -10,13 +10,11 @@ export function usePrivacyConsent() {
     }
   }, []);
 
-  /* Função para aceitar os cookies. */
   const handleAccept = () => {
     localStorage.setItem('cookie_consent', 'true');
     setVisible(false);
   };
 
-  /* Função para recusar os cookies. */
   const handleDecline = () => {
     localStorage.setItem('cookie_consent', 'false');
     setVisible(false);
