@@ -49,16 +49,15 @@
 }
 
 .cardList__buttons {
-    @include flexbox($justifyContent: space-around,
-        $alignItems: center,
-        $flexDirection: row);
+    @include flexbox($flexDirection: row,
+        $justifyContent: space-around,
+        $alignItems: center);
 
     margin-top: 1.5rem;
     padding-inline: 1.5rem;
 
     @media screen and (min-width: $breakpoint__tablet) {
-        @include flexbox($gap: 2rem);
-        flex-wrap: nowrap;
+        @include flexbox($gap: 2rem, $flexWrap: nowrap);
         padding: 1rem 3.5rem 0;
     }
 }
@@ -68,12 +67,10 @@
     padding: 1rem 1.5rem;
     border-radius: 0.5rem;
 
-    font-weight: 700;
+    @include font-variable($weight: 700);
     text-align: center;
 
     background-color: $color__secondary-700;
-
-
     color: $color__secondary-100;
 
     &:hover {
@@ -82,11 +79,11 @@
     }
 
     @media screen and (min-width: $breakpoint__smallDesktop) {
-        font-size: 1.25rem;
+        @include font-variable($size: 1.25rem, $weight: 700);
     }
 
     @media screen and (min-width: $breakpoint__desktop) {
+        @include font-variable($size: 1.5rem, $weight: 700);
         padding: 1.5rem 1.5rem;
-        font-size: 1.5rem;
     }
 }

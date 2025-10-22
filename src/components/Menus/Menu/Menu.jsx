@@ -10,10 +10,10 @@ export function Menu() {
   const [isOpen, setIsOpen] = useState(false);
 
   /* Permite que o React acesse o DOM do Menu */
-  const ref = useRef(null);
+  const menuRef = useRef(null);
 
   /* Escuta os cliques do documento e quando captura o clique fora do Menu, ele o fecha. */
-  useClickAway(ref, () => setIsOpen(false));
+  useClickAway(menuRef, () => setIsOpen(false));
 
   /* Função que fecha o menu mobile após o clique. */
   const handleLinkClick = () => {
@@ -28,7 +28,7 @@ export function Menu() {
 
   return (
     <nav className={styles.menuList__wrapper}>
-      <div className={styles.menuList__mobile} ref={ref}>
+      <div className={styles.menuList__mobile} ref={menuRef}>
         <ButtonHamburger isOpen={isOpen} onToggle={setIsOpen} />
         {isOpen && (
           <ul className={styles.menuList}>

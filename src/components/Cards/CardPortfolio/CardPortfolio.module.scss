@@ -35,12 +35,11 @@
 .card__infoCategory {
     padding-top: 0.25rem;
 
-    font-weight: 400;
-    font-style: oblique;
+    @include font-variable($slnt: -15);
     color: $color__secondary-700;
 
     @media screen and (min-width: $breakpoint__cellPhone) {
-        font-size: 1.25rem;
+        @include font-variable($size: 1.25rem, $slnt: -15);
     }
 
     @media screen and (min-width: $breakpoint__tablet) {
@@ -72,8 +71,7 @@
 
     border-radius: 1.5rem;
 
-    font-weight: 600;
-    line-height: 1.125rem;
+    @include font-variable($size: 1.125rem, $weight: 600);
 }
 
 .card__links {
@@ -83,10 +81,10 @@
     padding: 2rem 0 1rem 0;
 
     & a {
-        @include flexbox($alignItems: center, $gap: 0.25rem);
+        @include flexbox($gap: 0.25rem,
+            $alignItems: center);
 
-        font-weight: 700;
-        line-height: 1.5rem;
+        @include font-variable($weight: 700, $lineHeight: 1.5);
 
         border-radius: 0.5rem;
         color: $color__gray-700;
@@ -126,6 +124,5 @@
     border-radius: 1.5rem;
     border: 2px solid $color__secondary-300;
 
-    font-weight: 600;
-    line-height: 1.125rem;
+    @include font-variable($size: 1.125rem, $weight: 600);
 }

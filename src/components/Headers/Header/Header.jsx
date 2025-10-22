@@ -7,7 +7,7 @@ export function Header() {
     <header className={styles.header}>
       <h1 className={styles.header__brand}>
         <NavLink to="/">
-          danilo<span>batista®</span>
+          danilo<span className={styles.header__brandSpan}>batista®</span>
         </NavLink>
       </h1>
       <Menu />

@@ -1,7 +1,7 @@
 import emailjs from '@emailjs/browser';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useId, useRef, useState } from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
-import { ButtonSubmit } from '@/components/Buttons';
+import { Button } from '@/components/Buttons';
 import { FormInput, FormTextArea } from '@/components/Forms';
 import styles from './FormContact.module.scss';
 
@@ -122,8 +122,10 @@ export function FormContact() {
     }
   }
 
+  const contactFormId = useId();
+
   return (
-    <section className={styles.contactForm} id="contactFormId">
+    <section className={styles.contactForm} id={contactFormId}>
       <h2 className={styles.contactForm__title}>
         Gostou do meu trabalho? Diga "Oi!" e vamos crescer juntos!
       </h2>
@@ -134,8 +136,9 @@ export function FormContact() {
       >
         {errorMessage && (
           <p
-            className={`${styles.contactForm__message} ${errorMessage.includes('✅') ? styles.success : styles.error
-              }`}
+            className={`${styles.contactForm__message} ${
+              errorMessage.includes('✅') ? styles.success : styles.error
+            }`}
           >
             {errorMessage}
           </p>
@@ -204,9 +207,14 @@ export function FormContact() {
           )}
         </div>
 
-        <ButtonSubmit type="submit" disabled={!isFormValid || isSubmitting}>
+        <Button
+          type="submit"
+          disabled={!isFormValid || isSubmitting}
+          intent="primary"
+          colors="warning"
+        >
           {isSubmitting ? 'Enviando...' : 'Envie um Oi!'}
-        </ButtonSubmit>
+        </Button>
       </form>
     </section>
   );

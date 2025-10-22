@@ -13,7 +13,6 @@
 
     background-color: $color__gray-700;
 
-
     @media screen and (min-width: $breakpoint__cellPhone) {
         padding-inline: 2rem;
     }
@@ -32,12 +31,7 @@
 }
 
 .header__brand {
-    font-weight: 700;
-    font-size: 1.625rem;
-
-    & span {
-        font-weight: 400;
-    }
+    @include font-variable($size: 1.625rem, $weight: 700);
 
     & a {
         color: $color__gray-100;
@@ -48,10 +42,30 @@
     }
 
     @media screen and (min-width: $breakpoint__cellPhone) {
-        font-size: 1.5rem;
+        @include font-variable($size: 1.5rem, $weight: 700);
     }
 
     @media screen and (min-width: $breakpoint__desktop) {
-        font-size: 2rem;
+        @include font-variable($size: 2rem, $weight: 700);
+    }
+}
+
+.header__brandSpan {
+    @include font-variable($size: 1.625rem, $weight: 400);
+
+    & a {
+        color: $color__gray-100;
+
+        &:hover {
+            color: $color__primary-300;
+        }
+    }
+
+    @media screen and (min-width: $breakpoint__cellPhone) {
+        @include font-variable($size: 1.5rem, $weight: 400);
+    }
+
+    @media screen and (min-width: $breakpoint__desktop) {
+        @include font-variable($size: 2rem, $weight: 400);
     }
 }
