@@ -1,12 +1,16 @@
 @use '@/styles/main' as *;
 
 .hamburger {
+    @include flexbox($flexDirection: column)
+}
+
+.hamburgerIcon {
     @include flexbox($justifyContent: center,
         $alignItems: center,
         $flexDirection: column);
 
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     padding: 0;
 
     background: none;
@@ -17,9 +21,9 @@
 
     & span {
         display: block;
-        width: 28px;
-        height: 3px;
-        margin: 0.25rem 0;
+        width: 30px;
+        height: 2px;
+        margin: 0.215rem 0;
 
         background-color: $color__gray-100;
         border-radius: 3px;
@@ -40,4 +44,9 @@
             transform: translateY(-11px) rotate(-45deg);
         }
     }
+}
+
+.hamburgerLegend {
+    @include font-variable($size: 0.75rem, $weight: 700);
+    color: $color__white;
 }

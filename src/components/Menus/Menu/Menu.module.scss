@@ -1,13 +1,11 @@
 @use '@/styles/main' as *;
 
-/* Container para agrupar os dois tipos de menus. */
 .menuList__wrapper {
     @include flexbox($alignItems: center);
 }
 
-/* Elementos do Menu Mobile */
 .menuList__mobile {
-    display: flex;
+    @include flexbox();
 
     @media screen and (min-width: $breakpoint__tablet) {
         display: none;
@@ -34,13 +32,12 @@
     transition: opacity 0.3s ease-in-out;
 }
 
-/* Elementos do Menu Desktop */
 .menuList__desktop {
     display: none;
     gap: 1rem;
 
     @media screen and (min-width: $breakpoint__tablet) {
-        display: flex;
+        @include flexbox();
     }
 }
 
@@ -48,13 +45,13 @@
 .menuList__item {
     padding-inline: 0.5rem;
 
-    font-weight: 700;
+    @include font-variable($weight: 700);
 
     border-radius: 0.5rem;
     white-space: nowrap;
 
     @media screen and (min-width: $breakpoint__desktop) {
-        font-size: 1.25rem;
+        @include font-variable($size: 1.25rem, $weight: 700);
     }
 }
 

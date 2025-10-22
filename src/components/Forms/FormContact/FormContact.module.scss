@@ -1,8 +1,10 @@
 @use '@/styles/main' as *;
 
-/* Elementos do Formulário */
 .contactForm {
-    @include flexbox($flexDirection: column, $justifyContent: flex-start, $alignItems: left, $gap: 3rem);
+    @include flexbox($flexDirection: column,
+        $gap: 3rem,
+        $justifyContent: flex-start,
+        $alignItems: left);
 
     width: 100%;
     padding: 4.75rem 1.5rem;
@@ -18,7 +20,11 @@
     }
 
     @media screen and (min-width: $breakpoint__tablet) {
-        @include flexbox($flexDirection: column, $justifyContent: flex-start, $alignItems: left, $gap: 3rem);
+        @include flexbox($flexDirection: column,
+            $gap: 3rem,
+            $justifyContent: flex-start,
+            $alignItems: left,
+        );
         padding: 5rem 1.5rem;
     }
 
@@ -44,7 +50,7 @@
     animation: fadeIn 0.3s ease-in-out;
 
     text-align: center;
-    font-weight: 700;
+    @include font-variable($weight: 700);
 
     &.success {
         background-color: rgba($color__success-500, 0.1);
@@ -72,32 +78,25 @@
 }
 
 .contactForm__title {
+    @include font-variable($size: 1.875rem, $weight: 700, $lineHeight: 2.5rem);
     padding-inline: 1.5rem;
 
-    font-weight: 700;
-    font-size: 1.875rem;
-    line-height: 2.5rem;
-
     @media screen and (min-width: $breakpoint__cellPhone) {
-        font-size: 2rem;
-        line-height: 2.75rem;
+        @include font-variable($size: 2rem, $weight: 700, $lineHeight: 2.75rem);
     }
 
     @media screen and (min-width: $breakpoint__tablet) {
+        @include font-variable($size: 3rem, $weight: 700, $lineHeight: 4rem);
         padding-inline: 3.5rem;
-
-        font-size: 3rem;
-        line-height: 4rem;
     }
 
     @media screen and (min-width: $breakpoint__desktop) {
-        font-size: 3.75rem;
-        line-height: 4.25rem;
+        @include font-variable($size: 3.75rem, $weight: 700, $lineHeight: 4.25rem);
     }
 }
 
 .contactForm__form {
-    @include flexbox($flexDirection: column, $alignItems: center, $gap: 1.5rem);
+    @include flexbox($flexDirection: column, $gap: 1.5rem, $alignItems: center);
     padding-inline: 0.5rem;
 
     flex-wrap: wrap;
@@ -136,7 +135,7 @@
     animation: fadeIn 0.3s ease-in-out;
 
     span {
-        font-weight: 700;
+        @include font-variable($weight: 700);
 
         padding: 0.5rem 1.5rem;
         border-radius: 0.5rem;

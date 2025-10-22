@@ -8,14 +8,17 @@
     padding: 1.25rem 0 0.75rem 0.25rem;
 
     &>summary {
-        font-weight: 600;
+        @include font-variable($weight: 600);
         color: $color__success-700;
         padding-bottom: 1rem;
     }
 
     @media screen and (min-width: $breakpoint__cellPhone) {
-        font-size: 1.25rem;
-        line-height: 1.75rem;
+        @include font-variable($size: 1.25rem, $lineHeight: 1.75rem);
+
+        &>summary {
+            @include font-variable($size: 1.25rem, $lineHeight: 1.75rem, $weight: 600);
+        }
     }
 }
 
@@ -43,6 +46,6 @@
     padding: 0.25rem 0 0 0.25rem;
 
     &>span {
-        font-weight: 700;
+        @include font-variable($weight: 700);
     }
 }
