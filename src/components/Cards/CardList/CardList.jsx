@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Loading } from '@/components';
 import { SectionTitleAndSubTitle } from '@/components/Partials';
 import styles from './CardList.module.scss';
 
@@ -44,7 +45,7 @@ export function CardList({ component, listItem, title, subtitle, isEven }) {
   }, [component, listItem]);
 
   if (!state.LoadedComponent) {
-    return <div>Carregando...</div>;
+    return <Loading />;
   }
 
   const Loaded = state.LoadedComponent;

@@ -1,11 +1,12 @@
-import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useEffect, useId, useState } from 'react';
+import { Button } from '@/components/Buttons';
 import { CardPortfolio } from '@/components/Cards';
 import { SectionTitleAndSubTitle } from '@/components/Partials';
 import styles from './CardPortfolioList.module.scss';
 
 export function PortfolioList(props) {
   const [state, setState] = useState({ listToRender: [] });
+  const portfolioId = useId();
 
   useEffect(() => {
     const loadData = async () => {
@@ -26,7 +27,7 @@ export function PortfolioList(props) {
   }, [props.showHighlights]);
 
   return (
-    <section className={styles.section__layoutContainer} id="portfolioId">
+    <section className={styles.section__layoutContainer} id={portfolioId}>
       <SectionTitleAndSubTitle
         title="Projetos"
         subtitle="Experiências práticas que refletem meu crescimento técnico e criativo."
@@ -41,9 +42,9 @@ export function PortfolioList(props) {
       <div className={styles.cardList__links}>
         {props.showMoreLinks && (
           <div className={styles.cardList__buttons}>
-            <Link to="/portifolio" className={styles.cardList__button}>
+            <Button to={`/portifolio`} intent="primary" colors="success">
               Veja mais projetos aqui
-            </Link>
+            </Button>
           </div>
         )}
       </div>
