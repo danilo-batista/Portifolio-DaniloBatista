@@ -7,9 +7,9 @@
     transition: all 0.5s ease;
     cursor: pointer;
     text-align: center;
-    
+
     @include responsive-button;
-    
+
     @media screen and (min-width: $breakpoint__tablet) {
         width: auto;
     }
@@ -17,25 +17,26 @@
 
 /* Intents */
 .primary {
-    color: var(--intent-color-text, $color__white);
     background-color: var(--intent-color, $color__gray-500);
-    border: transparent;
+    border: 2px solid var(--intent-color-border, $color__gray-600);
+    color: var(--intent-color-text, $color__white);
 
     &.enabled:hover {
-        background-color: var(--intent-hover, $color__gray-700);
-        border: 2px solid var(--intent-hover-bg, $color__gray-500);
+        background-color: var(--intent-hover, $color__gray-600);
+        border: 2px solid var(--intent-hover-border, $color__gray-700);
+        color: var(--intent-hover-text, $color__white);
     }
 }
 
 .secondary {
-    color: var(--intent-color, $color__white);
     background-color: transparent;
-    border: 2px solid var(--intent-color, $color__gray-500);
+    border: 2px solid var(--intent-color-border, $color__gray-600);
+    color: var(--intent-color, $color__white);
 
     &.enabled:hover {
-        color: var(--intent-hover-text, $color__gray-900);
-        background-color: var(--intent-hover-bg, $color__gray-300);
-        border: 2px solid var(--intent-hover-bg, $color__gray-300);
+        background-color: var(--intent-hover, $color__gray-500);
+        border: 2px solid var(--intent-hover-border, $color__gray-500);
+        color: var(--intent-hover-text, $color__gray-100);
     }
 }
 
@@ -46,14 +47,14 @@
         $alignItems: center,
     );
 
-    color: var(--intent-color, $color__white);
     background-color: transparent;
-    border: 2px solid var(--intent-color, $color__gray-500);
+    border: 2px solid var(--intent-color-border, $color__gray-600);
+    color: var(--intent-color, $color__white);
 
     &.enabled:hover {
+        background-color: var(--intent-hover, $color__gray-500);
+        border: 2px solid var(--intent-hover-border, $color__gray-500);
         color: var(--intent-hover-text, $color__gray-900);
-        background-color: var(--intent-hover-bg, $color__gray-300);
-        border: 2px solid var(--intent-hover-bg, $color__gray-300);
 
         & svg {
             stroke: var(--intent-hover-text, $color__gray-900);
@@ -69,34 +70,38 @@
 /* Colors */
 .info {
     --intent-color: #{$color__info-600};
-    --intent-color-text: #{$color__info-100};
+    --intent-color-border: #{$color__info-600};
+    --intent-color-text: #{$color__white};
     --intent-hover: #{$color__info-500};
-    --intent-hover-bg: #{$color__info-300};
-    --intent-hover-text: #{$color__info-900};
+    --intent-hover-border: #{$color__info-500};
+    --intent-hover-text: #{$color__white};
 }
 
 .success {
     --intent-color: #{$color__success-600};
-    --intent-color-text: #{$color__success-100};
+    --intent-color-border: #{$color__success-600};
+    --intent-color-text: #{$color__white};
     --intent-hover: #{$color__success-500};
-    --intent-hover-bg: #{$color__success-300};
-    --intent-hover-text: #{$color__success-900};
+    --intent-hover-border: #{$color__success-500};
+    --intent-hover-text: #{$color__white};
 }
 
 .warning {
     --intent-color: #{$color__warning-600};
-    --intent-color-text: #{$color__warning-100};
-    --intent-hover: #{$color__warning-500};
-    --intent-hover-bg: #{$color__warning-300};
-    --intent-hover-text: #{$color__warning-900};
+    --intent-color-border: #{$color__warning-600};
+    --intent-color-text: #{$color__white};
+    --intent-hover: #{$color__warning-400};
+    --intent-hover-border: #{$color__warning-400};
+    --intent-hover-text: #{$color__white};
 }
 
 .danger {
     --intent-color: #{$color__danger-600};
-    --intent-color-text: #{$color__danger-100};
-    --intent-hover: #{$color__danger-500};
-    --intent-hover-bg: #{$color__danger-300};
-    --intent-hover-text: #{$color__danger-900};
+    --intent-color-border: #{$color__danger-600};
+    --intent-color-text: #{$color__white};
+    --intent-hover: #{$color__danger-400};
+    --intent-hover-border: #{$color__danger-400};
+    --intent-hover-text: #{$color__white};
 }
 
 /* Sizes */
