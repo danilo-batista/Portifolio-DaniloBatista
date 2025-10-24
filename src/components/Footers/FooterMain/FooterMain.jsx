@@ -1,13 +1,28 @@
+import { useNavigate } from 'react-router-dom';
 import daniloBatistaPicture from '@/assets/images/danilo-batista.webp';
 import { Button } from '@/components/Buttons';
 import { FooterCopyright } from '@/components/Footers';
 import { IconGitHub, IconLinkedIn } from '@/components/Icons';
-import { useScrollToTop } from '@/hooks/useScrollToTop';
+import { useScrollToTop } from '@/hooks';
 import styles from './FooterMain.module.scss';
 
 export function FooterMain() {
   const { scrollToElement, pathname } = useScrollToTop();
+  const navigate = useNavigate();
   const formId = 'contactFormId';
+
+  const onScrollToElement = (event) => {
+    if (pathname === '/contato') {
+      event.preventDefault();
+      const element = document.getElementById(formId);
+
+      if (element) {
+        scrollToElement(formId);
+      } else {
+        navigate(`/contato#${formId}`);
+      }
+    }
+  };
 
   return (
     <>
@@ -43,12 +58,7 @@ export function FooterMain() {
           <Button
             to={`/contato#${formId}`}
             intent="primary"
-            onClick={(event) => {
-              if (pathname === '/contato') {
-                event.preventDefault();
-                scrollToElement(formId);
-              }
-            }}
+            onClick={onScrollToElement}
           >
             Fale comigo
           </Button>
