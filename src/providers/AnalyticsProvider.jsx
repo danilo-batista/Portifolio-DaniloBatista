@@ -1,7 +1,7 @@
 import { Analytics } from '@vercel/analytics/react';
 import { useEffect } from 'react';
 
-export function AnalyticsProvider() {
+export function AnalyticsProvider({ children }) {
   useEffect(() => {
     /* Adiciona as variáveis de ambiente para os IDs de rastreamento. */
     const GA_ID = import.meta.env.VITE_GA_MEASUREMENT_ID;
@@ -70,5 +70,10 @@ export function AnalyticsProvider() {
   }, []);
 
   /* Retorna VercelAnalytics */
-  return <Analytics />;
+  return (
+    <>
+      {children}
+      <Analytics />
+    </>
+  );
 }

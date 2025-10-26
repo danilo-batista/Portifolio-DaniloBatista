@@ -50,6 +50,11 @@
     border-radius: 0.5rem;
     white-space: nowrap;
 
+    :focus-visible {
+        padding: 0.25rem;
+        border-radius: 0.5rem;
+    }
+
     @media screen and (min-width: $breakpoint__desktop) {
         @include font-variable($size: 1.25rem, $weight: 700);
     }
