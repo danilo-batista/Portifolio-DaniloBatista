@@ -1,46 +1,52 @@
-import { useRef, useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import { useClickAway } from 'react-use';
 import { ButtonHamburger } from '@/components/Buttons';
-import menuList from '@/database/menuList.json';
+import { pagesMetadata } from '@/config';
+import { useMenu } from '@/hooks';
 import styles from './Menu.module.scss';
 
 export function Menu() {
-  /* Estado para controlar o Menu (começa fechado). */
-  const [isOpen, setIsOpen] = useState(false);
+  const { isOpen, setIsOpen, menuRef, menuId, handleLinkClick, handleKeyDown } =
+    useMenu();
 
-  /* Permite que o React acesse o DOM do Menu */
-  const menuRef = useRef(null);
-
-  /* Escuta os cliques do documento e quando captura o clique fora do Menu, ele o fecha. */
-  useClickAway(menuRef, () => setIsOpen(false));
-
-  /* Função que fecha o menu mobile após o clique. */
-  const handleLinkClick = () => {
-    setIsOpen(false);
-  };
+  const pages = Object.values(pagesMetadata);
 
   /* Função que faz a checagem se o link corresponde a URL da página, aplicando o estilo para sinalizar a página ativa.  */
-  const className = ({ isActive }) =>
+  const getLinkClassName = ({ isActive }) =>
     isActive
       ? `${styles.menuList__itemActive} ${styles.menuList__itemLink}`
       : styles.menuList__itemLink;
 
   return (
-    <nav className={styles.menuList__wrapper}>
+    <nav
+      className={styles.menuList__wrapper}
+      aria-label="Menu principal"
+      onKeyDown={handleKeyDown}
+    >
       <div className={styles.menuList__mobile} ref={menuRef}>
-        <ButtonHamburger isOpen={isOpen} onToggle={setIsOpen} />
+        <ButtonHamburger
+          isOpen={isOpen}
+          onToggle={setIsOpen}
+          aria-controls={`mobile-menu-${menuId}`}
+          aria-expanded={isOpen}
+          aria-label={isOpen ? 'Fechar menu' : 'Abrir menu'}
+        />
+
         {isOpen && (
-          <ul className={styles.menuList}>
-            {menuList.map((menu) => {
+          <ul className={styles.menuList} id={`mobile-menu-${menuId}`}>
+            {pages.map((page) => {
               return (
-                <li className={styles.menuList__item} key={menu.title}>
+                <li className={styles.menuList__item} key={page.title}>
                   <NavLink
-                    to={menu.to}
+                    to={page.path}
                     onClick={handleLinkClick}
-                    className={className}
+                    className={getLinkClassName}
+                    aria-current={
+                      page.path === window.location.pathname
+                        ? 'page'
+                        : undefined
+                    }
                   >
-                    {menu.title}
+                    {page.title}
                   </NavLink>
                 </li>
               );
@@ -50,11 +56,17 @@ export function Menu() {
       </div>
 
       <ul className={styles.menuList__desktop}>
-        {menuList.map((menu) => {
+        {pages.map((page) => {
           return (
-            <li className={styles.menuList__item} key={menu.title}>
-              <NavLink to={menu.to} className={className}>
-                {menu.title}
+            <li className={styles.menuList__item} key={page.title}>
+              <NavLink
+                to={page.path}
+                className={getLinkClassName}
+                aria-current={
+                  page.path === window.location.pathname ? 'page' : undefined
+                }
+              >
+                {page.title}
               </NavLink>
             </li>
           );
