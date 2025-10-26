@@ -1,2 +1,2 @@
+export * from './Footer';
 export * from './FooterCopyright';
-export * from './FooterMain';

@@ -2,113 +2,21 @@
   {
     "to": "/",
     "title": "Home",
-    "element": "Home",
-    "description": "Portfólio profissional de Danilo Batista, desenvolvedor front-end e designer gráfico.",
-    "keywords": [
-      "Danilo Batista",
-      "portifólio de Danilo Batista",
-      "desenvolvedor front-end",
-      "designer gráfico",
-      "front-end developer",
-      "projetos digitais",
-      "web design",
-      "design criativo",
-      "react",
-      "sass",
-      "css",
-      "html",
-      "responsividade",
-      "javascript"
-    ],
-    "ogImage": "/images/home-og.png"
+    "element": "Home"
   },
   {
     "to": "/sobre-mim",
     "title": "Sobre Mim",
-    "element": "About",
-    "description": "Conheça a história de Danilo Batista: designer gráfico e desenvolvedor front-end com experiência em embalagens, quadrinhos e projetos digitais.",
-    "keywords": [
-      "Danilo Batista",
-      "sobre Danilo Batista",
-      "desenvolvedor front-end",
-      "experiência profissional",
-      "designer gráfico",
-      "front-end developer",
-      "projetos digitais",
-      "web design",
-      "design criativo",
-      "embalagens",
-      "quadrinhos",
-      "criatividade",
-      "react",
-      "sass",
-      "css",
-      "html",
-      "responsividade",
-      "javascript"
-    ],
-    "ogImage": "/images/sobre-mim-og.png"
+    "element": "About"
   },
   {
     "to": "/portifolio",
     "title": "Portifólio",
-    "element": "Portfolio",
-    "description": "Explore os destaques do portfólio de Danilo Batista — projetos front-end criativos desenvolvidos em React, JavaScript, HTML e CSS, com forte base em design gráfico",
-    "keywords": [
-      "Danilo Batista",
-      "portifólio de Danilo Batista",
-      "desenvolvedor front-end",
-      "experiência profissional",
-      "designer gráfico",
-      "front-end developer",
-      "projetos digitais",
-      "web design",
-      "design criativo",
-      "embalagens",
-      "quadrinhos",
-      "criatividade",
-      "landing page",
-      "e-commerce",
-      "react",
-      "sass",
-      "css",
-      "html",
-      "responsividade",
-      "javascript"
-    ],
-    "ogImage": "/images/portifolio-og.png"
+    "element": "Portfolio"
   },
   {
     "to": "/contato",
     "title": "Contato",
-    "element": "Contact",
-    "description": "Entre em contato com Danilo Batista — desenvolvedor front-end e designer gráfico. Vamos conversar sobre como cocriar soluções digitais com criatividade e impacto.",
-    "keywords": [
-      "Danilo Batista",
-      "contato Danilo Batista",
-      "mensagem para Danilo Batista",
-      "contratar Danilo Batista",
-      "desenvolvedor front-end",
-      "experiência profissional",
-      "designer gráfico",
-      "front-end developer",
-      "projetos digitais",
-      "web design",
-      "design criativo",
-      "embalagens",
-      "quadrinhos",
-      "criatividade",
-      "landing page",
-      "e-commerce",
-      "react",
-      "sass",
-      "css",
-      "html",
-      "responsividade",
-      "javascript",
-      "cocriação",
-      "colaboração multidisciplinar"
-    ],
-    "ogImage": "/images/contato-og.png"
+    "element": "Contact"
   }
 ]

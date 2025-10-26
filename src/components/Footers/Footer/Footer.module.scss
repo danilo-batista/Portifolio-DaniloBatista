@@ -42,18 +42,20 @@
     overflow: hidden;
     position: relative;
 
-    width: 9rem;
-    height: 9rem;
     margin: 1rem 1.5rem;
 
     border-radius: 50%;
     border: 3px solid $color__gray-500;
+
+    width: 9rem;
+    height: 9rem;
 
     &>img {
         position: absolute;
         bottom: 25;
         left: 0;
         width: 100%;
+        height: auto;
     }
 
     @media screen and (min-width: $breakpoint__tablet) {
@@ -98,14 +100,14 @@
         $justifyContent: space-around,
         $alignItems: center);
 
-    padding: 1.5rem;
+        margin-top: 2rem;
+        width: 100%;
 
     @media screen and (min-width: $breakpoint__tablet) {
         @include flexbox($flexDirection: row,
             $gap: 2rem,
-            $justifyContent: space-around,
+            $justifyContent: left,
             $alignItems: center,
             $flexWrap: nowrap);
-        padding: 1rem 3.5rem 0;
     }
 }

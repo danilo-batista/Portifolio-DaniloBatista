@@ -4,7 +4,7 @@
     @include flexbox($justifyContent: center);
 }
 
-.footerCopyright__link {
+.footerCopyright__text {
     @include font-variable($weight: 700);
     text-align: center;
 
@@ -12,14 +12,9 @@
     padding: 1rem 3rem;
 
     background-color: $color__gray-900;
-    color: $color__gray-400;
 
     & span {
         @include font-variable($weight: 400);
-    }
-
-    &:hover {
-        color: $color__gray-100;
     }
 
     @media screen and (min-width: $breakpoint__tablet) {
@@ -37,5 +32,13 @@
         & span {
             @include font-variable($size: 1.25rem, $weight: 400);
         }
+    }
+}
+
+.footerCopyright__link {
+    color: $color__gray-400;
+
+    &:hover {
+        color: $color__gray-100;
     }
 }
