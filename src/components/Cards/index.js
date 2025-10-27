@@ -1,3 +1,4 @@
+export * from './Card';
 export * from './CardCareer';
 export * from './CardCourses';
 export * from './CardExtraInfo';

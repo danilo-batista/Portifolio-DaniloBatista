@@ -1,9 +1,9 @@
 import {
+  Card,
   CardExtraInfo,
   CardThumbnail,
   CardTitleAndDate,
 } from '@/components/Cards';
-import styles from './CardCareer.module.scss';
 
 export function CardCareer({
   company,
@@ -18,24 +18,23 @@ export function CardCareer({
   extraProjects,
 }) {
   return (
-    <div className={styles.cardLayout__container}>
-      <a href={link} rel="noopener noreferrer">
-        <div className={styles.card__thumbnailCaption}>{company}</div>
+    <Card variant="career">
+      <Card.Thumbnail href={link} caption={company}>
         <CardThumbnail slug={slug} alt={alt} folder="brands" />
-      </a>
+      </Card.Thumbnail>
 
-      <div className={styles.card__information}>
+      <Card.Section>
         <CardTitleAndDate complement={period} title={title} />
-        <p className={styles.card__infoDescription}>{description}</p>
-      </div>
+        <Card.Description>{description}</Card.Description>
+      </Card.Section>
 
-      <div className={styles.card__information}>
+      <Card.Section>
         <CardExtraInfo
           extraContent={extraContent}
           resume={resume}
           extraProjects={extraProjects}
         />
-      </div>
-    </div>
+      </Card.Section>
+    </Card>
   );
 }
