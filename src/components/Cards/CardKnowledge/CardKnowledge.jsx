@@ -1,10 +1,4 @@
-import {
-  Card,
-  CardExtraInfo,
-  CardTags,
-  CardThumbnail,
-  CardTitleAndDate,
-} from '@/components/Cards';
+import { Card, CardExtraInfo, CardThumbnail } from '@/components/Cards';
 
 export function CardKnowledge({
   company,
@@ -25,11 +19,11 @@ export function CardKnowledge({
       </Card.Thumbnail>
 
       <Card.Section>
-        <CardTitleAndDate complement={period} title={title} />
+        <Card.Header complement={period} title={title} />
       </Card.Section>
 
       <Card.Section>
-        <CardTags tags={tags} />
+        <Card.TagList tags={tags} variant="tags" />
       </Card.Section>
 
       <Card.Section>

@@ -14,6 +14,16 @@ export function Card({ children, variant = 'default', className = '' }) {
   );
 }
 
+// Subcomponente: Card.Header (era CardTitleAndDate)
+Card.Header = function CardHeader({ title, complement }) {
+  return (
+    <>
+      <p className={styles.card__infoComplement}>{complement}</p>
+      <h3 className={styles.card__infoTitle}>{title}</h3>
+    </>
+  );
+};
+
 // Subcomponente: Link com thumbnail
 Card.Thumbnail = function CardThumbnail({ href, caption, children }) {
   return (
@@ -59,12 +69,24 @@ Card.Links = function CardLinks({ github, demo, slug }) {
   );
 };
 
-// Subcomponente: Pills/Tags (Portfolio)
-Card.Pills = function CardPills({ tags }) {
+//Subcomponente: TagList com variante Pills e Tags
+Card.TagList = function CardTagList({ tags, variant = 'pills' }) {
+  const listClass =
+    variant === 'pills'
+      ? styles.card__infoPills
+      : styles.card__infoTagActivitiesList;
+
+  const itemClass =
+    variant === 'pills'
+      ? styles.card__listItemsPills
+      : styles.card__infoTagActivitiesItems;
+
+  if (!tags || tags.length === 0) return null;
+
   return (
-    <ul className={styles.card__infoPills}>
+    <ul className={listClass}>
       {tags.map((tag) => (
-        <li className={styles.card__listItemsPills} key={tag}>
+        <li className={itemClass} key={tag}>
           {tag}
         </li>
       ))}

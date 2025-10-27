@@ -1,9 +1,4 @@
-import {
-  Card,
-  CardExtraInfo,
-  CardThumbnail,
-  CardTitleAndDate,
-} from '@/components/Cards';
+import { Card, CardExtraInfo, CardThumbnail } from '@/components/Cards';
 
 export function CardCareer({
   company,
@@ -24,7 +19,7 @@ export function CardCareer({
       </Card.Thumbnail>
 
       <Card.Section>
-        <CardTitleAndDate complement={period} title={title} />
+        <Card.Header complement={period} title={title} />
         <Card.Description>{description}</Card.Description>
       </Card.Section>
 
