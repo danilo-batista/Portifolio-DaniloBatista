@@ -5,7 +5,7 @@ export * from './CardExtraInfo';
 export * from './CardKnowledge';
 export * from './CardList';
 export * from './CardPortfolio';
-export * from './CardPortfolioList';
+
 export * from './CardTags';
 export * from './CardThumbnail';
 export * from './CardTitleAndDate';
