@@ -1,20 +1,27 @@
 [
   {
     "id": 1,
+    "component": "CardPortfolio",
+    "listItem": "projects",
+    "title": "Projetos",
+    "subtitle": "Experiências práticas que refletem meu crescimento técnico e criativo."
+  },
+  {
+    "id": 2,
     "component": "CardCareer",
     "listItem": "career",
     "title": "Experiências",
     "subtitle": "Conheça minha trajetória profissional e os desafios que fortaleceram minha carreira."
   },
   {
-    "id": 2,
+    "id": 3,
     "component": "CardCourses",
     "listItem": "courses",
     "title": "Cursos Extras",
     "subtitle": "Aprendizado contínuo que vai além da formação acadêmica."
   },
   {
-    "id": 3,
+    "id": 4,
     "component": "CardKnowledge",
     "listItem": "knowledge",
     "title": "Formação Acadêmica",

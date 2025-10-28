@@ -7,6 +7,10 @@
     background-color: $color__secondary-100;
 }
 
+.section__portfolio {
+    background-color: $color__white;
+}
+
 .cardLists__even {
     background-color: $color__white;
 }
@@ -41,5 +45,41 @@
     @media screen and (min-width: $breakpoint__largeDesktop) {
         grid-template-columns: repeat(4, 1fr);
         gap: 2.5rem;
+    }
+}
+
+.cardLists__portfolio {
+    @media screen and (min-width: $breakpoint__tablet) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (min-width: $breakpoint__smallDesktop) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media screen and (min-width: $breakpoint__largeDesktop) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    > * {
+        grid-column: auto;
+    }
+}
+
+.cardList__links {
+    @include flexbox($justifyContent: center);
+}
+
+.cardList__buttons {
+    @include flexbox($flexDirection: row,
+        $justifyContent: space-around,
+        $alignItems: center);
+
+    margin-top: 1.5rem;
+    padding-inline: 1.5rem;
+
+    @media screen and (min-width: $breakpoint__tablet) {
+        @include flexbox($gap: 2rem, $flexWrap: nowrap);
+        padding: 1rem 3.5rem 0;
     }
 }
