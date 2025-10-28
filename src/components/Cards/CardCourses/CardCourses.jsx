@@ -1,20 +1,15 @@
-import { CardTags, CardTitleAndDate } from '@/components/Cards';
-import styles from './CardCourses.module.scss';
+import { Card } from '@/components/Cards';
 
 export function CardCourses({ company, period, title, tags, link }) {
   return (
-    <div className={styles.card__layoutContainer}>
-      <a href={link} rel="noopener noreferrer">
-        <div className={styles.card__thumbnailCaption}>{company}</div>
-      </a>
-
-      <div className={styles.card__information}>
-        <CardTitleAndDate complement={period} title={title} />
-      </div>
-
-      <div className={styles.card__information}>
-        <CardTags tags={tags} />
-      </div>
-    </div>
+    <Card variant="courses">
+      <Card.Thumbnail href={link} caption={company} />
+      <Card.Section>
+        <Card.Header complement={period} title={title} />
+      </Card.Section>
+      <Card.Section>
+        <Card.TagList tags={tags} variant="tags" />
+      </Card.Section>
+    </Card>
   );
 }

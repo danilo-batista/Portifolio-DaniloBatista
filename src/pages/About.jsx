@@ -7,19 +7,21 @@ export function About() {
       <HeroAbout />
       <Skills />
 
-      {cardListTypes.map((cardList) => {
-        const isEven = cardList.id % 2 === 0;
-        return (
-          <CardList
-            key={cardList.component}
-            component={cardList.component}
-            listItem={cardList.listItem}
-            title={cardList.title}
-            subtitle={cardList.subtitle}
-            isEven={isEven}
-          />
-        );
-      })}
+      {cardListTypes
+        .filter((cardList) => cardList.component !== 'CardPortfolio')
+        .map((cardList) => {
+          const isEven = cardList.id % 2 === 0;
+          return (
+            <CardList
+              key={cardList.component}
+              component={cardList.component}
+              listItem={cardList.listItem}
+              title={cardList.title}
+              subtitle={cardList.subtitle}
+              isEven={isEven}
+            />
+          );
+        })}
     </>
   );
 }
