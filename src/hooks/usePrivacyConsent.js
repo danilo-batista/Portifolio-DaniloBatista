@@ -1,25 +1,25 @@
 import { useEffect, useState } from 'react';
 
 export function usePrivacyConsent() {
-  const [visible, setVisible] = useState(null);
+  const [consentGiven, setConsentGiven] = useState(null);
 
   useEffect(() => {
     const consentGiven = localStorage.getItem('cookie_consent');
-    setVisible(consentGiven !== 'true');
+    setConsentGiven(consentGiven === 'true');
   }, []);
 
   const handleAccept = () => {
     localStorage.setItem('cookie_consent', 'true');
-    setVisible(false);
+    setConsentGiven(true);
   };
 
   const handleDecline = () => {
     localStorage.setItem('cookie_consent', 'false');
-    setVisible(false);
+    setConsentGiven(true);
   };
 
   return {
-    visible,
+    consentGiven,
     handleAccept,
     handleDecline,
   };
