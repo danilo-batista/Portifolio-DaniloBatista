@@ -6,49 +6,56 @@ import { DefaultLayout } from '@/layouts';
 
 export function Router() {
   return (
-    <Suspense fallback={<Loading />}>
-      <Routes>
-        <Route path="/" element={<DefaultLayout />}>
-          {/* Home */}
-          <Route
-            index
-            element={
+    <Routes>
+      <Route path="/" element={<DefaultLayout />}>
+        {/* Home */}
+
+        <Route
+          index
+          element={
+            <Suspense fallback={<Loading />}>
               <TemplateSEO {...pagesMetadata.home}>
                 <pagesMetadata.home.component />
               </TemplateSEO>
-            }
-          />
-          {/* About */}
-          <Route
-            path="sobre-mim"
-            element={
+            </Suspense>
+          }
+        />
+        {/* About */}
+        <Route
+          path="sobre-mim"
+          element={
+            <Suspense fallback={<Loading />}>
               <TemplateSEO {...pagesMetadata.about}>
                 <pagesMetadata.about.component />
               </TemplateSEO>
-            }
-          />
-          {/* Portfolio */}
-          <Route
-            path="portifolio"
-            element={
+            </Suspense>
+          }
+        />
+        {/* Portfolio */}
+        <Route
+          path="portifolio"
+          element={
+            <Suspense fallback={<Loading />}>
               <TemplateSEO {...pagesMetadata.portfolio}>
                 <pagesMetadata.portfolio.component />
               </TemplateSEO>
-            }
-          />
-          {/* Contact */}
-          <Route
-            path="contato"
-            element={
+            </Suspense>
+          }
+        />
+        {/* Contact */}
+        <Route
+          path="contato"
+          element={
+            <Suspense fallback={<Loading />}>
               <TemplateSEO {...pagesMetadata.contact}>
                 <pagesMetadata.contact.component />
               </TemplateSEO>
-            }
-          />
-          {/* Fallback */}
-          <Route path="*" element={<Navigate to="/" replace />} />
-        </Route>
-      </Routes>
-    </Suspense>
+            </Suspense>
+          }
+        />
+        {/* Fallback */}
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Route>
+    </Routes>
   );
 }
