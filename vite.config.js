@@ -1,17 +1,17 @@
-import path from "node:path";
+import path from 'node:path';
 import react from "@vitejs/plugin-react";
-import critical from "rollup-plugin-critical";
 import { defineConfig } from "vite";
+import critical from 'vite-plugin-critical-split-css';
 
 export default defineConfig({
 	plugins: [
 		react(),
 		critical({
-			criticalUrl: ["http://localhost:5173", "https://www.danilobatista.com"],
-			criticalBase: "dist",
+			criticalUrl: ['http://localhost:5173', 'https://www.danilobatista.com'],
+			criticalBase: 'dist',
 			criticalPages: [
-				{ uri: "", template: "index.html" },
-				{ uri: "/contato", template: "contato.html" },
+				{ uri: '', template: 'index.html' },
+				{ uri: '/contato', template: 'contato.html' }
 			],
 			inline: true,
 			extract: false,
@@ -19,13 +19,12 @@ export default defineConfig({
 			height: 900,
 			penthouse: {
 				blockJSRequests: false,
-				timeout: 30000,
-			},
-		}),
-	],
+				timeout: 30000
+			}
+		})],
 	resolve: {
 		alias: {
-			"@": path.resolve(__dirname, "src"),
+			'@': path.resolve(__dirname, 'src'),
 		},
 	},
 	build: {
