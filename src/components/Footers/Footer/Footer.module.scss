@@ -52,10 +52,10 @@
 
     &>img {
         position: absolute;
-        bottom: 25;
-        left: 0;
         width: 100%;
         height: auto;
+        aspect-ratio: 1/1;
+        object-fit: cover;
     }
 
     @media screen and (min-width: $breakpoint__tablet) {
@@ -100,9 +100,9 @@
         $justifyContent: space-around,
         $alignItems: center);
 
-        margin-top: 2rem;
-        width: 100%;
-        padding-inline: 1.5rem;
+    margin-top: 2rem;
+    width: 100%;
+    padding-inline: 1.5rem;
 
     @media screen and (min-width: $breakpoint__tablet) {
         @include flexbox($flexDirection: row,

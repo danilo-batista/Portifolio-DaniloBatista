@@ -10,6 +10,9 @@
     z-index: 999;
 
     background-color: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    animation: fadeInOpacity 0.4s ease forwards;
+    will-change: opacity;
 }
 
 .cookieBanner {
@@ -25,7 +28,9 @@
     background-color: $color__gray-900;
 
     color: $color__white;
-    animation: fadeIn 0.5s ease;
+    opacity: 0;
+    animation: fadeInOpacity 0.4s ease forwards;
+    will-change: opacity;
 
     @media screen and (min-width: $breakpoint__tablet) {
         max-width: 425px;
@@ -81,15 +86,12 @@
     }
 }
 
-
-@keyframes fadeIn {
+@keyframes fadeInOpacity {
     from {
         opacity: 0;
-        transform: translateY(15px);
     }
 
     to {
         opacity: 1;
-        transform: translateY(0);
     }
 }
