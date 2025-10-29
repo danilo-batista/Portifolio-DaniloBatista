@@ -5,19 +5,28 @@ import styles from './PrivacyBanner.module.scss';
 
 export function PrivacyBanner() {
   const cookieBannerId = useId();
-  const { visible, handleAccept, handleDecline } = usePrivacyConsent();
+  const { consentGiven, handleAccept, handleDecline } = usePrivacyConsent();
 
-  if (visible === null) {
-    return <div style={{ visibility: 'hidden', height: 0 }} />;
-  }
-
-  if (!visible) return null;
+  const visible = consentGiven === false;
 
   return (
     <>
-      <div className={styles.cookieOverlay} />
+      <div
+        className={`${styles.cookieOverlay} ${
+          visible ? styles['cookieOverlay--visible'] : ''
+        }`}
+        aria-hidden="true"
+      />
 
-      <div id={cookieBannerId} className={styles.cookieBanner}>
+      <div
+        id={cookieBannerId}
+        className={`${styles.cookieBanner} ${
+          visible ? styles['cookieBanner--visible'] : ''
+        }`}
+        role="dialog"
+        aria-modal="true"
+        aria-label="Aviso de cookies"
+      >
         <div className={styles.cookieBanner__content}>
           <p>
             Usamos cookies para melhorar sua experiência e analisar o tráfego.
