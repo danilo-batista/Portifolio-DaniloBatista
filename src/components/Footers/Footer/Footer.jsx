@@ -36,9 +36,11 @@ export function Footer() {
             src={daniloBatistaPicture}
             alt="Danilo Batista"
             className={styles.hero__profilePicture}
-            loading="lazy"
             width="144"
             height="144"
+            loading="eager"
+            decoding="async"
+            fetchPriority="high"
           />
         </div>
         <div className={styles.footer__socialInfo}>
