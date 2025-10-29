@@ -7,6 +7,10 @@ export function PrivacyBanner() {
   const cookieBannerId = useId();
   const { visible, handleAccept, handleDecline } = usePrivacyConsent();
 
+  if (visible === null) {
+    return <div style={{ visibility: 'hidden', height: 0 }} />;
+  }
+
   if (!visible) return null;
 
   return (
