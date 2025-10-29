@@ -9,6 +9,12 @@
     background-color: $color__gray-800;
     color: $color__gray-300;
 
+    /* 🔒 Estabiliza o espaço antes do carregamento */
+    min-height: 400px;
+    opacity: 0;
+    animation: fadeInOpacity 0.4s ease forwards;
+    will-change: opacity;
+
     @media screen and (min-width: $breakpoint__mediumCellPhone) {
         padding: 1.825rem 1.5rem;
     }
@@ -51,6 +57,7 @@
     height: 9rem;
 
     &>img {
+        display: block;
         position: absolute;
         width: 100%;
         height: auto;
@@ -111,5 +118,15 @@
             $alignItems: center,
             $flexWrap: nowrap);
         padding-inline: 3.5rem;
+    }
+}
+
+@keyframes fadeInOpacity {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
     }
 }
