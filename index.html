@@ -6,8 +6,17 @@
   <meta name="google-site-verification" content="43QfOeh9s7fxQME4jXxVSNqck0r1gWYMmFPGww" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="preconnect" href="https://use.typekit.net" crossorigin>
-  <link rel="preconnect" href="https://p.typekit.net" crossorigin>
+  <!-- Preconnect para serviços críticos -->
+  <link rel="preconnect" href="https://use.typekit.net">
+  <link rel="preconnect" href="https://p.typekit.net">
+  <link rel="preconnect" href="https://www.clarity.ms">
+  
+  <!-- DNS Prefetch como fallback -->
+  <link rel="dns-prefetch" href="https://use.typekit.net">
+  <link rel="dns-prefetch" href="https://p.typekit.net">
+  <link rel="dns-prefetch" href="https://www.clarity.ms">
+  
+  <!-- Preload de fonte crítica -->
   <link rel="preload" href="https://use.typekit.net/lse8lfk.css" as="style"
     onload="this.onload=null;this.rel='stylesheet'">
   <noscript>
