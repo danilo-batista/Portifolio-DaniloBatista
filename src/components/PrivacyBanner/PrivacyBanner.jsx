@@ -12,26 +12,20 @@ export function PrivacyBanner() {
   return (
     <>
       <div
-        className={styles.cookieOverlay}
+        className={`${styles.cookieOverlay} ${
+          visible ? styles['cookieOverlay--visible'] : ''
+        }`}
         aria-hidden="true"
-        style={{
-          opacity: visible ? 1 : 0,
-          visibility: visible ? 'visible' : 'hidden',
-          pointerEvents: visible ? 'auto' : 'none',
-        }}
       />
 
       <div
         id={cookieBannerId}
-        className={styles.cookieBanner}
+        className={`${styles.cookieBanner} ${
+          visible ? styles['cookieBanner--visible'] : ''
+        }`}
         role="dialog"
         aria-modal="true"
         aria-label="Aviso de cookies"
-        style={{
-          opacity: visible ? 1 : 0,
-          visibility: visible ? 'visible' : 'hidden',
-          pointerEvents: visible ? 'auto' : 'none',
-        }}
       >
         <div className={styles.cookieBanner__content}>
           <p>
