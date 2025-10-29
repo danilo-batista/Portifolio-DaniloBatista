@@ -4,8 +4,8 @@ import cardListTypes from '@/database/cardListTypes.json';
 export function Portfolio() {
   const componentName = 'CardPortfolio';
   const listItem = 'projects';
-  const title = cardListTypes[3]?.title;
-  const subtitle = cardListTypes[3]?.subtitle;
+  const title = cardListTypes[1]?.title;
+  const subtitle = cardListTypes[1]?.subtitle;
 
   return (
     <CardList
