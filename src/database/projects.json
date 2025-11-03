@@ -106,7 +106,7 @@
     "description": "Projeto fictício de feed que permite criar, curtir e excluir comentários.",
     "period": "fev/2025",
     "client": "rocketseat",
-    "highlight": true,
+    "highlight": false,
     "category": "desenvolvimento",
     "tags": ["react", "hooks", "css modules", "sass"],
     "link": "https://ignite-feed-six-silk.vercel.app/"
@@ -141,6 +141,20 @@
   },
   {
     "id": 11,
+    "title": "CodeConnect",
+    "slug": "codeconnect",
+    "thumbnail": "codeconnect.webp",
+    "alt": "Imagem de tela do projeto CodeConnect",
+    "description": "Projeto fictício de rede social para desenvolvedores.",
+    "period": "out/2025",
+    "client": "danilobatista",
+    "highlight": true,
+    "category": "desenvolvimento",
+    "tags": ["react", "hooks", "react-router"],
+    "link": "https://codeconnect-sand.vercel.app/"
+  },
+  {
+    "id": 12,
     "title": "Portifolio DaniloBatista",
     "slug": "portifolio",
     "thumbnail": "portifolio-DaniloBatista.webp",
