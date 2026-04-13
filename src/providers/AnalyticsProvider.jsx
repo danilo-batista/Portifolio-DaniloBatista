@@ -1,7 +1,10 @@
 import { Analytics } from '@vercel/analytics/react';
 import { useEffect } from 'react';
+import { usePrivacyConsent } from '@/hooks/usePrivacyConsent';
 
 export function AnalyticsProvider({ children }) {
+  const { consentGiven } = usePrivacyConsent();
+
   useEffect(() => {
     /* Adiciona as variáveis de ambiente para os IDs de rastreamento. */
     const GA_ID = import.meta.env.VITE_GA_MEASUREMENT_ID;
@@ -68,6 +71,16 @@ export function AnalyticsProvider({ children }) {
       })(window, document, 'clarity', 'script', CLARITY_ID);
     }
   }, []);
+
+  /* Atualiza o consentimento ao carregar a página se já foi aceito */
+  useEffect(() => {
+    if (consentGiven) {
+      window.gtag('consent', 'update', {
+        ad_storage: 'granted',
+        analytics_storage: 'granted',
+      });
+    }
+  }, [consentGiven]);
 
   /* Retorna VercelAnalytics */
   return (

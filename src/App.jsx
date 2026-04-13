@@ -9,9 +9,9 @@ export function App() {
       <ScrollToTopProvider>
         <AnalyticsProvider>
           <Router />
+          <PrivacyBanner />
         </AnalyticsProvider>
       </ScrollToTopProvider>
-      <PrivacyBanner />
     </HelmetProvider>
   );
 }
