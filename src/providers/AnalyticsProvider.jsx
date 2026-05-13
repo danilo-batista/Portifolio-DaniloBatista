@@ -29,6 +29,8 @@ export function AnalyticsProvider({ children }) {
       function gtag(...args) {
         window.dataLayer.push(args);
       }
+      // Torna a função gtag global
+      window.gtag = gtag;
 
       gtag('js', new Date());
 
